@@ -169,6 +169,7 @@ html {
   html {
     padding: 0 !important;
     margin: 0;
+    overflow-x: hidden;
   }
   .cards-2 {
     padding: 0 !important;
