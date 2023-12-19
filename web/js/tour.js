@@ -1426,7 +1426,7 @@ function changeBackground() {
 
 function showSpinner() {
   // Show the spinner element
-  const spinnerWrapper = document.querySelector(".spinner-wrapperV2");
+  const spinnerWrapper = document.querySelector(".lds-ring");
   if (spinnerWrapper) {
     spinnerWrapper.style.display = "block";
   }
@@ -1434,7 +1434,7 @@ function showSpinner() {
 
 function hideSpinner() {
   // Hide the spinner element
-  const spinnerWrapper = document.querySelector(".spinner-wrapperV2");
+  const spinnerWrapper = document.querySelector(".lds-ring");
   if (spinnerWrapper) {
     spinnerWrapper.style.display = "none";
   }
