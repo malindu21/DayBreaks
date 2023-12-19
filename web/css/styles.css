@@ -1066,7 +1066,11 @@ input[type="checkbox"] {
 
 .spinner-wrapperV2 {
   position: relative; /* Change fixed to relative */
-
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
 
 }
