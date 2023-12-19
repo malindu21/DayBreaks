@@ -208,13 +208,15 @@ const package001 = {
     },
   },
    dynamicData : [
-    "Drive through <b>Arthuur's Creek apple orchards</b>",
+   
     "<b>Kinglake</b> town exploration",
     "<b>Wirrawilla Rainforest walk</b>",
     "<b>Redwood Forest</b> walk",
     "<b>Warburton</b> town exploration",
     "<b>Steavenson Falls</b>",
     "<b>Marysville</b> town exploration",
+  
+    "Drive through <b>Arthuur's Creek apple orchards</b>",
     "<b>Keppel Lookout</b>",
     "Scenic journey through <b>Black Spur</b> Drive"
 ],
