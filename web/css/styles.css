@@ -1092,7 +1092,7 @@ li:nth-child(even){
 
 
 .spinner-wrapperV2 {
-  position: relative; /* Change fixed to relative */
+  position: fixed; /* Change fixed to relative */
   z-index: 999999;
   top: 0;
   right: 0;
