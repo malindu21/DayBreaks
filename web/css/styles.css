@@ -240,11 +240,6 @@ html {
     text-align: center;
     margin-left: 45px;
   }
-  .book-buttons-v2 {
-      position: fixed;
-      -webkit-transform: translateZ(0) !important;
-       transform: translate3d(0,0,0) !important;
-  }
 }
 
 body,
@@ -1699,6 +1694,14 @@ input.cmn-toggle-round-flat:checked + label:after {
   align-items: center;
   /* Vertically align buttons */
   z-index: 5;
+}
+
+@media (max-width:700px) {
+  .book-buttons-v2 {
+    position: fixed;
+    -webkit-transform: translateZ(0) !important;
+     transform: translate3d(0,0,0) !important;
+  }
 }
 
 .circle-button {
