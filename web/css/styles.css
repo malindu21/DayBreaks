@@ -2722,13 +2722,13 @@ b {
 .white-box-tours {
   width: 450px;
   transition: transform 0.2s;
-  margin: 15px;
+/*  margin: 15px;*/
   display: inline-flex;
   border-radius: 10px;
   align-items: flex-start;
   /* Vertically center the content */
   text-align: center;
-  padding: 5px;
+ /* padding: 5px;*/
   border-radius: 15px;
 
   flex-shrink: 0;
