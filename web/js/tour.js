@@ -1272,12 +1272,38 @@ function populateList(dynamicData) {
   dynamicNameElement.innerHTML = "<b>" + dynamicName + "</b>";
   
   var listContainer = document.getElementById('dynamicList');
-  dynamicData.forEach(function (item) {
+  dynamicData.forEach(function (item, index) {
       var listItem = document.createElement('li');
+      
+      // Add default styles to the li element
+      listItem.style.fontSize = "12px";
+      listItem.style.width = "200px";
+      
+      // Apply styles based on screen width
+      if (window.matchMedia('(max-width: 600px)').matches) {
+        listItem.style.float = "none";
+        listItem.style.width = "100%";
+        listItem.style.margin = "0 0 0 0";
+
+        // Apply even margin-right style
+        if (index % 2 === 1) {
+          listItem.style.marginRight = "0";
+        }
+      } else {
+        listItem.style.float = "left";
+        listItem.style.margin = "0 10px 10px 0";
+
+        // Apply even margin-right style
+        if (index % 2 === 1) {
+          listItem.style.marginRight = "0";
+        }
+      }
+      
       listItem.innerHTML = item;
       listContainer.appendChild(listItem);
   });
 }
+
 
 function getTitle(title) {
   switch (title) {
