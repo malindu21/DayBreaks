@@ -640,6 +640,10 @@ strong {
   margin-bottom: auto;
 }
 
+#dynamic-boxes-container .white-box-tours{
+  margin-bottom: 15px;
+}
+
 .howToBook {
   width: 65%;
 }
@@ -1064,33 +1068,6 @@ input[type="checkbox"] {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-
-li{
-
-  float:left;
-  font-size: 12px;
-  margin:0 10px 10px 0;
-  width:200px;
-}
-li:nth-child(even){
-  margin-right:0;
-}
-
-@media only screen and (max-width: 600px) {
-  /* Your styles for smaller screens here */
-  li{
-
-    float:none;
-    width:100%;
-    margin:0 0px 0px 0;
-
-  }
-  li:nth-child(even){
-    margin-right:0;
-  }
-  
-}
-
 
 .spinner-wrapperV2 {
   position: fixed;
