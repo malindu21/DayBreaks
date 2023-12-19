@@ -146,7 +146,7 @@
         "title": "Ocean Vibes",
         "subTitle": "Black Spur Drive, rainforests & waterfalls",
         "desc": "Embark on a picturesque journey through lush apple orchards, serene rainforests, and iconic Australian forests, all while savouring quick coffee breaks and exploring charming towns along the way. Be captivated by one of the state's tallest waterfalls, before concluding the day with a mesmerizing sunset, overlooking the majestic mountains.",
-        "duration": "Duration: 11.00 Hours",
+        "duration": "Duration: 12.00 Hours",
         "backgroundImageUrls": [
             "images/into_the_forest/6-min.webp",
             "images/into_the_forest/7-min.webp",
@@ -169,8 +169,8 @@
             },
             {
                 "iconClass": "fas fa-clock fa-inverse",
-                "title": "Duration - 11hrs",
-                "description": "11 hrs"
+                "title": "Duration - 12hrs",
+                "description": "12 hrs"
             },
             {
                 "iconClass": "fas fa-clock fa-inverse",
@@ -288,7 +288,7 @@
         "title": "Beach to Greenery",
         "subTitle": "Black Spur Drive, rainforests & waterfalls",
         "desc": "Embark on a picturesque journey through lush apple orchards, serene rainforests, and iconic Australian forests, all while savouring quick coffee breaks and exploring charming towns along the way. Be captivated by one of the state's tallest waterfalls, before concluding the day with a mesmerizing sunset, overlooking the majestic mountains.",
-        "duration": "Duration: 11.00 Hours",
+        "duration": "Duration: 13.00 Hours",
         "backgroundImageUrls": [
             "images/into_the_forest/6-min.webp",
             "images/into_the_forest/7-min.webp",
@@ -311,8 +311,8 @@
             },
             {
                 "iconClass": "fas fa-clock fa-inverse",
-                "title": "Duration - 11hrs",
-                "description": "11 hrs"
+                "title": "Duration - 13hrs",
+                "description": "13 hrs"
             },
             {
                 "iconClass": "fas fa-clock fa-inverse",
@@ -430,7 +430,7 @@
         "title": "Cliffs & Chills",
         "subTitle": "Black Spur Drive, rainforests & waterfalls",
         "desc": "Embark on a picturesque journey through lush apple orchards, serene rainforests, and iconic Australian forests, all while savouring quick coffee breaks and exploring charming towns along the way. Be captivated by one of the state's tallest waterfalls, before concluding the day with a mesmerizing sunset, overlooking the majestic mountains.",
-        "duration": "Duration: 11.00 Hours",
+        "duration": "Duration: 12.00 Hours",
         "backgroundImageUrls": [
             "images/into_the_forest/6-min.webp",
             "images/into_the_forest/7-min.webp",
@@ -453,8 +453,8 @@
             },
             {
                 "iconClass": "fas fa-clock fa-inverse",
-                "title": "Duration - 11hrs",
-                "description": "11 hrs"
+                "title": "Duration - 12hrs",
+                "description": "12 hrs"
             },
             {
                 "iconClass": "fas fa-clock fa-inverse",
