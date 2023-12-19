@@ -1064,7 +1064,7 @@ input[type="checkbox"] {
   animation-delay: -0.16s;
 }
 
-.spinner-wrapperV2 {
+.accordion .area-1 .spinner-wrapperV2 {
   position: fixed;
   z-index: 999999;
   top: 0;
