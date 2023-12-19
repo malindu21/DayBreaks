@@ -1039,6 +1039,18 @@ input[type="checkbox"] {
 
   background: #111;
 }
+
+.spinner-wrapperV2 {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: #11111100;
+}
+
 .spinner {
   position: absolute;
   top: 50%;
