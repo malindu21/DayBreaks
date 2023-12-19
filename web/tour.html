@@ -570,6 +570,7 @@
 
         function updatePrice(tourPrice) {
             document.getElementById('tourPrice').innerText = "$"+ tourPrice;
+            localStorage.setItem('tourPrice', tourPrice);
         }
 
         function addTourType(type) {

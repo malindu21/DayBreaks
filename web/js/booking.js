@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 getAllPackages();
-
+calculateValue(false);
 function getAllPackages() {
   fetch("js/packages.json")
     .then((response) => response.json())
@@ -272,6 +272,7 @@ function loadCityResult(address) {
     cityTextBox.value = selectedAddress.formatted;
     citySearchResults.innerHTML = "";
     citySearchResults.classList.add("d-none");
+
     if (distance > 20) {
       showDistanceExceedPopup();
     } else {
@@ -399,7 +400,7 @@ function calculateValue(status) {
   var priceElement = document.querySelectorAll("#price");
 
   // Extract the text content and remove the dollar sign
-  var priceText = 140;
+  var priceText = localStorage.getItem("tourPrice");
 
   // Parse the string to a floating-point number
   var priceValue = parseFloat(priceText);
@@ -407,6 +408,8 @@ function calculateValue(status) {
   // Perform calculations (e.g., double the value)
   var result = 0;
   document.getElementById("price-breakdown").innerHTML =
+    "$" + priceValue.toFixed(2);
+    document.getElementById("price").innerHTML =
     "$" + priceValue.toFixed(2);
   if (status == true) {
     result = priceValue + 50;
