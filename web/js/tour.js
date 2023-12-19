@@ -1371,6 +1371,9 @@ function changeBackground() {
   const nextImage = new Image();
   nextImage.src = backgroundImageUrls[currentIndex];
 
+  // Show spinner
+  showSpinner();
+
   nextImage.onload = function () {
     // Set a smooth transition for background-image
     area2.style.transition = "background-image 0.5s";
@@ -1383,9 +1386,29 @@ function changeBackground() {
     // Crossfade effect
     areaPlus.style.backgroundImage = `url('${nextImage.src}'), url('${area1.style.backgroundImage}')`;
 
+    // Hide spinner once the image is loaded
+    hideSpinner();
+
     resetInterval();
   };
 }
+
+function showSpinner() {
+  // Show the spinner element
+  const spinnerWrapper = document.querySelector(".spinner-wrapper");
+  if (spinnerWrapper) {
+    spinnerWrapper.style.display = "block";
+  }
+}
+
+function hideSpinner() {
+  // Hide the spinner element
+  const spinnerWrapper = document.querySelector(".spinner-wrapper");
+  if (spinnerWrapper) {
+    spinnerWrapper.style.display = "none";
+  }
+}
+
 
 
 function resetInterval() {
