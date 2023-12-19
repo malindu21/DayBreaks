@@ -1666,7 +1666,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 }
 
 .circle-buttons-v2 {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   /* Adjust the distance from the bottom as needed */
   right: 30px;
@@ -1680,7 +1680,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 }
 
 .book-buttons-v2 {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   -webkit-transform: translateZ(0);
   transform: translate3d(0,0,0);
