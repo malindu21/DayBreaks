@@ -211,12 +211,12 @@ const package001 = {
     "Drive through <b>Arthuur's Creek apple orchards</b>",
     "<b>Kinglake</b> town exploration",
     "<b>Wirrawilla Rainforest walk</b>",
-    "Scenic journey through <b>Black Spur</b> Drive",
     "<b>Redwood Forest</b> walk",
     "<b>Warburton</b> town exploration",
     "<b>Steavenson Falls</b>",
     "<b>Marysville</b> town exploration",
-    "<b>Keppel Lookout</b>"
+    "<b>Keppel Lookout</b>",
+    "Scenic journey through <b>Black Spur</b> Drive"
 ],
 
 
@@ -949,6 +949,7 @@ function insertSectionsIntoContainer() {
     meetAndPickUp.appendChild(
       meetAndPickUpSection(1, package002.packageMeetAndPickUp)
     );
+    populateList(package001.dynamicData);
     packageName.appendChild(packageNameSection(package002.details.title));
     packageSubTitle.appendChild(
       packageSubTitleSection(package002.details.subTitle)
@@ -993,6 +994,7 @@ function insertSectionsIntoContainer() {
     meetAndPickUp.appendChild(
       meetAndPickUpSection(1, package003.packageMeetAndPickUp)
     );
+    populateList(package001.dynamicData);
     packageName.appendChild(packageNameSection(package003.details.title));
     packageSubTitle.appendChild(
       packageSubTitleSection(package003.details.subTitle)
@@ -1037,6 +1039,7 @@ function insertSectionsIntoContainer() {
     meetAndPickUp.appendChild(
       meetAndPickUpSection(1, package004.packageMeetAndPickUp)
     );
+    populateList(package001.dynamicData);
     packageName.appendChild(packageNameSection(package004.details.title));
     packageSubTitle.appendChild(
       packageSubTitleSection(package004.details.subTitle)
@@ -1347,7 +1350,7 @@ function packageDescSection(desc) {
   const div = document.createElement("div");
   div.innerHTML = `
         <div>
-            <p  style="font-size: 15px;">${desc}</p>
+            <p  style="font-size: 13px;">${desc}</p>
             </div>
         `;
   return div;
