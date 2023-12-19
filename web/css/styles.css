@@ -1064,31 +1064,6 @@ input[type="checkbox"] {
   animation-delay: -0.16s;
 }
 
-li{
-
-  float:left;
-  font-size: 12px;
-  margin:0 10px 10px 0;
-  width:200px;
-}
-li:nth-child(even){
-  margin-right:0;
-}
-
-@media only screen and (max-width: 600px) {
-  /* Your styles for smaller screens here */
-  li{
-
-    float:none;
-    width:100%;
-    margin:0 0px 0px 0;
-
-  }
-  li:nth-child(even){
-    margin-right:0;
-  }
-  
-}
 
 
 .spinner-wrapperV2 {
@@ -1123,6 +1098,32 @@ li:nth-child(even){
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
+
+li{
+
+  float:left;
+  font-size: 12px;
+  margin:0 10px 10px 0;
+  width:200px;
+}
+li:nth-child(even){
+  margin-right:0;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Your styles for smaller screens here */
+  li{
+
+    float:none;
+    width:100%;
+    margin:0 0px 0px 0;
+
+  }
+  li:nth-child(even){
+    margin-right:0;
+  }
+}
+
 @-webkit-keyframes sk-bouncedelay {
   0%,
   80%,
