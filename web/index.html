@@ -294,7 +294,7 @@
                </a>
             </div>
          </div>
-         <div class="lazy-background tour-package ocen_vibes p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('002','220','280')" role="button">
+         <div class="tour-package ocen_vibes p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('002','220','280')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -357,7 +357,7 @@
                </a>
             </div>
          </div>
-         <div class="lazy-background tour-package beach-to-greenery p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('003','210','280')" role="button">
+         <div class="tour-package beach-to-greenery p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('003','210','280')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -420,7 +420,7 @@
                </a>
             </div>
          </div>
-         <div class="lazy-background tour-package cliffs-chills p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('004','250','310')" role="button">
+         <div class="tour-package cliffs-chills p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('004','250','310')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -505,7 +505,7 @@
       </div>
    </div>
    <!---Tour package end-->
-   <div id="howToBook" class="lazy-background cards-2">
+   <div id="howToBook" class="cards-2">
       <div class="container">
          <div class="row">
             <div class="col-lg-6 order-lg-1 order-2">
@@ -617,7 +617,7 @@
          </div>
       </div>
    </div>
-   <div class="lazy-background review-bg mt-5 d-flex justify-content-center align-items-center">
+   <div class="review-bg mt-5 d-flex justify-content-center align-items-center">
       <div class="container review-list d-inline-flex justify-content-center align-items-center">
          <div class="review-box p-5 blur-bgV2 d-flex flex-wrap">
             <div class="review-profile mb-3">
@@ -694,7 +694,7 @@
             <div class="col-lg-6">
                <div class="scroll-element js-scroll slide-right">
                   <!-- Card -->
-                  <div class="lazy-background cards-5">
+                  <div class="cards-5">
                      <div class="card-body">
                      </div>
                      <!-- end of button-container -->
@@ -880,33 +880,14 @@
       </div>
    </div>
    <!-- Scripts -->
+   
    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var lazyBackgrounds = document.querySelectorAll('.lazy-background');
-  
-        var lazyLoad = function (target) {
-          var io = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                var img = entry.target.querySelector('img');
-                var src = img.getAttribute('data-src');
-  
-                img.setAttribute('src', src);
-                img.removeAttribute('data-src');
-                observer.disconnect();
-              }
-            });
-          });
-  
-          io.observe(target);
-        };
-  
-        lazyBackgrounds.forEach(function (lazyBackground) {
-          lazyLoad(lazyBackground);
-        });
-      });
-    </script>
-   <script>
+      if (entry.isIntersecting) {
+  // Add class with background image
+  entry.target.classList.add('header');
+  // Job done for this item - no need to watch it!
+  observer.unobserve(entry.target);
+}
       document.getElementById('bookPackageOne').addEventListener('click', function () {
          var buttonValue = this.getAttribute('value');
          localStorage.setItem('packageId', buttonValue);
