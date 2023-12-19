@@ -229,7 +229,7 @@
          </div>
       </div>
       <div class="tour-package-list d-flex flex-wrap">
-         <div class="tour-package into-the-forest p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('001','170','220')"
+         <div loading="lazy" class="tour-package into-the-forest p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('001','170','220')"
             role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
@@ -294,7 +294,7 @@
                </a>
             </div>
          </div>
-         <div class="tour-package ocen_vibes p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('002','220','280')" role="button">
+         <div loading="lazy" class="tour-package ocen_vibes p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('002','220','280')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -357,7 +357,7 @@
                </a>
             </div>
          </div>
-         <div class="tour-package beach-to-greenery p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('003','210','280')" role="button">
+         <div loading="lazy" class="tour-package beach-to-greenery p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('003','210','280')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -420,7 +420,7 @@
                </a>
             </div>
          </div>
-         <div class="tour-package cliffs-chills p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('004','250','310')" role="button">
+         <div loading="lazy" class="tour-package cliffs-chills p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('004','250','310')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -882,14 +882,7 @@
    <!-- Scripts -->
    
    <script>
-      if (entry.isIntersecting) {
-  // Add class with background image
-  entry.target.classList.add('tour-package.into-the-forest');
-  entry.target.classList.add('tour-package.ocen_vibes');
-  
-  // Job done for this item - no need to watch it!
-  observer.unobserve(entry.target);
-}
+
       document.getElementById('bookPackageOne').addEventListener('click', function () {
          var buttonValue = this.getAttribute('value');
          localStorage.setItem('packageId', buttonValue);
