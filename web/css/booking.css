@@ -331,6 +331,16 @@ label {
   -webkit-backdrop-filter: blur(5px);
 }
 
+.blur-bgV2 {
+  padding: 1px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
 .text-grey {
   color: #7f8c8d;
   font-weight: 400;

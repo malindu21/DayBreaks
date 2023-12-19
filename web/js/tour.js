@@ -862,6 +862,8 @@ function insertSectionsIntoContainer() {
   const importantInfomation = document.getElementById("importantInfomation");
 
   var packageId = localStorage.getItem("packageId");
+  // var vanPrice = localStorage.getItem("vanPrice");
+  // var suvPrice = localStorage.getItem("suvPrice");
   // const packageId = "001"
 
   if (packageId == "001") {
@@ -1276,7 +1278,8 @@ function populateList(dynamicData) {
       var listItem = document.createElement('li');
       
       // Add default styles to the li element
-      listItem.style.fontSize = "12px";
+      listItem.style.fontSize = "13px";
+      listItem.style.lineHeight = "17px";
       listItem.style.width = "200px";
       
       // Apply styles based on screen width
@@ -1378,7 +1381,7 @@ function packageDescSection(desc) {
   const div = document.createElement("div");
   div.innerHTML = `
         <div>
-            <p  style="font-size: 13px;">${desc}</p>
+            <p  style="font-size: 14px; line-height:20px">${desc}</p>
             </div>
         `;
   return div;

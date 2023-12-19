@@ -17,6 +17,25 @@
    background-size: cover;
 }
 
+
+.tour-package.ocen_vibes{
+  background: url(../images/geelong.webp);
+ background-size: cover;
+}
+
+.tour-package.beach-to-greenery{
+  background: url(../images/greatocenroad.webp);
+ background-size: cover;
+}
+
+.tour-package.cliffs-chills{
+  background: url(../images/mornington.webp);
+ background-size: cover;
+}
+
+
+
+
 h5 {
   color: #6f6f6f9b;
   font: 700 1.125rem/1.5rem "Montserrat", sans-serif;
@@ -72,6 +91,16 @@ h5 {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(5px);
 }
+
+.blur-bgV2 {
+  padding: 1px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
 
 .text-grey {
   color: #7f8c8d;
