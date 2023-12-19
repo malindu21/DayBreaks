@@ -169,7 +169,6 @@ html {
   html {
     padding: 0 !important;
     margin: 0;
-    overflow-x: hidden;
   }
   .cards-2 {
     padding: 0 !important;
@@ -240,8 +239,9 @@ html {
     margin-left: 45px;
   }
   .book-buttons-v2 {
-    -webkit-transform: translateZ(0);
-    transform: translate3d(0,0,0);
+    position: fixed;
+      -webkit-transform: translateZ(0);
+       transform: translate3d(0,0,0);
   }
 }
 
