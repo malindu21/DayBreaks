@@ -1039,18 +1039,6 @@ input[type="checkbox"] {
 
   background: #111;
 }
-
-.spinner-wrapperV2 {
-  position: fixed;
-  z-index: 999999;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  background: #11111100;
-}
-
 .spinner {
   position: absolute;
   top: 50%;
@@ -1072,6 +1060,41 @@ input[type="checkbox"] {
   animation-delay: -0.32s;
 }
 .spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.spinner-wrapperV2 {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: #111;
+}
+.spinnerV2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+}
+.spinnerV2 > div {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: #fff;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.spinnerV2 .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinnerV2 .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
