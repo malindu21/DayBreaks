@@ -170,7 +170,7 @@ html {
     padding: 0 !important;
     margin: 0;
     width:100% !important;
-    overflow-x: clip !important;
+    overflow-x:hidden !important;
   }
   .cards-2 {
     padding: 0 !important;
