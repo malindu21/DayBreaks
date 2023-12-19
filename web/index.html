@@ -229,7 +229,7 @@
          </div>
       </div>
       <div class="tour-package-list d-flex flex-wrap">
-         <div class="tour-package into-the-forest p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('001','170','220')"
+         <div class="lazy-background tour-package into-the-forest p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('001','170','220')"
             role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
@@ -248,7 +248,7 @@
                      </div>
                      <!-- Second Column -->
                      <div style="line-height: 35px;">
-                        $220
+                        <b>$220</b>
                         <div class="text-small fw-light text-start  lh-1">Per Person</div>
                      </div>
                      <div class="border-end pe-3"></div>
@@ -267,7 +267,7 @@
                      </div>
                      <!-- Second Column -->
                      <div style="line-height: 35px;">
-                        $170
+                        <b>$170</b>
                         <div class="text-small fw-light text-start lh-1">Per Person</div>
                      </div>
                   </div>
@@ -294,7 +294,7 @@
                </a>
             </div>
          </div>
-         <div class="tour-package ocen_vibes p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('002','220','280')" role="button">
+         <div class="lazy-background tour-package ocen_vibes p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('002','220','280')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -312,7 +312,7 @@
                      </div>
                      <!-- Second Column -->
                      <div style="line-height: 35px;">
-                        $280
+                        <b>$280</b>
                         <div class="text-small fw-light text-start lh-1">Per Person</div>
                      </div>
                      <div class="border-end pe-3"></div>
@@ -330,7 +330,7 @@
                      </div>
                      <!-- Second Column -->
                      <div style="line-height: 35px;">
-                        $220
+                        <b>$220</b>
                         <div class="text-small fw-light text-start lh-1">Per Person</div>
                      </div>
                   </div>
@@ -357,7 +357,7 @@
                </a>
             </div>
          </div>
-         <div class="tour-package beach-to-greenery p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('003','210','280')" role="button">
+         <div class="lazy-background tour-package beach-to-greenery p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('003','210','280')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -375,7 +375,7 @@
                      </div>
                      <!-- Second Column -->
                      <div style="line-height: 35px;">
-                        $280
+                        <b>$280</b>
                         <div class="text-small fw-light text-start lh-1">Per Person</div>
                      </div>
                      <div class="border-end pe-3"></div>
@@ -393,7 +393,7 @@
                      </div>
                      <!-- Second Column -->
                      <div style="line-height: 35px;">
-                        $210
+                        <b>$210</b>
                         <div class="text-small fw-light text-start lh-1">Per Person</div>
                      </div>
                   </div>
@@ -420,7 +420,7 @@
                </a>
             </div>
          </div>
-         <div class="tour-package cliffs-chills p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('004','250','310')" role="button">
+         <div class="lazy-background tour-package cliffs-chills p-3 d-flex flex-column justify-content-between" onclick="onclickPackage('004','250','310')" role="button">
             <div class="tour-package-header d-flex justify-content-between align-items-center">
                <!-- First Section -->
                <div class="tour-package-details blur-bgV2 d-flex flex-column justify-content-center text-white">
@@ -880,6 +880,32 @@
       </div>
    </div>
    <!-- Scripts -->
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var lazyBackgrounds = document.querySelectorAll('.lazy-background');
+  
+        var lazyLoad = function (target) {
+          var io = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                var img = entry.target.querySelector('img');
+                var src = img.getAttribute('data-src');
+  
+                img.setAttribute('src', src);
+                img.removeAttribute('data-src');
+                observer.disconnect();
+              }
+            });
+          });
+  
+          io.observe(target);
+        };
+  
+        lazyBackgrounds.forEach(function (lazyBackground) {
+          lazyLoad(lazyBackground);
+        });
+      });
+    </script>
    <script>
       document.getElementById('bookPackageOne').addEventListener('click', function () {
          var buttonValue = this.getAttribute('value');
