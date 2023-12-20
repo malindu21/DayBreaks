@@ -1233,11 +1233,8 @@ input.cmn-toggle-round-flat:checked + label:after {
   /* Adjust the margin as needed */
   margin-left: 1rem;
 }
-/* Add space between dropdown items */
-.navbar-custom .dropdown-item {
-  margin: 0.5rem 0;
-  /* Adjust the margin as needed */
-}
+
+
 /* Add space between social icons (if displayed) */
 .navbar-custom .social-icons {
   display: flex;
@@ -1280,61 +1277,11 @@ input.cmn-toggle-round-flat:checked + label:after {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link.active {
+
+.navbar-custom .nav-item .nav-link:hover{
   color: #fff;
 }
-/* Dropdown Menu */
-.navbar-custom .dropdown:hover > .dropdown-menu {
-  display: block;
-  /* this makes the dropdown menu stay open while hovering it */
-  min-width: auto;
-  animation: fadeDropdown 0.2s;
-  /* required for the fade animation */
-}
-@keyframes fadeDropdown {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.navbar-custom .dropdown-toggle:focus {
-  /* removes dropdown outline on focus */
-  outline: 0;
-}
-.navbar-custom .dropdown-menu {
-  margin-top: 0;
-  border: none;
-  border-radius: 0.25rem;
-  background-color: #111;
-}
-.navbar-custom .dropdown-item {
-  color: #fff;
-  text-decoration: none;
-}
-.navbar-custom .dropdown-item:hover {
-  background-color: #111;
-}
-.navbar-custom .dropdown-item .item-text {
-  font: 600 0.875rem/0.875rem "Open Sans", sans-serif;
-}
-.navbar-custom .dropdown-item:hover .item-text {
-  color: #14bf98;
-}
-.navbar-custom .dropdown-items-divide-hr {
-  width: 100%;
-  height: 1px;
-  margin: 0.75rem auto 0.75rem auto;
-  border: none;
-  background-color: #b5bcc4;
-  opacity: 0.2;
-}
-/* end of dropdown menu */
-.navbar-custom .social-icons {
-  display: none;
-}
+
 
 .switch-container {
   display: inline-flex;
@@ -2198,57 +2145,7 @@ a.back-to-top {
 a:hover.back-to-top {
   background-color: #000000;
 }
-/***************************/
-/* 20. Extra Pages */
-/***************************/
-.ex-header {
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-  background-color: #153e52;
-  text-align: center;
-}
-.ex-header h1 {
-  color: #fff;
-}
-.ex-basic-1 {
-  padding-top: 2rem;
-  padding-bottom: 0.875rem;
-  background-color: #fbfbfb;
-}
-.ex-basic-1 .breadcrumbs {
-  margin-bottom: 1rem;
-}
-.ex-basic-1 .breadcrumbs .fa {
-  margin-right: 0.5rem;
-  margin-left: 0.625rem;
-}
-.ex-basic-2 {
-  padding-top: 4.75rem;
-  padding-bottom: 4rem;
-}
-.ex-basic-2 h3 {
-  margin-bottom: 1rem;
-}
-.ex-basic-2 .text-container {
-  margin-bottom: 3.625rem;
-}
-.ex-basic-2 .text-container.last {
-  margin-bottom: 0;
-}
-.ex-basic-2 .list-unstyled .fas {
-  color: #14bf98;
-  font-size: 0.5rem;
-  line-height: 1.375rem;
-}
-.ex-basic-2 .list-unstyled .media-body {
-  margin-left: 0.625rem;
-}
-.ex-basic-2 .form-container {
-  margin-top: 2.5rem;
-}
-.ex-basic-2 .btn-outline-reg {
-  margin-top: 1.75rem;
-}
+
 /*****************************/
 /* 21. Media Queries */
 /*****************************/
@@ -2304,8 +2201,7 @@ a:hover.back-to-top {
   .navbar-custom .nav-item .nav-link {
     padding: 0.25rem 0.75rem 0.25rem 0.75rem;
   }
-  .navbar-custom .nav-item .nav-link:hover,
-  .navbar-custom .nav-item .nav-link.active {
+  .navbar-custom .nav-item .nav-link:hover {
     color: #ffff;
   }
   .navbar-custom.top-nav-collapse {
@@ -2319,27 +2215,9 @@ a:hover.back-to-top {
   .navbar-custom.top-nav-collapse .nav-item .nav-link {
     color: #787976;
   }
-  .navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
-  .navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-    color: #fff;
-  }
-  .navbar-custom .dropdown-menu {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-top: 0.75rem solid rgba(0, 0, 0, 0);
-    border-radius: 0.25rem;
-    box-shadow: 0 0.25rem 0.375rem 0 rgba(0, 0, 0, 0.03);
-  }
-  .navbar-custom.top-nav-collapse .dropdown-menu {
-    border-top: 0.125rem solid rgba(0, 0, 0, 0);
-  }
-  .navbar-custom .dropdown-item {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-  .navbar-custom .dropdown-items-divide-hr {
-    width: 84%;
-  }
+
+
+
   /* end of navigation */
   /* Header */
   .header .header-content {
