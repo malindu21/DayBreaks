@@ -412,6 +412,21 @@ const package002 = {
 
   },
 
+  dynamicData : [
+   
+    "<b>Geelong</b> waterfront walk",
+    "Giant <b>Sky wheel ride</b>",
+    "Explore <b>Jack Rabbit winery</b>",
+    "<b>Point Lonsdale</b> Coastal Trail",
+    "<b>Rip View scenic lookout</b>",
+    "<b>Queencliff</b> to Sorrento ferryn",
+  
+    "<b>Sorrento</b> town exploration",
+    "<b>Millionaire’s Walk</b>",
+    "<b>Arthur’s Seat</b> lookout",
+    "<b>Dromana</b> beach"
+],
+
   packageCancellationPolicy: {
     1: {
       value:
@@ -614,6 +629,16 @@ const package003 = {
     },
   
   },
+  dynamicData : [
+   
+    "Scenic drive through the iconic <b>Great Ocean Road</b>",
+    "<b>Climb</b> up <b>Split Point Lighthouse</b>",
+    "<b>Teddy’s lookout<b>",
+    "<b>Maits rainforest</b> walk",
+    "Descend to the beach using the <b>Gibson Steps</b>",
+    "Watch water crash into <b>Thunder Cave</b>",
+    "Visit the <b>12 Apostles</b>"
+],
 
   packageCancellationPolicy: {
     1: {
@@ -813,6 +838,17 @@ const package004 = {
     },
   
   },
+  dynamicData : [
+   
+    "Animal encounters at Moonlit Sanctuary",
+    "Walk amongst ancient seaside mansions at Millionaire’s walk",
+    "Seashell collection",
+    "Rye town exploration",
+    "Explore Mornington Peninsula National Park",
+    "Cape Schanck board walk along cliffs",
+    "Explore rock pools and small marine life at Pebble beach",
+    "Bathing at Peninsula Geothermal hot springs"
+],
 
   packageCancellationPolicy: {
     1: {
@@ -953,7 +989,7 @@ function insertSectionsIntoContainer() {
     meetAndPickUp.appendChild(
       meetAndPickUpSection(1, package002.packageMeetAndPickUp)
     );
-    populateList(package001.dynamicData);
+    populateList(package002.dynamicData);
     packageName.appendChild(packageNameSection(package002.details.title));
     packageSubTitle.appendChild(
       packageSubTitleSection(package002.details.subTitle)
@@ -998,7 +1034,7 @@ function insertSectionsIntoContainer() {
     meetAndPickUp.appendChild(
       meetAndPickUpSection(1, package003.packageMeetAndPickUp)
     );
-    populateList(package001.dynamicData);
+    populateList(package003.dynamicData);
     packageName.appendChild(packageNameSection(package003.details.title));
     packageSubTitle.appendChild(
       packageSubTitleSection(package003.details.subTitle)
@@ -1043,7 +1079,7 @@ function insertSectionsIntoContainer() {
     meetAndPickUp.appendChild(
       meetAndPickUpSection(1, package004.packageMeetAndPickUp)
     );
-    populateList(package001.dynamicData);
+    populateList(package004.dynamicData);
     packageName.appendChild(packageNameSection(package004.details.title));
     packageSubTitle.appendChild(
       packageSubTitleSection(package004.details.subTitle)
