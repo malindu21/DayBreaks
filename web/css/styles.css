@@ -428,10 +428,48 @@ strong {
   transition: all 0.2s;
   border-radius: 20px;
 }
+
+.btn-solid-reg-wrapper{
+  box-shadow:  0px 0px 10px 0px #11111145;
+  z-index: 10;
+  display: none;
+  backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 768px) {
+  .btn-solid-reg-wrapper{
+    display: flex;
+  }
+}
+
+.btn-solid-reg.tour{
+  background-color: #111 !important;
+  border: 0.125rem solid #111;
+  color: #fff;
+  height: 60px;
+  border-radius: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn-solid-reg:hover {
   background-color: transparent;
   color: #fff;
   text-decoration: none;
+}
+
+.btn-solid-reg.tour:hover {
+  background-color: transparent;
+  color: #111;
+}
+
+.share-btn{
+  width: 55px;
+  height: 55px;
+  background-color: transparent;
+  border: 0.125rem solid #111;
+  border-radius: 50%;
 }
 .button-container .btn-solid-reg:hover {
   /* Hover state styles */
@@ -1696,11 +1734,9 @@ input.cmn-toggle-round-flat:checked + label:after {
   z-index: 5;
 }
 
-@media (max-width:700px) {
+@media (max-width:768px) {
   .book-buttons-v2 {
-    position: fixed;
-    -webkit-transform: translateZ(0) !important;
-     transform: translate3d(0,0,0) !important;
+    display: none !important;
   }
 }
 
@@ -2135,6 +2171,12 @@ input.cmn-toggle-round-flat:checked + label:after {
 @keyframes pulse {
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width:768px) {
+  .chevron{
+    bottom: 20%;
   }
 }
 /**********************************/

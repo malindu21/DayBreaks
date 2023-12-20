@@ -1500,19 +1500,21 @@ storeScroll();
 
 // Share modal js
 
-const viewBtn = document.querySelector(".view-modal"),
+const viewBtns = document.querySelectorAll(".view-modal"),
   popup = document.querySelector(".popup"),
   close = popup.querySelector(".close"),
   field = popup.querySelector(".field"),
   input = field.querySelector("input"),
   copy = field.querySelector("button");
 
-viewBtn.onclick = () => {
-  popup.classList.toggle("show");
-};
-close.onclick = () => {
-  viewBtn.click();
-};
+viewBtns.forEach((viewBtn)=>{
+  viewBtn.onclick = () => {
+    popup.classList.toggle("show");
+  };
+  close.onclick = () => {
+    viewBtn.click();
+  };
+})
 
 copy.onclick = () => {
   input.select(); //select input value
