@@ -840,14 +840,14 @@ const package004 = {
   },
   dynamicData : [
    
-    "Animal encounters at Moonlit Sanctuary",
-    "Walk amongst ancient seaside mansions at Millionaire’s walk",
-    "Seashell collection",
-    "Rye town exploration",
-    "Explore Mornington Peninsula National Park",
-    "Cape Schanck board walk along cliffs",
-    "Explore rock pools and small marine life at Pebble beach",
-    "Bathing at Peninsula Geothermal hot springs"
+    "<b>Animal encounters</b> at <b>Moonlit Sanctuary</b>",
+    "Walk amongst ancient seaside mansions at <b>Millionaire’s walk</b>",
+    "<b>Seashell</b> collection",
+    "<b>Rye</b> town exploration",
+    "Explore <b>Mornington Peninsula National Park</b>",
+    "<b>Cape Schanck</b> board walk along cliffs",
+    "Explore <b>rock pools</b> and small <b>marine life</b> at <b>Pebble beach</b>",
+    "<b>Bathing</b> at Peninsula <b>Geothermal hot springs</b>"
 ],
 
   packageCancellationPolicy: {
