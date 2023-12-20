@@ -4,12 +4,13 @@
    Description: Day Break
 */
 
-function onclickPackage(packageId,vanPrice,suvPrice){
+function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
   window.location.href = "tour.html?packageId=" + packageId
- 
          localStorage.setItem('packageId', packageId);
-         localStorage.setItem('vanPrice', vanPrice);
-         localStorage.setItem('suvPrice', suvPrice);
+         localStorage.setItem('van4Price', van4Price);
+         localStorage.setItem('suv4Price', suv4Price);
+         localStorage.setItem('van7Price', van7Price);
+         localStorage.setItem('suv7Price', suv7Price);
 }
 
 (function ($) {

@@ -152,7 +152,7 @@
                                                 </div>
                                                 <div style="white-space: nowrap; display: flex; flex-direction: column; align-items: flex-start; line-height: 22px;">
                                                     <span id="tourPrice" style="font-size: large; font-weight: bold; margin-bottom: -5px;">$880</span>
-                                                    <span style="font-size: x-small;">($100 per person)</span>
+                                                    <span id="tourSmallPrice" style="font-size: x-small;">($100 per person)</span>
                                                 </div>
                                             </div>
                                             <div id="iconContainer"
@@ -642,11 +642,14 @@
     </script>
 
     <script>
-        var vanPrice = localStorage.getItem("vanPrice");
-        var suvPrice = localStorage.getItem("suvPrice");
+        var vanPrice = localStorage.getItem("van7Price");
+        var suvPrice = localStorage.getItem("suv7Price");
+        var van4Price = localStorage.getItem("van4Price");
+        var suv4Price = localStorage.getItem("suv4Price");
 
         addTourType("VAN");
         updatePrice(vanPrice);
+        updateSmallPrice(van4Price);
         function selectButton(button) {
             // Remove 'active' class from all buttons
             $('.btn-group button').removeClass('active');
@@ -662,6 +665,7 @@
                 iconImage.src = 'images/van.png'; // Change the path accordingly
                 updateMaxTravelers(7);
                 updatePrice(vanPrice);
+                updateSmallPrice(van4Price);
                 addTourType("VAN");
             } else {
                 // Logic for other buttons
@@ -670,6 +674,7 @@
                 iconImage.src = 'images/suv.svg'; // Change the path accordingly
                 updateMaxTravelers(4);
                 updatePrice(suvPrice);
+                updateSmallPrice(suv4Price);
                 addTourType("SUV");
             }
         }
@@ -681,6 +686,11 @@
         function updatePrice(tourPrice) {
             document.getElementById('tourPrice').innerText = "$" + tourPrice;
             localStorage.setItem('tourPrice', tourPrice);
+        }
+
+        function updateSmallPrice(tourSmallPrice) {
+            document.getElementById('tourSmallPrice').innerText = "($" + tourSmallPrice + " per person)";
+            localStorage.setItem('tourSmallPrice', tourSmallPrice);
         }
 
         function addTourType(type) {
