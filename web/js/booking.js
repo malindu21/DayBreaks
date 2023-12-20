@@ -401,16 +401,20 @@ function calculateValue(status) {
 
   // Extract the text content and remove the dollar sign
   var priceText = localStorage.getItem("tourPrice");
-
+  var priceSmallText = localStorage.getItem("tourSmallPrice");
   // Parse the string to a floating-point number
   var priceValue = parseFloat(priceText);
-
+  var priceSmallValue = parseFloat(priceSmallText);
   // Perform calculations (e.g., double the value)
   var result = 0;
   document.getElementById("price-breakdown").innerHTML =
     "$" + priceValue.toFixed(2);
     document.getElementById("price").innerHTML =
     "$" + priceValue.toFixed(2);
+
+    document.getElementById("priceSmall").innerHTML = 
+    "( $" +  + priceSmallValue.toFixed(2) + " per person )";
+
   if (status == true) {
     result = priceValue + 50;
     document.getElementById("pickup-charge").innerHTML = "$50";
