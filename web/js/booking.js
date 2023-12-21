@@ -88,7 +88,7 @@ if (ticketType == "SUV") {
   document.getElementById(
     "ticket-type-icon"
   ).innerHTML = `<img class="tourIcon" src="images/van.png" alt="Icon"
-  style="margin-left:auto; width: 33px; height: 35px;filter:invert(1)">`;
+  style="margin-left:auto; width: 33px; height: 25px;filter:invert(1)">`;
   document.getElementById("ticket-type-text").innerHTML = "Van";
 } else {
   // noOfTravellersEle.setAttribute("readonly", "true");
