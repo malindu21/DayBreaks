@@ -113,6 +113,15 @@
   width: 50px;
 }
 
+.modal-body h3 {
+  color: #484a46;
+  font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
+}
+.modal h1 {
+  color: #484a46;
+  font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 0px;
