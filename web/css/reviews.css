@@ -22,7 +22,7 @@
 }
 
 .review-profile {
-  flex: 1;
+  /* flex: 1; */
   min-width:250px;
 }
 .review-profile img {
