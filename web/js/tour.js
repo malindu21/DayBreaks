@@ -672,7 +672,7 @@ const package004 = {
   details: {
     title: "Cliffs & Chills",
     subTitle: "Mornington Peninsula, National Parks & Geothermal Hot Springs",
-    desc: "Discover the allure of the Mornington Peninsula that seamlessly blends encounters with native wildlife, leisurely coastal strolls, boutique shopping, coastal exploration, and ultimate relaxation. Experience a close encounter with the region's iconic wildlife, gaining insights into their conservation efforts. Take in the coastal beauty during relaxing walks while collecting unique mementos.  Explore the dramatic coastal landscapes unique to this region before concluding your adventure with a tranquil soak in mineral-rich geothermal pools, allowing stress to melt away amidst the peninsula's serene natural beauty. ",
+    desc: "Discover the Mornington Peninsula, where wildlife encounters, coastal walks, boutique shopping, and exploration meet seamless relaxation. Encounter native animals, learn about conservation, and stroll along the coast, collecting special mementos. Explore dramatic landscapes unique to the area, then unwind in geothermal pools, letting stress melt away amidst the serene natural beauty.",
     duration: "Duration: 12 hours",
     backgroundImageUrls: [
       "images/clif/0.webp",
