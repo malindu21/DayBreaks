@@ -1212,9 +1212,9 @@ function createIterity(iconClass, title, description, duration,package) {
             <div class="circle-tours">${iconClass}</div>
             <div class="white-box-tours" style="width: 80%; " >  
             <div class="comment">
-              <h3>${title}</h3>
+              <p>${title}</p>
               <p>${description}</p>
-              <h3>${duration}</h3>
+              <h3 style="color:#5F6672">${duration}</h3>
             </div>
             ${
               Object.entries(package.package1Iternity).length !=
