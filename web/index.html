@@ -931,22 +931,7 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
-      <script>
-         document.addEventListener("DOMContentLoaded", function() {
-           var lazyImage = document.querySelector("#lazy-container img");
-       
-           var observer = new IntersectionObserver(function(entries, observer) {
-             entries.forEach(function(entry) {
-               if (entry.isIntersecting) {
-                 lazyImage.src = lazyImage.dataset.src;
-                 observer.unobserve(lazyImage);
-               }
-             });
-           });
-       
-           observer.observe(lazyImage);
-         });
-       </script>
+  
    <script>
       const scrollElements = document.querySelectorAll(".js-scroll");
 
