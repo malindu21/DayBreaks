@@ -1490,7 +1490,7 @@ function changeBackground(index) {
     areaPlus.style.transition = "background-image 0.5s";
 
     // Crossfade effect
-    areaPlus.style.backgroundImage = `url('${nextImage.src}'), url('${area1.style.backgroundImage}')`;
+    areaPlus.style.backgroundImage = `url('${nextImage.src}')`;
 
     // Hide spinner once the image is loaded
     hideSpinner();
