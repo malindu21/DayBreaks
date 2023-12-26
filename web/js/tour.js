@@ -242,7 +242,6 @@ const package002 = {
       "images/ocean_vibes/3.webp",
       "images/ocean_vibes/4.webp",
       "images/ocean_vibes/5.webp",
-      "images/ocean_vibes/5.webp",
       "images/ocean_vibes/6.webp",
       "images/ocean_vibes/8.webp",
       "images/ocean_vibes/9.webp",
@@ -676,12 +675,11 @@ const package004 = {
     desc: "Discover the Mornington Peninsula, where wildlife encounters, coastal walks, boutique shopping, and exploration meet seamless relaxation. Encounter native animals, learn about conservation, and stroll along the coast, collecting special mementos. Explore dramatic landscapes unique to the area, then unwind in geothermal pools, letting stress melt away amidst the serene natural beauty.",
     duration: "Duration: 12 hours",
     backgroundImageUrls: [
-      "images/clif/0.webp",
+
       "images/clif/1.webp",
       "images/clif/2.webp",
       "images/clif/3.webp",
       "images/clif/4.webp",
-      "images/clif/5.webp",
       "images/clif/5.webp",
       "images/clif/6.webp",
       "images/clif/7.webp",
@@ -907,6 +905,11 @@ function insertSectionsIntoContainer() {
     //aboutThisActivity();
     backgroundImageUrls = [];
     backgroundImageUrls = package001.details.backgroundImageUrls;
+
+    backgroundImageUrls.forEach(function (src) {
+      addImageToList(src);
+    });
+
     for (const section of Object.values(package001.packageActivity)) {
       aboutThisActivity(section.title, section.description, section.iconClass);
     }
@@ -954,6 +957,11 @@ function insertSectionsIntoContainer() {
     
     backgroundImageUrls = [];
     backgroundImageUrls = package002.details.backgroundImageUrls;
+
+    backgroundImageUrls.forEach(function (src) {
+      addImageToList(src);
+    });
+
     for (const section of Object.values(package002.packageActivity)) {
       aboutThisActivity(section.title, section.description, section.iconClass);
     }
@@ -999,6 +1007,10 @@ function insertSectionsIntoContainer() {
   }else if (packageId == "003"){
     backgroundImageUrls = [];
     backgroundImageUrls = package003.details.backgroundImageUrls;
+
+    backgroundImageUrls.forEach(function (src) {
+      addImageToList(src);
+    });
     for (const section of Object.values(package003.packageActivity)) {
       aboutThisActivity(section.title, section.description, section.iconClass);
     }
@@ -1044,6 +1056,10 @@ function insertSectionsIntoContainer() {
   }else if (packageId == "004"){
     backgroundImageUrls = [];
     backgroundImageUrls = package004.details.backgroundImageUrls;
+
+    backgroundImageUrls.forEach(function (src) {
+      addImageToList(src);
+    });
     for (const section of Object.values(package004.packageActivity)) {
       aboutThisActivity(section.title, section.description, section.iconClass);
     }
@@ -1091,6 +1107,7 @@ function insertSectionsIntoContainer() {
 
 
 changeBackground();
+//startAutoScroll();
 
 
 var data = {
@@ -1436,11 +1453,26 @@ function packageDurationSection(duration) {
 
 // tour.js
 
-function changeBackground() {
+
+
+// Initial start of auto-scroll
+
+
+// To restart the auto-scroll, call startAutoScroll() again
+
+
+// Example: Add images dynamically
+
+
+// Loop through the image sources and add them to the list
+
+
+
+function changeBackground(index) {
   currentIndex = (currentIndex + 1) % backgroundImageUrls.length;
 
   const nextImage = new Image();
-  nextImage.src = backgroundImageUrls[currentIndex];
+  nextImage.src = backgroundImageUrls[index ?? 0];
 
   // Show spinner
   showSpinner();
@@ -1460,7 +1492,7 @@ function changeBackground() {
     // Hide spinner once the image is loaded
     hideSpinner();
 
-    resetInterval();
+    //resetInterval();
   };
 }
 
@@ -1482,10 +1514,9 @@ function hideSpinner() {
 
 
 
-function resetInterval() {
-  clearInterval(intervalId);
-  intervalId = setInterval(changeBackground, 7000);
-}
+
+
+
 
 function scrollToBottom() {
   var area2Element = document.querySelector(".area-2");
@@ -1567,3 +1598,84 @@ copy.onclick = () => {
   }
 };
 
+
+function addImageToList(imageSrc) {
+  const li = document.createElement("li");
+  li.className = "HTouritem";
+
+  const img = document.createElement("img");
+  img.src = imageSrc;
+  img.loading = "lazy";
+  img.style.width = "60px";
+  img.style.height = "45px";
+  img.style.margin = "10px";
+
+  li.appendChild(img);
+
+  li.addEventListener("click", () => handleItemClick(li));
+
+  const ul = document.getElementById("tourGrid");
+  ul.appendChild(li);
+
+  if (ul.children.length === 1) {
+    li.classList.add('clicked');
+  }
+}
+
+function handleItemClick(clickedItem) {
+  const itemList = Array.from(document.getElementById("tourGrid").getElementsByTagName("li"));
+  const index = itemList.indexOf(clickedItem);
+
+  console.log("Index:", index);
+
+  const items = document.querySelectorAll('.HTouritem');
+  items.forEach(item => item.classList.remove('clicked'));
+
+  clickedItem.classList.add('clicked');
+  clickedItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+  changeBackground(index);
+}
+
+function autoScrollItems() {
+  const itemList = Array.from(document.getElementById("tourGrid").getElementsByTagName("li"));
+  const clickedItem = document.querySelector('.HTouritem.clicked');
+  const currentIndex = itemList.indexOf(clickedItem);
+  const nextIndex = (currentIndex + 1) % itemList.length;
+
+  handleItemClick(itemList[nextIndex]);
+}
+
+let numberOfIterations = 10;
+let currentIteration = 0;
+let autoScrollInterval = null;
+
+function stopAutoScroll() {
+  clearInterval(autoScrollInterval);
+}
+
+function startAutoScroll() {
+  autoScrollInterval = setInterval(() => {
+    autoScrollItems();
+    currentIteration++;
+
+    if (currentIteration === numberOfIterations) {
+      stopAutoScroll();
+    }
+  }, 7000);
+}
+
+
+
+function hideSlider() {
+  var element = document.getElementById("HTourWrap");
+  stopAutoScroll();
+if (element.style.display === "none") {
+// If the element is currently hidden, show it
+element.style.display = "block"; // You can use "block" or "inline" based on your layout
+} else {
+// If the element is currently visible, hide it
+
+element.style.display = "none";
+}
+}

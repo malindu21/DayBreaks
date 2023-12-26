@@ -9,6 +9,47 @@ html {
   height: 100%;
   padding: 2.5px;
 }
+.HTourlist {
+  display: flex;
+  padding: 0px 0; /* Adjusted padding to 20px on the top and bottom, 0 on the left and right */
+  overflow-x: scroll;
+  justify-content: flex-start; /* Align items to the start so that the first item is visible */
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.HTourWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  width: calc(70% - 20px);
+  margin: 0 auto; /* Center horizontally */
+
+}
+
+.HTouritem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.HTouritem.clicked {
+  border-radius: 10px;
+  opacity: 1;
+  border: 2px solid #ffffff; /* Change the color to your preferred border color */
+}
+
+.HTouritem:not(:last-child) {
+  margin-right: 10px;
+}
 
 ::-webkit-scrollbar {
   display: none;
