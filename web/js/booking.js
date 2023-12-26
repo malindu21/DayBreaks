@@ -20,18 +20,18 @@ const travellersEl = document.getElementById("travellers-list");
 const ticketType = localStorage.getItem("tourType");
 
 /* Preloader */
-$(window).on("load", function () {
-  var preloaderFadeOutTime = 500;
+// $(window).on("load", function () {
+//   var preloaderFadeOutTime = 500;
 
-  function hidePreloader() {
-    var preloader = $(".spinner-wrapper");
-    setTimeout(function () {
-      preloader.fadeOut(preloaderFadeOutTime);
-    }, 250);
-  }
+//   function hidePreloader() {
+//     var preloader = $(".spinner-wrapper");
+//     setTimeout(function () {
+//       preloader.fadeOut(preloaderFadeOutTime);
+//     }, 250);
+//   }
 
-  hidePreloader();
-});
+//   hidePreloader();
+// });
 
 //UI fix
 
