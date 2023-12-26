@@ -476,10 +476,12 @@ strong {
   background-color: transparent !important;
   /* Adjust other styles for the hover state */
 }
+
 @font-face {
   font-family: "Panterick";
   src: url("../webfonts/Panterick.ttf");
 }
+
 .user-friendly-paragraph {
   font-family: Panterick;
   font-size: 45px;
