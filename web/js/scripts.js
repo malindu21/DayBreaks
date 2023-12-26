@@ -38,15 +38,15 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
   const typewriterElement1 = document.getElementById("typewriter-text");
   const cursorElement1 = document.getElementById("cursor");
 
-  const imageUrls = [
+  // const imageUrls = [
 
 
-    "images/header/header_1.webp",
-    "images/header/header_2.webp",
-    "images/header/header_4.webp",
-    "images/header/header_5.webp",
-    // Add more image URLs as needed
-  ];
+  //   "images/header/header_1.webp",
+  //   "images/header/header_2.webp",
+  //   "images/header/header_4.webp",
+  //   "images/header/header_5.webp",
+  //   // Add more image URLs as needed
+  // ];
 
   // // Second Typewriter
   // const typewriterElementBox1 = document.getElementById('typewriter-text-box-1');
@@ -58,13 +58,13 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
 
   /* Preloader */
   $(window).on("load", function () {
-    var preloaderFadeOutTime = 250;
+    var preloaderFadeOutTime = 100;
 
     function hidePreloader() {
       var preloader = $(".spinner-wrapper");
       setTimeout(function () {
         preloader.fadeOut(preloaderFadeOutTime);
-      }, 250);
+      }, 100);
     }
 
     hidePreloader();
