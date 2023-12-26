@@ -1325,7 +1325,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 }
 .navbar-custom .nav-item .nav-link {
   padding: 0.625rem 0.75rem 0.625rem 0.75rem;
-  color: #787976;
+  color: #ffffff;
   text-decoration: none;
   transition: all 0.2s ease;
   text-align: center;
@@ -1428,13 +1428,15 @@ input.cmn-toggle-round-flat:checked + label:after {
 /*********************/
 .header {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url("../images/header-background.jpg") center center no-repeat;
+    url("../images/header/header_2.webp"), center center no-repeat;
   background-size: cover;
   border-radius: 20px;
   height: 90%;
   width: 100%;
   margin: 0;
   padding: 0;
+  transition: 0.5s ease-out; /* Add a transition effect for a smooth change */
+
 }
 /* Wrapper to Center the Typewriter */
 .wrapper {
@@ -1586,7 +1588,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 .cards-2 .card-body {
   border-color: #111;
   border-width: 2px;
-  background: url("../images/Sample_Image_of_Video_1.jpg") center center
+  background: url("../images/clif/3.webp") center center
     no-repeat;
     background-size: cover;
   padding: 20px;
@@ -1606,7 +1608,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 .cards-5 .card-body {
   border-color: #111;
   border-width: 2px;
-  background: url("../images/Sample_Image_of_Video_2.jpg") center center
+  background: url("../images/beach_to_greenery/1.webp") center center
     no-repeat;
   padding: 20px;
   background-size: cover;
@@ -2269,7 +2271,7 @@ a:hover.back-to-top {
     color: #fff;
   }
   .navbar-custom.top-nav-collapse .nav-item .nav-link {
-    color: #787976;
+    color: #ffffff;
   }
 
   .navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
@@ -2617,8 +2619,9 @@ a:hover.back-to-top {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end; /* Center vertically and horizontally */
     color: #111;
-    justify-content: flex-end;
+  
   }
   .cards-2 .col-lg-12 div.card:nth-child(3n + 2) {
     margin-right: 3rem;

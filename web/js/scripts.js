@@ -38,6 +38,16 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
   const typewriterElement1 = document.getElementById("typewriter-text");
   const cursorElement1 = document.getElementById("cursor");
 
+  const imageUrls = [
+
+
+    "images/header/header_1.webp",
+    "images/header/header_2.webp",
+    "images/header/header_4.webp",
+    "images/header/header_5.webp",
+    // Add more image URLs as needed
+  ];
+
   // // Second Typewriter
   // const typewriterElementBox1 = document.getElementById('typewriter-text-box-1');
   // const typewriterElementBox2 = document.getElementById('typewriter-text-box-2');
@@ -288,6 +298,24 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
     }
     $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
   }
+
+
+
+   function changeBackgroundImage() {
+      const header = document.getElementById('header');
+      const randomIndex = Math.floor(Math.random() * imageUrls.length);
+      const randomImageUrl = imageUrls[randomIndex];
+
+      // Use the Image object to preload the image before updating the background
+      const tempImage = new Image();
+      tempImage.src = randomImageUrl;
+      tempImage.onload = function () {
+        header.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("${randomImageUrl}")`;
+      };
+    }
+
+    // Change the background image every 5 seconds (adjust the interval as needed)
+    setInterval(changeBackgroundImage, 5000);
 
   /* Back To Top Button */
   // create the back to top button
