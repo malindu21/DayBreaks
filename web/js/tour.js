@@ -1,4 +1,17 @@
 
+  /* Preloader */
+  $(window).on("load", function () {
+    var preloaderFadeOutTime = 250;
+
+    function hidePreloader() {
+      var preloader = $(".spinner-wrapper");
+      setTimeout(function () {
+        preloader.fadeOut(preloaderFadeOutTime);
+      }, 250);
+    }
+
+    hidePreloader();
+  });
 
 
 const package001 = {
@@ -668,7 +681,6 @@ const package003 = {
   packageMeetAndPickUp: "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
 };
 
-
 const package004 = {
   // ... your dummy data here
 
@@ -884,8 +896,6 @@ const areaPlusWrapper = document.querySelector(".area-plus-wrapper");
 var backgroundImageUrls = [];
 let currentIndex = 0;
 let intervalId;
-
-
 
 insertSectionsIntoContainer();
 function insertSectionsIntoContainer() {
@@ -1110,33 +1120,34 @@ function insertSectionsIntoContainer() {
 
 
 changeBackground();
+function changeBackground(index) {
+  currentIndex = (currentIndex + 1) % backgroundImageUrls.length;
+
+  const nextImage = new Image();
+  nextImage.src = backgroundImageUrls[index ?? 0];
+
+  // Show spinner
+  showSpinner();
+
+  nextImage.onload = function () {
+    // Set a smooth transition for background-image
+    area2.style.transition = "background-image 0.5s";
+
+    // Crossfade effect
+    area2.style.backgroundImage = `url('${nextImage.src}')`;
+
+    areaPlus.style.transition = "background-image 0.5s";
+
+    // Crossfade effect
+    areaPlus.style.backgroundImage = `url('${nextImage.src}')`;
+
+    // Hide spinner once the image is loaded
+    hideSpinner();
+
+    //resetInterval();
+  };
+}
 //startAutoScroll();
-
-
-var data = {
-  whatToWear: ["Comfortable clothing", "Walking shoes", "Sunscreen", "Jacket"],
-  notAllowed: [
-    "Luggage and large bags",
-    "Pets",
-    "Smoking on-board",
-    "More than 4 passengers per booking",
-  ],
-  knowBeforeYouGo: [
-    "You will receive confirmation at the time of booking",
-    "You must be at least 18 years old to drink alcohol",
-    "Please note that a moderate amount of walking is involved",
-    "Destination entrance fees and nature walk fees are included",
-    "Beverages will be provided",
-    "Breakfast will not be provided (stop to purchase at own expenses)",
-    "Lunch will be provided",
-    "Child car seat available for Toddler and kids under the age of 7",
-  ],
-  notSuitableFor: [
-    "Wheelchair users",
-    "Travelers with heart problems or other serious medical conditions",
-    "Pregnant women",
-  ],
-};
 
 // Populate the dropdown with options
 // var dropdown = document.getElementById("dropdown");
@@ -1159,24 +1170,7 @@ var data = {
 //     infoDiv.textContent = selectedOption;
 // });
 
-function createSection(iconClass, title, description) {
-  const div = document.createElement("div");
-  div.className = "white-box-tours";
 
-  div.innerHTML = `
-            <div class="custom-col-wider">
-            <h3> m </h3>
-            </div>
-            <pre></pre>
-            <div class="custom-col-narrower">
-                <h3>${title}</h3>
-                <p>${description}</p>
-            
-            </div>
-        `;
-
-  return div;
-}
 function aboutThisActivity(topic, desc, iconClass) {
   const container = document.getElementById("dynamic-boxes-container");
   const whiteBox = document.createElement("div");
@@ -1222,7 +1216,6 @@ function aboutThisActivity(topic, desc, iconClass) {
     whiteBox.style.width = "45%";
   }
 }
-
 function createIterity(iconClass, title, description, duration,package) {
   const div = document.createElement("div");
   div.className = "white-box-tours";
@@ -1247,7 +1240,6 @@ function createIterity(iconClass, title, description, duration,package) {
         </div>`;
   return div;
 }
-
 function meetAndPickUpSection(index, description) {
   const div = document.createElement("div");
 
@@ -1282,7 +1274,6 @@ function meetAndPickUpSection(index, description) {
 
   return div;
 }
-
 function importantInfomationSection(title, items) {
   const div = document.createElement("div");
 
@@ -1320,7 +1311,6 @@ function importantInfomationSection(title, items) {
 
   return div;
 }
-
 function populateList(dynamicData) {
   var dynamicNameElement = document.getElementById("dynamicName");
 
@@ -1363,8 +1353,6 @@ function populateList(dynamicData) {
       listContainer.appendChild(listItem);
   });
 }
-
-
 function getTitle(title) {
   switch (title) {
     case "whatToWear":
@@ -1444,60 +1432,18 @@ function packageDescSection(desc) {
   return div;
 }
 
-function packageDurationSection(duration) {
-  const div = document.createElement("div");
-  div.innerHTML = `
-            <div >
-            <p>${duration}</p>
-            </div>
-        `;
-  return div;
-}
 
 // tour.js
 
-
-
 // Initial start of auto-scroll
-
 
 // To restart the auto-scroll, call startAutoScroll() again
 
-
 // Example: Add images dynamically
-
 
 // Loop through the image sources and add them to the list
 
 
-
-function changeBackground(index) {
-  currentIndex = (currentIndex + 1) % backgroundImageUrls.length;
-
-  const nextImage = new Image();
-  nextImage.src = backgroundImageUrls[index ?? 0];
-
-  // Show spinner
-  showSpinner();
-
-  nextImage.onload = function () {
-    // Set a smooth transition for background-image
-    area2.style.transition = "background-image 0.5s";
-
-    // Crossfade effect
-    area2.style.backgroundImage = `url('${nextImage.src}')`;
-
-    areaPlus.style.transition = "background-image 0.5s";
-
-    // Crossfade effect
-    areaPlus.style.backgroundImage = `url('${nextImage.src}')`;
-
-    // Hide spinner once the image is loaded
-    hideSpinner();
-
-    //resetInterval();
-  };
-}
 
 function showSpinner() {
   // Show the spinner element
@@ -1514,11 +1460,6 @@ function hideSpinner() {
     spinnerWrapper.style.display = "none";
   }
 }
-
-
-
-
-
 
 
 function scrollToBottom() {
@@ -1674,8 +1615,8 @@ function hideSlider() {
   var element = document.getElementById("HTourWrap");
   stopAutoScroll();
 if (element.style.display === "none") {
-// If the element is currently hidden, show it
-element.style.display = "block"; // You can use "block" or "inline" based on your layout
+
+    element.style.display = "block"; // You can use "block" or "inline" based on your layout
 } else {
 // If the element is currently visible, hide it
 
