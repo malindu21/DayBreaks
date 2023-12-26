@@ -57,18 +57,18 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
   // const typewriterElementBox6 = document.getElementById('typewriter-text-box-6');
 
   /* Preloader */
-  // $(window).on("load", function () {
-  //   var preloaderFadeOutTime = 500;
+  $(window).on("load", function () {
+    var preloaderFadeOutTime = 500;
 
-  //   function hidePreloader() {
-  //     var preloader = $(".spinner-wrapper");
-  //     setTimeout(function () {
-  //       preloader.fadeOut(preloaderFadeOutTime);
-  //     }, 250);
-  //   }
+    function hidePreloader() {
+      var preloader = $(".spinner-wrapper");
+      setTimeout(function () {
+        preloader.fadeOut(preloaderFadeOutTime);
+      }, 250);
+    }
 
-  //   hidePreloader();
-  // });
+    hidePreloader();
+  });
 
   $(window).on("scroll load", function () {
    if($('.navbar').length>0){
