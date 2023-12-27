@@ -718,8 +718,8 @@ strong {
 /* Adjust the styles based on your specific requirements */
 .scroll-element {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .btn-solid-lg {
   display: inline-block;
@@ -1592,10 +1592,7 @@ input.cmn-toggle-round-flat:checked + label:after {
   border-width: 2px;
 
     background-size: cover;
-  padding: 20px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 30px;
+
   height: 80vh;
   width: 95%;
 
