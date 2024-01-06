@@ -690,11 +690,6 @@ strong {
   width: 65%;
 }
 
-#howToBook{
-  display: flex;
-  align-items: center;
-}
-
 @media screen and (max-width: 980px) {
   .howToBook {
     width: 100%;
