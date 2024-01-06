@@ -169,8 +169,8 @@ html {
   html {
     padding: 0 !important;
     margin: 0;
-    width:100% !important;
-    overflow-x:hidden !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
   }
   .cards-2 {
     padding: 0 !important;
@@ -429,20 +429,20 @@ strong {
   border-radius: 20px;
 }
 
-.btn-solid-reg-wrapper{
-  box-shadow:  0px 0px 10px 0px #11111145;
+.btn-solid-reg-wrapper {
+  box-shadow: 0px 0px 10px 0px #11111145;
   z-index: 10;
   display: none;
   backdrop-filter: blur(10px);
 }
 
 @media screen and (max-width: 768px) {
-  .btn-solid-reg-wrapper{
+  .btn-solid-reg-wrapper {
     display: flex;
   }
 }
 
-.btn-solid-reg.tour{
+.btn-solid-reg.tour {
   background-color: #111 !important;
   border: 0.125rem solid #111;
   color: #fff;
@@ -464,7 +464,7 @@ strong {
   color: #111;
 }
 
-.share-btn{
+.share-btn {
   width: 55px;
   height: 55px;
   background-color: transparent;
@@ -649,7 +649,6 @@ strong {
   margin-bottom: auto;
 }
 
-
 #importantInfomation {
   display: inline-table;
   overflow-x: auto;
@@ -682,7 +681,7 @@ strong {
   margin-bottom: auto;
 }
 
-#dynamic-boxes-container .white-box-tours{
+#dynamic-boxes-container .white-box-tours {
   margin-bottom: 15px;
 }
 
@@ -1124,7 +1123,6 @@ input[type="checkbox"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 .spinnerV2 > div {
   display: inline-block;
@@ -1236,7 +1234,6 @@ input.cmn-toggle-round-flat:checked + label:after {
   margin-left: 1rem;
 }
 
-
 /* Add space between social icons (if displayed) */
 .navbar-custom .social-icons {
   display: flex;
@@ -1245,60 +1242,60 @@ input.cmn-toggle-round-flat:checked + label:after {
 }
 
 .navbar-custom .nav-item .nav-link:hover,
- .navbar-custom .nav-item .nav-link.active {
-   color: #fff;
- }
- /* Dropdown Menu */
- .navbar-custom .dropdown:hover > .dropdown-menu {
-   display: block;
-   /* this makes the dropdown menu stay open while hovering it */
-   min-width: auto;
-   animation: fadeDropdown 0.2s;
-   /* required for the fade animation */
- }
- @keyframes fadeDropdown {
-   0% {
-     opacity: 0;
-   }
-   100% {
-     opacity: 1;
-   }
- }
- .navbar-custom .dropdown-toggle:focus {
-   /* removes dropdown outline on focus */
-   outline: 0;
- }
- .navbar-custom .dropdown-menu {
-   margin-top: 0;
-   border: none;
-   border-radius: 0.25rem;
-   background-color: #111;
- }
- .navbar-custom .dropdown-item {
-   color: #fff;
-   text-decoration: none;
- }
- .navbar-custom .dropdown-item:hover {
-   background-color: #111;
- }
- .navbar-custom .dropdown-item .item-text {
-   font: 600 0.875rem/0.875rem "Open Sans", sans-serif;
- }
- .navbar-custom .dropdown-item:hover .item-text {
-   color: #14bf98;
- }
- .navbar-custom .dropdown-items-divide-hr {
-   width: 100%;
-   height: 1px;
-   margin: 0.75rem auto 0.75rem auto;
-   border: none;
-   background-color: #b5bcc4;
-   opacity: 0.2;
- }
- /* end of dropdown menu */
- .navbar-custom .social-icons {
-   display: none;
- }
+.navbar-custom .nav-item .nav-link.active {
+  color: #fff;
+}
+/* Dropdown Menu */
+.navbar-custom .dropdown:hover > .dropdown-menu {
+  display: block;
+  /* this makes the dropdown menu stay open while hovering it */
+  min-width: auto;
+  animation: fadeDropdown 0.2s;
+  /* required for the fade animation */
+}
+@keyframes fadeDropdown {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.navbar-custom .dropdown-toggle:focus {
+  /* removes dropdown outline on focus */
+  outline: 0;
+}
+.navbar-custom .dropdown-menu {
+  margin-top: 0;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #111;
+}
+.navbar-custom .dropdown-item {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-custom .dropdown-item:hover {
+  background-color: #111;
+}
+.navbar-custom .dropdown-item .item-text {
+  font: 600 0.875rem/0.875rem "Open Sans", sans-serif;
+}
+.navbar-custom .dropdown-item:hover .item-text {
+  color: #14bf98;
+}
+.navbar-custom .dropdown-items-divide-hr {
+  width: 100%;
+  height: 1px;
+  margin: 0.75rem auto 0.75rem auto;
+  border: none;
+  background-color: #b5bcc4;
+  opacity: 0.2;
+}
+/* end of dropdown menu */
+.navbar-custom .social-icons {
+  display: none;
+}
 .navbar-custom .navbar-brand {
   font-size: 0;
 }
@@ -1336,10 +1333,9 @@ input.cmn-toggle-round-flat:checked + label:after {
   margin-bottom: 1rem;
 }
 
-.navbar-custom .nav-item .nav-link:hover{
+.navbar-custom .nav-item .nav-link:hover {
   color: #fff;
 }
-
 
 .switch-container {
   display: inline-flex;
@@ -1441,7 +1437,6 @@ input.cmn-toggle-round-flat:checked + label:after {
   background-position: 50% 65%;
   background-blend-mode: darken;
   background-color: #00000020;
-
 }
 /* Wrapper to Center the Typewriter */
 .wrapper {
@@ -1469,6 +1464,9 @@ input.cmn-toggle-round-flat:checked + label:after {
   }
 }
 @media (max-width: 768px) {
+  .boxes-container {
+    margin-bottom: 15px;
+  }
   .btn-custom {
     font: 700 0.8rem "Montserrat", sans-serif;
     padding: 1rem;
@@ -1594,7 +1592,7 @@ input.cmn-toggle-round-flat:checked + label:after {
   border-color: #111;
   border-width: 2px;
 
-    background-size: cover;
+  background-size: cover;
 
   height: 80vh;
   width: 95%;
@@ -1675,8 +1673,9 @@ input.cmn-toggle-round-flat:checked + label:after {
   background-color: rgba(255, 255, 255, 0.09);
 }
 
-.area-plus , .area-2 {
-  background: url("../images/header-background.jpg")  no-repeat;
+.area-plus,
+.area-2 {
+  background: url("../images/header-background.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -1739,7 +1738,7 @@ input.cmn-toggle-round-flat:checked + label:after {
   z-index: 5;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .book-buttons-v2 {
     display: none !important;
   }
@@ -2179,8 +2178,8 @@ input.cmn-toggle-round-flat:checked + label:after {
   }
 }
 
-@media (max-width:768px) {
-  .chevron{
+@media (max-width: 768px) {
+  .chevron {
     bottom: 20%;
   }
 }
@@ -2478,7 +2477,7 @@ a:hover.back-to-top {
     background-color: rgba(255, 255, 255, 0.09);
   }
 
-  .area-plus-accordion{
+  .area-plus-accordion {
     height: 93vh;
     overflow-y: auto;
   }
@@ -2608,7 +2607,6 @@ a:hover.back-to-top {
     margin-top: 0.5rem;
   }
   .card5 .card-body {
- 
     padding: 20px;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -2620,7 +2618,6 @@ a:hover.back-to-top {
     align-items: center;
     justify-content: flex-end; /* Center vertically and horizontally */
     color: #111;
-  
   }
   .cards-2 .col-lg-12 div.card:nth-child(3n + 2) {
     margin-right: 3rem;
@@ -2820,13 +2817,13 @@ b {
 .white-box-tours {
   width: 450px;
   transition: transform 0.2s;
-/*  margin: 15px;*/
+  /*  margin: 15px;*/
   display: inline-flex;
   border-radius: 10px;
   align-items: flex-start;
   /* Vertically center the content */
   text-align: center;
- /* padding: 5px;*/
+  /* padding: 5px;*/
   border-radius: 15px;
 
   flex-shrink: 0;
