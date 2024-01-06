@@ -690,6 +690,11 @@ strong {
   width: 65%;
 }
 
+#howToBook{
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 980px) {
   .howToBook {
     width: 100%;
@@ -2600,7 +2605,7 @@ a:hover.back-to-top {
     height: 100vh;
   }
   .cards-2 .card-body {
-    padding: 2.25rem 2.5rem 2.5rem 2.5rem;
+    padding: 1.8rem 2.5rem;
   }
   .card5 {
     align-items: center;
@@ -2614,7 +2619,7 @@ a:hover.back-to-top {
     margin-bottom: 3rem;
     border-radius: 20px;
     opacity: 0.9;
-    padding: 2.25rem 2.5rem 2.5rem 2.5rem;
+    padding: 1.8rem 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
