@@ -1438,6 +1438,9 @@ input.cmn-toggle-round-flat:checked + label:after {
   margin: 0;
   padding: 0;
   transition: 0.5s ease-out; /* Add a transition effect for a smooth change */
+  background-position: 50% 65%;
+  background-blend-mode: darken;
+  background-color: #00000015;
 
 }
 /* Wrapper to Center the Typewriter */
