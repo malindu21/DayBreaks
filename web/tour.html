@@ -645,6 +645,17 @@
         addTourType("VAN");
         updatePrice(vanPrice);
         updateSmallPrice(van4Price);
+
+        function formatPrice(price) {
+            price = parseFloat(price);
+            if (isNaN(price)) {
+                return "Invalid Price";
+            }
+            price = price.toFixed(2);
+            let parts = price.split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return parts.join(".");
+        }
         function selectButton(button) {
             // Remove 'active' class from all buttons
             $('.btn-group button').removeClass('active');
@@ -679,12 +690,17 @@
         }
 
         function updatePrice(tourPrice) {
-            document.getElementById('tourPrice').innerText = "$" + tourPrice;
+
+            document.querySelectorAll('#tourPrice').forEach(ele => {
+                ele.innerText = formatPrice(tourPrice)
+            });
             localStorage.setItem('tourPrice', tourPrice);
         }
 
         function updateSmallPrice(tourSmallPrice) {
-            document.getElementById('tourSmallPrice').innerText = "( $" + tourSmallPrice + " per person )";
+            document.querySelectorAll('#tourSmallPrice').forEach(ele => {
+                ele.innerText = "( $" + tourSmallPrice + " per person )";
+            })
             localStorage.setItem('tourSmallPrice', tourSmallPrice);
         }
 

@@ -35,6 +35,17 @@ const ticketType = localStorage.getItem("tourType");
 
 //UI fix
 
+function formatPrice(price) {
+  price = parseFloat(price);
+  if (isNaN(price)) {
+      return "Invalid Price";
+  }
+  price = price.toFixed(2);
+  let parts = price.split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const pickup = document.getElementById("pickup-drop-col");
   const pickupDate = document.getElementById("pickup-date-col");
@@ -408,9 +419,9 @@ function calculateValue(status) {
   // Perform calculations (e.g., double the value)
   var result = 0;
   document.getElementById("price-breakdown").innerHTML =
-    "$" + priceValue.toFixed(2);
+    "$" + formatPrice(priceValue);
     document.getElementById("price").innerHTML =
-    "$" + priceValue.toFixed(2);
+    "$" + formatPrice(priceValue);
 
     document.getElementById("priceSmall").innerHTML = 
     "( $" +  + priceSmallValue.toFixed(2) + " per person )";
@@ -428,7 +439,7 @@ function calculateValue(status) {
   }
   // Display the result (you can modify this based on your requirements)
   priceElement.forEach((element) => {
-    element.innerHTML = "$" + result.toFixed(2);
+    element.innerHTML = "$" + formatPrice(result);
   });
 }
 
