@@ -51,9 +51,12 @@
     <!-- Preloader -->
     <div class="spinner-wrapper">
         <div class="spinner">
-<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                type="module"></script>
 
-    <dotlottie-player src="https://lottie.host/6bc6b050-b6ea-44fb-b1ae-2c753e62f45f/R7VhoMr4Wo.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></dotlottie-player>
+            <dotlottie-player src="https://lottie.host/6bc6b050-b6ea-44fb-b1ae-2c753e62f45f/R7VhoMr4Wo.json"
+                background="transparent" speed="1" style="width: 200px; height: 200px;" loop
+                autoplay></dotlottie-player>
         </div>
     </div>
     <!-- end of preloader -->
@@ -61,19 +64,15 @@
     <!-- Details Section -->
     <div id="details" class="accordion">
         <div class="area-1" loading="lazy">
-       
-
             <div class="button-container-left">
                 <a href="index.html" role="button"
                     class="btn text-white back-button blur-bgV2 px-4 py-2 cursor-pointer">
                     <i class="fa-solid fa-arrow-left me-2"></i>
                     <span>Go Back</span>
                 </a>
-
             </div>
 
             <div class="image-loader-wrapper">
-
                 <div class="lds-ring">
                     <div></div>
                     <div></div>
@@ -88,19 +87,13 @@
                     <i class="fa-solid fa-share me-2"></i>
                     <span>Share</span>
                 </a>
-
             </div>
-
-
-
-
-
 
             <div id="HTourWrap" class="HTourWrap" style="display: flex;">
                 <ul class="HTourlist" id="tourGrid">
-                  <!-- Existing list items -->
+                    <!-- Existing list items -->
                 </ul>
-              </div>
+            </div>
 
 
             <!-- Circle Buttons Container -->
@@ -111,11 +104,6 @@
                     <i class="fas fa-stop"></i>
                 </button>
             </div> -->
-
-
-
-
-        
         </div>
     </div><!-- End of Details Section -->
 
@@ -169,16 +157,15 @@
                                                     style="margin-bottom: 7.5px; line-height: 13px;">
                                                     Max <span id="maxNumber">7</span> travellers
                                                 </div>
-                                                <div
-                                                    style="white-space: nowrap; display: flex; flex-direction: column; align-items: flex-start; line-height: 22px;">
+                                                <div class="tour-price-summary">
                                                     <span id="tourPrice"
                                                         style="font-size: large; font-weight: bold; margin-bottom: -5px;">$880</span>
                                                     <span id="tourSmallPrice" style="font-size: x-small;">($100 per
                                                         person)</span>
                                                 </div>
                                             </div>
-                                            <img loading="lazy" class="tourIcon" id="iconImage" src="images/van.png" alt="Icon"
-                                            style="width: 45px; height: 30px;margin-right:20px;">
+                                            <img loading="lazy" class="tourIcon" id="iconImage" src="images/van.png"
+                                                alt="Icon" style="width: 45px; height: 30px;margin-right:20px;">
                                         </div>
                                     </div>
                                 </div>
@@ -204,22 +191,11 @@
         </div> <!-- end of fixed inside-fcontainer -->
     </div> <!-- end of fcontainer -->
 
-
-
-
-
-
-
-
-
     <div class="centerc" onclick="scrollToBottom()">
         <div class="chevron"></div>
         <div class="chevron"></div>
         <div class="chevron"></div>
     </div>
-
-
-
 
     <div id="howToBook" class="overflow-x-hidden howToBook">
         <pre></pre>
@@ -382,10 +358,11 @@
     <div style="height: 5px;"></div>
     <!---fixed book now start--->
     <div
-        class="btn-solid-reg-wrapper container-fluid position-fixed bottom-0 px-3 py-2 align-items-center justify-content-between">
-        <a class="btn-solid-reg w-75 tour" href="booking_form.html">Book Now</a>
-        <div role="button" class="share-btn d-flex justify-content-center align-items-center view-modal">
-            <i class="fa-solid fa-share text-black fs-5"></i>
+        class="fixed-menu btn-solid-reg-wrapper container-fluid position-fixed bottom-0 px-3 py-2 align-items-center justify-content-between">
+        <a class="btn-solid-reg flex-fill tour" href="booking_form.html">Book Now</a>
+        <div class="tour-price-summary">
+            <span id="tourPrice" style="font-size: large; font-weight: bold;">$880</span>
+            <span id="tourSmallPrice" style="font-size: x-small;">($100 per person)</span>
         </div>
     </div>
     <!---fixed book now end--->
