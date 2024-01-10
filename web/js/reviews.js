@@ -6,7 +6,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar1.jpg",
     name: "Michael Roberts",
-    job: "Software Developer",
+    job: "",
     img: "https://t4.ftcdn.net/jpg/02/91/24/27/360_F_291242770_z3XC7rJB1Mvc5jVMsEY9Dx2xMrX4sxUi.jpg",
     review:
       "Unforgettable Adventure! From start to finish, Daybreak exceeded our expectations.",
@@ -16,7 +16,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar2.jpg",
     name: "Alice Smith",
-    job: "Graphic Designer",
+    job: "",
     img: "./images/review2.jpg",
     review:
       "Seamless organization, friendly guides, and a truly memorable experience. Highly recommend!",
@@ -26,7 +26,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar3.jpg",
     name: "David Nguyen ",
-    job: "Software Engineer",
+    job: "",
     img: "./images/review3.jpg",
     review:
       "Outstanding customer service, and the complimentary beverages added a delightful touch to the experience.",
@@ -36,7 +36,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar4.jpg",
     name: "Sarah Lopez",
-    job: "Registered Nurse",
+    job: "",
     img: "https://t4.ftcdn.net/jpg/02/91/24/27/360_F_291242770_z3XC7rJB1Mvc5jVMsEY9Dx2xMrX4sxUi.jpg",
     review:
       "Well-organized private tours, comfortable travel, and the avoidance of cramped buses—this tour company knows how to create a seamless and spacious experience",
@@ -46,7 +46,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar5.jpg",
     name: "Daniel Garcia ",
-    job: "Financial Analyst",
+    job: "",
     img: "./images/review2.jpg",
     review:
       "The traveler's guide was a brilliant addition, offering fascinating insights into each destination. A perfect blend of fun and education—highly recommended!",
@@ -56,7 +56,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar6.jpg",
     name: "Rebecca Singh",
-    job: "Project Manager",
+    job: "",
     img: "./images/review3.jpg",
     review:
       "Outstanding customer service from booking to the trip's end. Responsive, accommodating, and dedicated staff!",
@@ -66,7 +66,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar7.jpg",
     name: "Christopher Patel",
-    job: "Mechanical Engineer",
+    job: "",
     img: "./images/review2.jpg",
     review:
       "Well-organized, comfortable, and stress-free. This tour company knows how to create a seamless experience. Highly impressed!",
@@ -76,7 +76,7 @@ const reviewList = [
     profilePic:
       "images/reviews/review_avatar8.jpg",
     name: "Emily Martinez",
-    job: "Accountant",
+    job: "",
     img: "./images/review3.jpg",
     review:
       "Unique and authentic encounters set this tour apart. Explored hidden gems and connected with the local culture. A truly special journey.",

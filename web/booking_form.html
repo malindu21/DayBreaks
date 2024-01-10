@@ -351,7 +351,36 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   <script src="js/booking.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDikl81rfLTB-y67jaqbY21q2-jb0bhgmo",
+        authDomain: "daybreak-4a1c8.firebaseapp.com",
+        projectId: "daybreak-4a1c8",
+        storageBucket: "daybreak-4a1c8.appspot.com",
+        messagingSenderId: "950035784259",
+        appId: "1:950035784259:web:99bc447df8593257cb2af6",
+        measurementId: "G-HW2WXHZ76Y"
+      };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+    var database = firebase.database();
+    var usersRef = database.ref('users');
+    usersRef.child('dates').on('value', function(snapshot) {
+      var dates = snapshot.val();
+      console.log(dates);
+    });
+
+  </script>
+
 </body>
 
 </html>

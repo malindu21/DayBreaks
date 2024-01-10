@@ -1,3 +1,5 @@
+import { getDatabase, ref, set } from "firebase/database";
+
 const cityTextBox = document.getElementById("city");
 const citySearchResults = document.getElementById("search-results");
 let addressList = [];
