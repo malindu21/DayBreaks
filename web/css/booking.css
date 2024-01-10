@@ -414,3 +414,7 @@ label {
     margin-bottom: 15px !important;
   }
 }
+
+.flatpickr-disabled{
+  color: rgba(57,57,57,0.5) !important;
+}

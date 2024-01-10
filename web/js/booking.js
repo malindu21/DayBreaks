@@ -1,5 +1,3 @@
-import { getDatabase, ref, set } from "firebase/database";
-
 const cityTextBox = document.getElementById("city");
 const citySearchResults = document.getElementById("search-results");
 let addressList = [];
@@ -40,7 +38,7 @@ const ticketType = localStorage.getItem("tourType");
 function formatPrice(price) {
   price = parseFloat(price);
   if (isNaN(price)) {
-      return "Invalid Price";
+    return "Invalid Price";
   }
   price = price.toFixed(2);
   let parts = price.split(".");
@@ -52,15 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const pickup = document.getElementById("pickup-drop-col");
   const pickupDate = document.getElementById("pickup-date-col");
   const additionalMessage = document.getElementById("additional-message-col");
-     if(window.innerHeight < 850){
-      pickup.classList.remove("col-lg-6");
-      pickup.classList.add("col-lg-4");
-      pickupDate.classList.remove("col-lg-6");
-      pickupDate.classList.add("col-lg-4");
-      additionalMessage.classList.add("col-lg-4");
-      document.getElementById("additional_details").setAttribute("rows",2);
-     }
-})
+  if (window.innerHeight < 850) {
+    pickup.classList.remove("col-lg-6");
+    pickup.classList.add("col-lg-4");
+    pickupDate.classList.remove("col-lg-6");
+    pickupDate.classList.add("col-lg-4");
+    additionalMessage.classList.add("col-lg-4");
+    document.getElementById("additional_details").setAttribute("rows", 2);
+  }
+});
 
 getAllPackages();
 calculateValue(false);
@@ -74,7 +72,7 @@ function getAllPackages() {
       )[0];
 
       document.getElementById("package-title").innerHTML = dataset.title;
-      packageName = dataset.title
+      packageName = dataset.title;
       document.getElementById("main-bg").style.background =
         "url(" + dataset.backgroundImageUrls[0] + ") no-repeat center center";
       document.getElementById("main-bg").style.backgroundSize = "cover";
@@ -326,25 +324,18 @@ function calcDistance(startCoords, destCoords) {
   return distanceInKilometers;
 }
 
-//enable custom datepicker
 
-flatpickr("input[type=datetime-local]", {
-  minDate: "today",
-});
 
 function generateNamesString() {
   let namesString = "";
   travellerDetails.forEach((e) => {
     namesString += e.value.name + " - " + e.value.age + ",";
   });
-   console.log(namesString)
+  console.log(namesString);
   return namesString.slice(0, -1);
 }
 
-
 function validateCheckout() {
-
-
   selectedDate = document.getElementById("schedule-date").value;
   if (ticketType === "") {
     showToast("Please select your ticket type to continue.");
@@ -362,11 +353,10 @@ function validateCheckout() {
     showToast("Please select your tour date to continue.");
   } else {
     addTicketWidget(ticketType);
-    $("#ttWidgetModal").modal('show');
-   // showPopupWithDelay();
+    $("#ttWidgetModal").modal("show");
+    // showPopupWithDelay();
   }
 }
-
 
 function showPopupWithDelay() {
   //myPopup.classList.add("show");
@@ -422,11 +412,10 @@ function calculateValue(status) {
   var result = 0;
   document.getElementById("price-breakdown").innerHTML =
     "$" + formatPrice(priceValue);
-    document.getElementById("price").innerHTML =
-    "$" + formatPrice(priceValue);
+  document.getElementById("price").innerHTML = "$" + formatPrice(priceValue);
 
-    document.getElementById("priceSmall").innerHTML = 
-    "( $" +  + priceSmallValue.toFixed(2) + " per person )";
+  document.getElementById("priceSmall").innerHTML =
+    "( $" + +priceSmallValue.toFixed(2) + " per person )";
 
   if (status == true) {
     result = priceValue + 50;
@@ -452,7 +441,8 @@ function addTicketWidget(ref) {
   var url =
     "https://www.tickettailor.com/all-tickets/daybreak/?ref=" +
     generatedKeyword +
-    "&srch=" + generateWidgetRef(ref);
+    "&srch=" +
+    generateWidgetRef(ref);
 
   scriptElement.src = "https://cdn.tickettailor.com/js/widgets/min/widget.js";
   scriptElement.setAttribute("data-url", url);
@@ -467,8 +457,6 @@ function addTicketWidget(ref) {
   scriptElement.setAttribute("data-inline-ref", "website_widget");
 
   widgetContainer.appendChild(scriptElement);
-
-
 }
 
 // Call the function to add the widget when the page loads
@@ -568,4 +556,6 @@ function generateUniqueKeyword(string1, string2, length = 15) {
   return keyword;
 }
 
-function generateWidgetRef(packageType) {return packageName + " " + pachageCat + " " + packageType;}
+function generateWidgetRef(packageType) {
+  return packageName + " " + pachageCat + " " + packageType;
+}
