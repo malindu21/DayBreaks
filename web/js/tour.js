@@ -21,7 +21,7 @@ const package001 = {
     title: "Into the forest",
     subTitle: "Black Spur Drive, rainforests & waterfalls",
     desc: "Embark on a picturesque journey through lush apple orchards, serene rainforests, and iconic Australian forests, all while savouring quick coffee breaks and exploring charming towns along the way. Be captivated by one of the state's tallest waterfalls, before concluding the day with a mesmerizing sunset, overlooking the majestic mountains.",
-    duration: "Duration: 11.00 Hours",
+    duration: "Duration: 12.00 Hours",
     backgroundImageUrls: [
       "images/into_the_forest/0.webp",
       "images/into_the_forest/1.webp",
@@ -144,7 +144,7 @@ const package001 = {
     section2: {
       iconClass: "fas fa-clock fa-inverse",
       title: "Duration",
-      description: "11 hours",
+      description: "12 hours",
     },
     section3: {
       iconClass: "fas fa-clock fa-inverse",
@@ -1226,7 +1226,7 @@ function createIterity(iconClass, title, description, duration,package) {
             <div class="circle-tours">${iconClass}</div>
             <div class="white-box-tours" style="width: 80%; " >  
             <div class="comment">
-              <p>${title}</p>
+              <h2> ${title} </h2>
               <p>${description}</p>
               <h3 style="color:#5F6672">${duration}</h3>
             </div>
