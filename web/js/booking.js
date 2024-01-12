@@ -467,6 +467,10 @@ document
   .addEventListener("change", function (e) {
     // Get the selected date
     selectedDate = e.target.value;
+    let year = selectedDate.split('-')[0]
+    let month = selectedDate.split('-')[1]
+    let day = selectedDate.split('-')[2]
+    selectedDate = day + '/' + month + '/' + year;
     console.log(selectedDate);
   });
 
