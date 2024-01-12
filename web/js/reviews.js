@@ -9,7 +9,7 @@ const reviewList = [
     job: "",
     img: "https://t4.ftcdn.net/jpg/02/91/24/27/360_F_291242770_z3XC7rJB1Mvc5jVMsEY9Dx2xMrX4sxUi.jpg",
     review:
-      "Unforgettable Adventure! From start to finish, Daybreak exceeded our expectations. - Michael Roberts",
+      "Unforgettable Adventure! From start to finish, Daybreak exceeded our expectations.",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const reviewList = [
     job: "",
     img: "./images/review2.jpg",
     review:
-      "Seamless organization, friendly guides, and a truly memorable experience. Highly recommend! - Alice Smith",
+      "Seamless organization, friendly guides, and a truly memorable experience. Highly recommend!",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const reviewList = [
     job: "",
     img: "./images/review3.jpg",
     review:
-      "Outstanding customer service, and the complimentary beverages added a delightful touch to the experience. - David Nguyen",
+      "Outstanding customer service, and the complimentary beverages added a delightful touch to the experience.",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const reviewList = [
     job: "",
     img: "https://t4.ftcdn.net/jpg/02/91/24/27/360_F_291242770_z3XC7rJB1Mvc5jVMsEY9Dx2xMrX4sxUi.jpg",
     review:
-      "Well-organized private tours, comfortable travel, and the avoidance of cramped buses—this tour company knows how to create a seamless and spacious experience - Sarah Lopez",
+      "Well-organized private tours, comfortable travel, and the avoidance of cramped buses—this tour company knows how to create a seamless and spacious experience",
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const reviewList = [
     job: "",
     img: "./images/review2.jpg",
     review:
-      "The traveler's guide was a brilliant addition, offering fascinating insights into each destination. A perfect blend of fun and education—highly recommended! - Daniel Garcia",
+      "The traveler's guide was a brilliant addition, offering fascinating insights into each destination. A perfect blend of fun and education—highly recommended!",
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const reviewList = [
     job: "",
     img: "./images/review3.jpg",
     review:
-      "Outstanding customer service from booking to the trip's end. Responsive, accommodating, and dedicated staff! - Rebecca Singh",
+      "Outstanding customer service from booking to the trip's end. Responsive, accommodating, and dedicated staff!",
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ const reviewList = [
     job: "",
     img: "./images/review2.jpg",
     review:
-      "Well-organized, comfortable, and stress-free. This tour company knows how to create a seamless experience. Highly impressed! - Christopher Patel",
+      "Well-organized, comfortable, and stress-free. This tour company knows how to create a seamless experience. Highly impressed!",
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ const reviewList = [
     job: "",
     img: "./images/review3.jpg",
     review:
-      "Unique and authentic encounters set this tour apart. Explored hidden gems and connected with the local culture. A truly special journey. - Emily Martinez",
+      "Unique and authentic encounters set this tour apart. Explored hidden gems and connected with the local culture. A truly special journey.",
   },
 ];
 
@@ -113,7 +113,19 @@ function onReviewChange(isForward) {
     $(this).text(reviewList[index].job).fadeIn(500);
   });
   $("#reviewer_text").fadeOut(500, function () {
-    $(this).text(reviewList[index].review).fadeIn(500);
+    var review = reviewList[index].review;
+
+    // Split the string into the review text and the reviewer name
+    var splitReview = review.split('-');
+    var reviewText = review.replace(/"/g, '').trim();  // Remove double quotes
+    var reviewerName = reviewList[index].name.replace(/"/g, '').trim(); // Remove double quotes
+  
+    // Set the content of the <q> element with the formatted text
+    var formattedReview = '"' + reviewText + '" - ' + reviewerName;
+  
+    // Set the text and fadeIn
+    $(this).text(formattedReview).fadeIn(500);
+
   });
   $("#review_image").fadeOut(500, function () {
     $(this).attr("src", reviewList[index].img).fadeIn(500);
