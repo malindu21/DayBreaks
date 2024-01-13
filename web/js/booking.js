@@ -526,15 +526,15 @@ function submitForm(name, email, subject, message, key) {
 
       // You can add more logic here based on the PHP file's response
       if (data.includes("Message was sent successfully!")) {
-        alert("Message was sent successfully! js");
+      //  alert("Message was sent successfully! js");
         //window.location.href = 'index.php';
       } else {
-        alert("Failed to send the message.");
+      //  alert("Failed to send the message.");
       }
     })
     .catch((error) => {
       console.error("Error:", error);
-      alert("An error occurred while sending the message.");
+     // alert("An error occurred while sending the message.");
     });
 }
 
@@ -561,5 +561,7 @@ function generateUniqueKeyword(string1, string2, length = 15) {
 }
 
 function generateWidgetRef(packageType) {
-  return packageName + " " + pachageCat + " " + packageType;
+  //alert( packageName + " " + pachageCat + " " + packageType + " " + selectedDate);
+  return packageName + " " + pachageCat + " " + packageType + " " + selectedDate;
+
 }
