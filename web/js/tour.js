@@ -1,18 +1,18 @@
+/* Preloader */
+$(window).on("load", function () {
+  var preloaderFadeOutTime = 250;
 
-  /* Preloader */
-  $(window).on("load", function () {
-    var preloaderFadeOutTime = 250;
+  function hidePreloader() {
+    var preloader = $(".spinner-wrapper");
+    setTimeout(function () {
+      preloader.fadeOut(preloaderFadeOutTime);
+    }, 250);
+  }
 
-    function hidePreloader() {
-      var preloader = $(".spinner-wrapper");
-      setTimeout(function () {
-        preloader.fadeOut(preloaderFadeOutTime);
-      }, 250);
-    }
+  hidePreloader();
+});
 
-    hidePreloader();
-  });
-
+let maxPassengers = 7;
 
 const package001 = {
   // ... your dummy data here
@@ -50,7 +50,7 @@ const package001 = {
       "Luggage and large bags",
       "Pets",
       "Smoking on-board",
-      "More than 4 passengers per booking",
+      "More than " + maxPassengers + " passengers per booking",
     ],
     knowBeforeYouGo: [
       "You will receive confirmation at the time of booking",
@@ -160,7 +160,8 @@ const package001 = {
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
-      description: "Private tour for your group of maximum 4 people ",
+      description:
+        "Private tour for your group of maximum 4 people or 7 people",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -221,20 +222,18 @@ const package001 = {
         "In case the road-trip is cancelled due to severe weather conditions, you will be offered either a full refund or an alternative date to travel",
     },
   },
-   dynamicData : [
-   
+  dynamicData: [
     "<b>Kinglake</b> town exploration",
     "<b>Wirrawilla Rainforest walk</b>",
     "<b>Redwood Forest</b> walk",
     "<b>Warburton</b> town exploration",
     "<b>Steavenson Falls</b>",
     "<b>Marysville</b> town exploration",
-  
+
     "Drive through <b>Arthuur's Creek apple orchards</b>",
     "<b>Keppel Lookout</b>",
-    "Scenic journey through <b>Black Spur</b> Drive"
-],
-
+    "Scenic journey through <b>Black Spur</b> Drive",
+  ],
 
   packageMeetAndPickUp:
     "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee.",
@@ -294,7 +293,8 @@ const package002 = {
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
-      description: "Private tour for your group of maximum 4 people or 7 people",
+      description:
+        "Private tour for your group of maximum 4 people or 7 people",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -334,7 +334,6 @@ const package002 = {
     },
   },
 
-
   importantInformation: {
     whatToWear: [
       "Comfortable clothing",
@@ -346,7 +345,7 @@ const package002 = {
       "Luggage and large bags",
       "Pets",
       "Smoking on-board",
-      "More than 7 passengers per booking",
+      "More than " + maxPassengers + " passengers per booking",
     ],
     knowBeforeYouGo: [
       "You will receive confirmation at the time of booking",
@@ -378,67 +377,66 @@ const package002 = {
       title: "Ride on the Arthur’s Seat Eagle",
       description:
         "One of the region’s most iconic landmarks, Arthur’s seat will offer a panoramic view that stretches from Port Phillip Bay to the distant Melbourne skyline. Step inside a state of the art aerial gondola on Arthur’s Seat Eagle and quietly glide through the sky enjoying the scenery.",
-         duration: "20 minutes ● Aerial Fun",
+      duration: "20 minutes ● Aerial Fun",
     },
     3: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Sorrento",
       description:
         "A serene town located on a rugged coastline with pristine beaches, dramatic cliffs and crystal-clear waters. Take a stroll through the preserved heritage buildings, boutique shops and galleries which line the town’s main street! ",
-        duration: "20 minutes ● Town exploration",
+      duration: "20 minutes ● Town exploration",
     },
     4: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "LUNCH",
       description:
         "Get ready for a delectable lunch experience that’s a true taste of the region, crafted from locally sourced ingredients for a truly authentic and delightful meal.  ",
-         duration: "1 hour ● Lunch break",
+      duration: "1 hour ● Lunch break",
     },
     5: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Queenscliff to Sorrento Ferry",
       description:
         "A scenic and efficient way to travel between the coastal towns of Queenscliff and Mornington. Opportunity to soak up the sun in the ferry viewing deck or enjoy a relaxing journey inside. ",
-        duration: "1 hour ● Ferry ride",
+      duration: "1 hour ● Ferry ride",
     },
     6: {
       iconClass: "fas fa-bicycle fa-inverse",
-      title: "Point Lonsdale Coastal Trail +  Rip View Lookout (Point Lonsdale) ",
+      title:
+        "Point Lonsdale Coastal Trail +  Rip View Lookout (Point Lonsdale) ",
       description:
         "Take a stroll in the vineyard at this award-winning winery surrounded by picturesque views of the Bellarine Peninsula! Optional wine tasting available at $15 per head ",
-        duration: "40 minutes ● Coastal walk",
-    }, 
+      duration: "40 minutes ● Coastal walk",
+    },
     7: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Jack Rabbit Winery ",
       description:
         "Take a stroll keeping the ocean to your left along this expansive promenade and check out the views of Corio Bay as you walk along the pristine coastline starting from Cunningham Pier. As the day draws to a close, be treated to a spectacular golden hour or, depending on the time of the year, witness the sky come alive with a magical sunset. ",
-       duration: "1 hour ● Winery experience",
+      duration: "1 hour ● Winery experience",
     },
     8: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Geelong Waterfront walk (Starting at Cunningham Pier)",
       description:
         "Take a stroll keeping the ocean to your left along this expansive promenade and check out the views of Corio Bay as you walk along the pristine coastline starting from Cunningham Pier. As the day draws to a close, be treated to a spectacular golden hour or, depending on the time of the year, witness the sky come alive with a magical sunset. ",
-                duration: "60 minutes ● Town Exploration",
+      duration: "60 minutes ● Town Exploration",
     },
-
   },
 
-  dynamicData : [
-   
+  dynamicData: [
     "<b>Geelong</b> waterfront walk",
     "Giant <b>Sky wheel ride</b>",
     "Explore <b>Jack Rabbit winery</b>",
     "<b>Point Lonsdale</b> Coastal Trail",
     "<b>Rip View scenic lookout</b>",
     "<b>Queencliff</b> to Sorrento ferryn",
-  
+
     "<b>Sorrento</b> town exploration",
     "<b>Millionaire’s Walk</b>",
     "<b>Arthur’s Seat</b> lookout",
-    "<b>Dromana</b> beach"
-],
+    "<b>Dromana</b> beach",
+  ],
 
   packageCancellationPolicy: {
     1: {
@@ -462,7 +460,8 @@ const package002 = {
     },
   },
 
-  packageMeetAndPickUp: "Pickup included from anywhere in Melbourne within 10km radius.  Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
+  packageMeetAndPickUp:
+    "Pickup included from anywhere in Melbourne within 10km radius.  Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
 };
 
 const package003 = {
@@ -491,7 +490,6 @@ const package003 = {
     ],
   },
 
-
   importantInformation: {
     whatToWear: [
       "Comfortable clothing",
@@ -503,7 +501,7 @@ const package003 = {
       "Luggage and large bags",
       "Pets",
       "Smoking on-board",
-      "More than 7 passengers per booking",
+      "More than " + maxPassengers + " passengers per booking",
     ],
     knowBeforeYouGo: [
       "You will receive confirmation at the time of booking",
@@ -547,7 +545,8 @@ const package003 = {
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
-      description: "Private tour for your group of maximum 4 people ",
+      description:
+        "Private tour for your group of maximum 4 people or 7 people",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -599,42 +598,43 @@ const package003 = {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Great Ocean Road (Memorial Arch)",
       description:
-        "One of Melbourne’s most popular drives, this stunning coastal highway will offer some of the most breathtaking scenery in Australia! Relax and soak in the stunning coastal scenery that unfolds before you. Don’t forget to snap some photos at this famous point of the highway called Memorial Arch!  ",     
-           duration: "15 minutes ● Scenic point",
+        "One of Melbourne’s most popular drives, this stunning coastal highway will offer some of the most breathtaking scenery in Australia! Relax and soak in the stunning coastal scenery that unfolds before you. Don’t forget to snap some photos at this famous point of the highway called Memorial Arch!  ",
+      duration: "15 minutes ● Scenic point",
     },
     3: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Teddy's Lookout ",
       description:
-        "A picturesque viewpoint on the Great Ocean Road offering stunning panoramic views of the surrounding landscape including the beautiful Saint George River, the lush Otway Ranges & the blue waters of the Southern Ocean. A perfect photo spot on our road trip!  ",      
-          duration: "20 minutes ● Scenic lookout",
+        "A picturesque viewpoint on the Great Ocean Road offering stunning panoramic views of the surrounding landscape including the beautiful Saint George River, the lush Otway Ranges & the blue waters of the Southern Ocean. A perfect photo spot on our road trip!  ",
+      duration: "20 minutes ● Scenic lookout",
     },
     4: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Maits Rest Rainforest Walk",
       description:
-        "Venture into the enchanting rainforest and immerse yourself in the beauty of thick ferns and a diverse range of plant life as you enjoy a leisurely stroll. Step amongst the majestic myrtle beech trees estimated to be over 300 years old and discover a range of ancient flora and fauna. ",        duration: "30 minutes ● Forest walk",
+        "Venture into the enchanting rainforest and immerse yourself in the beauty of thick ferns and a diverse range of plant life as you enjoy a leisurely stroll. Step amongst the majestic myrtle beech trees estimated to be over 300 years old and discover a range of ancient flora and fauna. ",
+      duration: "30 minutes ● Forest walk",
     },
     5: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "LUNCH in Port Campbell",
       description:
-        "Stop for delightful lunchbreak at the colourful & lively seaside village of  Port Campbell, home to restaurants & cafes with views of beach sheltered by cliffs & Norfolk Pines. ",       
-         duration: "45 minutes ● Lunch break",
+        "Stop for delightful lunchbreak at the colourful & lively seaside village of  Port Campbell, home to restaurants & cafes with views of beach sheltered by cliffs & Norfolk Pines. ",
+      duration: "45 minutes ● Lunch break",
     },
     6: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Thunder Cave",
       description:
         "Embark on a short, exhilarating walk to reach the Thunder Cave, a natural wonder sculpted by the relentless power of the ocean. ",
-        duration: "30 minutes ● Scenic lookout",
+      duration: "30 minutes ● Scenic lookout",
     },
     7: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Gibson Steps",
       description:
         "Visit the Gibson Steps and descend to the beach using a series of steps carved into the cliff edge for a unique perspective of the offshore rock formations. Feel the immense power of the ocean as you witness the waves crashing against the rugged coastline and rocks ",
-                duration: "30 minutes ● Coastal climb down",
+      duration: "30 minutes ● Coastal climb down",
     },
     8: {
       iconClass: "fas fa-bicycle fa-inverse",
@@ -643,18 +643,16 @@ const package003 = {
         "Our road trip then leads us to our last stop, the world-famous Twelve Apostles, colossal limestone stacks rising majestically from the Southern Ocean. Enjoy a relaxing visit to the purpose-built viewing platforms. The changing light throughout the day and the backdrop of the endless ocean provide a breathtaking scene that draws visitors from all over the world! Depending on the time of year, catch golden hour or a spectacular sunset over the iconic limestone sea stacks. ",
       duration: "30 minutes ● Scenic lookout & sunset",
     },
-  
   },
-  dynamicData : [
-   
+  dynamicData: [
     "Scenic drive through the iconic <b>Great Ocean Road</b>",
     "<b>Climb</b> up <b>Split Point Lighthouse</b>",
     "<b>Teddy’s lookout<b>",
     "<b>Maits rainforest</b> walk",
     "Descend to the beach using the <b>Gibson Steps</b>",
     "Watch water crash into <b>Thunder Cave</b>",
-    "Visit the <b>12 Apostles</b>"
-],
+    "Visit the <b>12 Apostles</b>",
+  ],
 
   packageCancellationPolicy: {
     1: {
@@ -678,7 +676,8 @@ const package003 = {
     },
   },
 
-  packageMeetAndPickUp: "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
+  packageMeetAndPickUp:
+    "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
 };
 
 const package004 = {
@@ -690,7 +689,6 @@ const package004 = {
     desc: "Discover the Mornington Peninsula, where wildlife encounters, coastal walks, boutique shopping, and exploration meet seamless relaxation. Encounter native animals, learn about conservation, and stroll along the coast, collecting special mementos. Explore dramatic landscapes unique to the area, then unwind in geothermal pools, letting stress melt away amidst the serene natural beauty.",
     duration: "Duration: 12 hours",
     backgroundImageUrls: [
-
       "images/clif/1.webp",
       "images/clif/2.webp",
       "images/clif/3.webp",
@@ -706,7 +704,7 @@ const package004 = {
   },
 
   importantInformation: {
-    whatToWear : [
+    whatToWear: [
       "Comfortable clothing",
       "Walking shoes",
       "Sunscreen",
@@ -715,13 +713,13 @@ const package004 = {
       "Swimsuit",
       "Towel",
       "Bath Robe",
-      "Thongs/slides"
-  ],
+      "Thongs/slides",
+    ],
     notAllowed: [
       "Luggage and large bags",
       "Pets",
       "Smoking on-board",
-      "More than 4 passengers per booking",
+      "More than " + maxPassengers + " passengers per booking",
     ],
     knowBeforeYouGo: [
       "You will receive confirmation at the time of booking",
@@ -765,7 +763,8 @@ const package004 = {
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
-      description: "Private tour for your group of maximum 4 people or 7 people",
+      description:
+        "Private tour for your group of maximum 4 people or 7 people",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -805,8 +804,6 @@ const package004 = {
     },
   },
 
-
-
   package1Iternity: {
     1: {
       iconClass: "fas fa-car fa-inverse",
@@ -820,40 +817,39 @@ const package004 = {
       title: "Millionaire's Walk + Seashell Collection ",
       description:
         "Immerse yourself in luxury and nature on a  leisurely stroll along the Millionaire's Walk. This exclusive coastal path not only treats to opulent views of magnificent seaside mansions but also offers the chance to step down into the water's edge. Here, you can collect seashells, creating a unique memento of your visit while connecting with the coastal wonders that grace this stretch of shoreline. ",
-                duration: "1 hour ● Coastal walk & Collecting mementos",
+      duration: "1 hour ● Coastal walk & Collecting mementos",
     },
     3: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Rye",
       description:
         "Rye, a beloved coastal gem nestled on the stunning Mornington Peninsula boasts a lovely foreshore area with heaps of greenery. Discover a world of boutique shops, each offering a unique treasure trove of finds waiting to be uncovered. Enjoy the simple pleasures of a relaxing walk, indulging in retail therapy as you explore the heart of this coastal town.",
-                duration: "20 minutes ● Town exploration ",
+      duration: "20 minutes ● Town exploration ",
     },
     4: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "LUNCH",
       description:
         "Indulge in a delightful lunch featuring the finest local produce, a culinary experience that celebrates the region’s flavours and freshness.  ",
-        duration: "1 hour ● Lunch break",
+      duration: "1 hour ● Lunch break",
     },
     5: {
       iconClass: "fas fa-bicycle fa-inverse",
-      title: "Mornington Peninsula National Park (Cape Schanck Board Walk + Pebble Beach) ",
+      title:
+        "Mornington Peninsula National Park (Cape Schanck Board Walk + Pebble Beach) ",
       description:
         "The adventure continues as we continue to delve into the pristine wilderness of the Mornington Peninsula National Park. Explore the dramatic landscapes along the Cape Schanck Boardwalk, a winding path that offers breathtaking views of the wild ocean, rugged cliffs, and coastal flora. See if you can spot the Cape Schanck Lighthouse in the distance at the cliff edge. Climb down to Pebble beach where you will discover big round pebbles which now grace the shoreline replacing the golden sand we are familiar with. ",
-                duration: "45 minutes ● Coastal walk",
+      duration: "45 minutes ● Coastal walk",
     },
     6: {
       iconClass: "fas fa-bicycle fa-inverse",
       title: "Peninsula Geothermal Hot Springs  ",
       description:
-        "Conclude the day of exploration with ultimate relaxation and rejuvenation at the Peninsula Hot Springs. Renowned as a natural spa destination, this haven features geothermal pools nestled within serene landscapes. Immerse yourself in the warm, mineral-rich waters, allowing stress to melt away and your sense of well-being to soar, capping off your tour with a blissful and tranquil experience. Depending on the time of year, catch golden hour or a tranquil sunset at the amphitheatre or the hilltop pools. ",        
-        duration: "2 hours ● Relaxation",
+        "Conclude the day of exploration with ultimate relaxation and rejuvenation at the Peninsula Hot Springs. Renowned as a natural spa destination, this haven features geothermal pools nestled within serene landscapes. Immerse yourself in the warm, mineral-rich waters, allowing stress to melt away and your sense of well-being to soar, capping off your tour with a blissful and tranquil experience. Depending on the time of year, catch golden hour or a tranquil sunset at the amphitheatre or the hilltop pools. ",
+      duration: "2 hours ● Relaxation",
     },
-  
   },
-  dynamicData : [
-   
+  dynamicData: [
     "<b>Animal encounters</b> at <b>Moonlit Sanctuary</b>",
     "Walk amongst ancient seaside mansions at <b>Millionaire’s walk</b>",
     "<b>Seashell</b> collection",
@@ -861,8 +857,8 @@ const package004 = {
     "Explore <b>Mornington Peninsula National Park</b>",
     "<b>Cape Schanck</b> board walk along cliffs",
     "Explore <b>rock pools</b> and small <b>marine life</b> at <b>Pebble beach</b>",
-    "<b>Bathing</b> at Peninsula <b>Geothermal hot springs</b>"
-],
+    "<b>Bathing</b> at Peninsula <b>Geothermal hot springs</b>",
+  ],
 
   packageCancellationPolicy: {
     1: {
@@ -886,7 +882,8 @@ const package004 = {
     },
   },
 
-  packageMeetAndPickUp: "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
+  packageMeetAndPickUp:
+    "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
 };
 
 const area1 = document.querySelector(".accordion");
@@ -966,8 +963,7 @@ function insertSectionsIntoContainer() {
     );
     packageDesc.appendChild(packageDescSection(package001.details.desc));
     // packageDuration.appendChild(packageDurationSection(package001.details.duration));
-  }else if (packageId == "002"){
-    
+  } else if (packageId == "002") {
     backgroundImageUrls = [];
     backgroundImageUrls = package002.details.backgroundImageUrls;
 
@@ -1017,7 +1013,7 @@ function insertSectionsIntoContainer() {
       packageSubTitleSection(package002.details.subTitle)
     );
     packageDesc.appendChild(packageDescSection(package002.details.desc));
-  }else if (packageId == "003"){
+  } else if (packageId == "003") {
     backgroundImageUrls = [];
     backgroundImageUrls = package003.details.backgroundImageUrls;
 
@@ -1066,7 +1062,7 @@ function insertSectionsIntoContainer() {
       packageSubTitleSection(package003.details.subTitle)
     );
     packageDesc.appendChild(packageDescSection(package003.details.desc));
-  }else if (packageId == "004"){
+  } else if (packageId == "004") {
     backgroundImageUrls = [];
     backgroundImageUrls = package004.details.backgroundImageUrls;
 
@@ -1118,6 +1114,105 @@ function insertSectionsIntoContainer() {
   }
 }
 
+//===========================================================================
+
+var vanPrice = localStorage.getItem("van7Price");
+var suvPrice = localStorage.getItem("suv7Price");
+var van4Price = localStorage.getItem("van4Price");
+var suv4Price = localStorage.getItem("suv4Price");
+
+addTourType("VAN");
+updatePrice(vanPrice);
+updateSmallPrice(van4Price);
+
+function formatPrice(price) {
+  price = parseFloat(price);
+  if (isNaN(price)) {
+    return "Invalid Price";
+  }
+  price = price.toFixed(2);
+  let parts = price.split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
+}
+function selectButton(button) {
+  // Remove 'active' class from all buttons
+  $(".btn-group button").removeClass("active");
+
+  // Add 'active' class to the selected button
+  $(button).addClass("active");
+  // Check if it's the first button
+  if ($(button).is(":first-child")) {
+    // Logic for the first button
+    console.log("This is the first button. Do something special.");
+    var iconImage = document.getElementById("iconImage");
+    iconImage.src = "images/van.png"; // Change the path accordingly
+    updateMaxTravelers(7);
+    updatePrice(vanPrice);
+    updateSmallPrice(van4Price);
+    addTourType("VAN");
+    maxPassengers = 7;
+  } else {
+    // Logic for other buttons
+    console.log("This is not the first button. Do something else.");
+    var iconImage = document.getElementById("iconImage");
+    iconImage.src = "images/suv.svg"; // Change the path accordingly
+    updateMaxTravelers(4);
+    updatePrice(suvPrice);
+    updateSmallPrice(suv4Price);
+    addTourType("SUV");
+    maxPassengers = 4;
+  }
+
+  reloadImportantInformation();
+}
+
+function reloadImportantInformation() {
+  const importantInfomation = document.getElementById("importantInfomation");
+  let package = {};
+  var packageId = localStorage.getItem("packageId");
+  if (packageId == "001") {
+    package = package001;
+  } else if (packageId == "002") {
+    package = package002;
+  } else if (packageId == "003") {
+    package = package003;
+  } else if (packageId == "004") {
+    package = package004;
+  }
+  importantInfomation.innerHTML = "";
+  for (const [title, items] of Object.entries(package.importantInformation)) {
+    if (title == "notAllowed") {
+      items.pop();
+      items.push("More than " + maxPassengers + " passengers per booking");
+    }
+    importantInfomation.appendChild(importantInfomationSection(title, items));
+  }
+}
+
+function updateMaxTravelers(maxNumber) {
+  document.getElementById("maxNumber").innerText = maxNumber;
+}
+
+function updatePrice(tourPrice) {
+  document.querySelectorAll("#tourPrice").forEach((ele) => {
+    ele.innerText = formatPrice(tourPrice);
+  });
+  localStorage.setItem("tourPrice", tourPrice);
+}
+
+function updateSmallPrice(tourSmallPrice) {
+  document.querySelectorAll("#tourSmallPrice").forEach((ele) => {
+    ele.innerText = "( $" + tourSmallPrice + " per person )";
+  });
+  localStorage.setItem("tourSmallPrice", tourSmallPrice);
+}
+
+function addTourType(type) {
+  localStorage.setItem("tourType", type);
+}
+
+//===========================================================================================
 
 changeBackground();
 function changeBackground(index) {
@@ -1170,7 +1265,6 @@ function changeBackground(index) {
 //     infoDiv.textContent = selectedOption;
 // });
 
-
 function aboutThisActivity(topic, desc, iconClass) {
   const container = document.getElementById("dynamic-boxes-container");
   const whiteBox = document.createElement("div");
@@ -1216,7 +1310,7 @@ function aboutThisActivity(topic, desc, iconClass) {
     whiteBox.style.width = "45%";
   }
 }
-function createIterity(iconClass, title, description, duration,package) {
+function createIterity(iconClass, title, description, duration, package) {
   const div = document.createElement("div");
   div.className = "white-box-tours";
   div.style.width = "100%"; // Set the default width to 45%
@@ -1275,6 +1369,7 @@ function meetAndPickUpSection(index, description) {
   return div;
 }
 function importantInfomationSection(title, items) {
+  console.log(items);
   const div = document.createElement("div");
 
   div.className = "white-box-tours";
@@ -1319,38 +1414,38 @@ function populateList(dynamicData) {
 
   // Set the innerHTML of the h4 element to the dynamic name
   dynamicNameElement.innerHTML = "<b>" + dynamicName + "</b>";
-  
-  var listContainer = document.getElementById('dynamicList');
+
+  var listContainer = document.getElementById("dynamicList");
   dynamicData.forEach(function (item, index) {
-      var listItem = document.createElement('li');
-      
-      // Add default styles to the li element
-      listItem.style.fontSize = "13px";
-      listItem.style.lineHeight = "17px";
-      listItem.style.width = "200px";
-      
-      // Apply styles based on screen width
-      if (window.matchMedia('(max-width: 600px)').matches) {
-        listItem.style.float = "none";
-        listItem.style.width = "100%";
-        listItem.style.margin = "0 0 0 0";
+    var listItem = document.createElement("li");
 
-        // Apply even margin-right style
-        if (index % 2 === 1) {
-          listItem.style.marginRight = "0";
-        }
-      } else {
-        listItem.style.float = "left";
-        listItem.style.margin = "0 10px 10px 0";
+    // Add default styles to the li element
+    listItem.style.fontSize = "13px";
+    listItem.style.lineHeight = "17px";
+    listItem.style.width = "200px";
 
-        // Apply even margin-right style
-        if (index % 2 === 1) {
-          listItem.style.marginRight = "0";
-        }
+    // Apply styles based on screen width
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      listItem.style.float = "none";
+      listItem.style.width = "100%";
+      listItem.style.margin = "0 0 0 0";
+
+      // Apply even margin-right style
+      if (index % 2 === 1) {
+        listItem.style.marginRight = "0";
       }
-      
-      listItem.innerHTML = item;
-      listContainer.appendChild(listItem);
+    } else {
+      listItem.style.float = "left";
+      listItem.style.margin = "0 10px 10px 0";
+
+      // Apply even margin-right style
+      if (index % 2 === 1) {
+        listItem.style.marginRight = "0";
+      }
+    }
+
+    listItem.innerHTML = item;
+    listContainer.appendChild(listItem);
   });
 }
 function getTitle(title) {
@@ -1432,7 +1527,6 @@ function packageDescSection(desc) {
   return div;
 }
 
-
 // tour.js
 
 // Initial start of auto-scroll
@@ -1442,8 +1536,6 @@ function packageDescSection(desc) {
 // Example: Add images dynamically
 
 // Loop through the image sources and add them to the list
-
-
 
 function showSpinner() {
   // Show the spinner element
@@ -1460,7 +1552,6 @@ function hideSpinner() {
     spinnerWrapper.style.display = "none";
   }
 }
-
 
 function scrollToBottom() {
   var area2Element = document.querySelector(".area-2");
@@ -1519,14 +1610,14 @@ const viewBtns = document.querySelectorAll(".view-modal"),
   input = field.querySelector("input"),
   copy = field.querySelector("button");
 
-viewBtns.forEach((viewBtn)=>{
+viewBtns.forEach((viewBtn) => {
   viewBtn.onclick = () => {
     popup.classList.toggle("show");
   };
   close.onclick = () => {
     viewBtn.click();
   };
-})
+});
 
 copy.onclick = () => {
   input.select(); //select input value
@@ -1541,7 +1632,6 @@ copy.onclick = () => {
     }, 3000);
   }
 };
-
 
 function addImageToList(imageSrc) {
   const li = document.createElement("li");
@@ -1562,28 +1652,36 @@ function addImageToList(imageSrc) {
   ul.appendChild(li);
 
   if (ul.children.length === 1) {
-    li.classList.add('clicked');
+    li.classList.add("clicked");
   }
 }
 
 function handleItemClick(clickedItem) {
-  const itemList = Array.from(document.getElementById("tourGrid").getElementsByTagName("li"));
+  const itemList = Array.from(
+    document.getElementById("tourGrid").getElementsByTagName("li")
+  );
   const index = itemList.indexOf(clickedItem);
 
   console.log("Index:", index);
 
-  const items = document.querySelectorAll('.HTouritem');
-  items.forEach(item => item.classList.remove('clicked'));
+  const items = document.querySelectorAll(".HTouritem");
+  items.forEach((item) => item.classList.remove("clicked"));
 
-  clickedItem.classList.add('clicked');
-  clickedItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  clickedItem.classList.add("clicked");
+  clickedItem.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest",
+    inline: "center",
+  });
 
   changeBackground(index);
 }
 
 function autoScrollItems() {
-  const itemList = Array.from(document.getElementById("tourGrid").getElementsByTagName("li"));
-  const clickedItem = document.querySelector('.HTouritem.clicked');
+  const itemList = Array.from(
+    document.getElementById("tourGrid").getElementsByTagName("li")
+  );
+  const clickedItem = document.querySelector(".HTouritem.clicked");
   const currentIndex = itemList.indexOf(clickedItem);
   const nextIndex = (currentIndex + 1) % itemList.length;
 
@@ -1609,17 +1707,14 @@ function startAutoScroll() {
   }, 7000);
 }
 
-
-
 function hideSlider() {
   var element = document.getElementById("HTourWrap");
   stopAutoScroll();
-if (element.style.display === "none") {
-
+  if (element.style.display === "none") {
     element.style.display = "block"; // You can use "block" or "inline" based on your layout
-} else {
-// If the element is currently visible, hide it
+  } else {
+    // If the element is currently visible, hide it
 
-element.style.display = "none";
-}
+    element.style.display = "none";
+  }
 }
