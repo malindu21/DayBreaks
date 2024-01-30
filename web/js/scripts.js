@@ -15,7 +15,7 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
 
 (function ($) {
   const sentences1 = [
-    "Private day tours",
+    "Day tours",
     "For families & small groups",
     "Travel, Explore, Repeat!",
     "#daybreak",
