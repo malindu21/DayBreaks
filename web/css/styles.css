@@ -1854,7 +1854,7 @@ input.cmn-toggle-round-flat:checked + label:after {
   background-color: #111;
 }
 .accordion .accordion-container {
-  max-width: 90%;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
   margin-top: auto;
@@ -2705,7 +2705,8 @@ a:hover.back-to-top {
   /* end of services */
   /* Details 1 */
   .accordion .accordion-container {
-    max-width: 28rem;
+    max-width: 29rem;
+    overflow-x: hidden; /* check again */
   }
   /* end of details 1 */
   /* Details 2 */

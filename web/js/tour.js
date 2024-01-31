@@ -155,13 +155,13 @@ const package001 = {
       iconClass: "fas fa-map-marker fa-inverse",
       title: "Pickup & Drop-off included",
       description:
-        "Pickup included from anywhere in Melbourne within 10km radius ",
+        "Pick up & drop of included from anywhere within Melb CBD",
     },
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
       description:
-        "Private tour for your group of maximum 4 people or 7 people",
+        "Protecting natural environments through ecotourism, with smaller group sizes to conserve, preserve & minimise disturbances to our natural habitats",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -230,13 +230,13 @@ const package001 = {
     "<b>Steavenson Falls</b>",
     "<b>Marysville</b> town exploration",
 
-    "Drive through <b>Arthuur's Creek apple orchards</b>",
+    "Drive through <b>Arthur's Creek apple orchards</b>",
     "<b>Keppel Lookout</b>",
     "Scenic journey through <b>Black Spur</b> Drive",
   ],
 
   packageMeetAndPickUp:
-    "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee.",
+    "Pick up included from anywhere in Melbourne CBD. Enquire during your booking to confirm the pick up location. We can also arrange pickup outside the Melbourne CBD region at an additional service fee.",
 };
 
 const package002 = {
@@ -288,13 +288,13 @@ const package002 = {
       iconClass: "fas fa-map-marker fa-inverse",
       title: "Pickup & Drop-off included",
       description:
-        "Pickup included from anywhere in Melbourne within 10km radius ",
+        "Pick up & drop of included from anywhere within Melb CBD",
     },
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
       description:
-        "Private tour for your group of maximum 4 people or 7 people",
+        "Protecting natural environments through ecotourism, with smaller group sizes to conserve, preserve & minimise disturbances to our natural habitats",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -430,7 +430,7 @@ const package002 = {
     "Explore <b>Jack Rabbit winery</b>",
     "<b>Point Lonsdale</b> Coastal Trail",
     "<b>Rip View scenic lookout</b>",
-    "<b>Queencliff</b> to Sorrento ferryn",
+    "<b>Queencliff</b> to Sorrento ferry",
 
     "<b>Sorrento</b> town exploration",
     "<b>Millionaire’s Walk</b>",
@@ -461,7 +461,7 @@ const package002 = {
   },
 
   packageMeetAndPickUp:
-    "Pickup included from anywhere in Melbourne within 10km radius.  Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
+    "Pick up included from anywhere in Melbourne CBD. Enquire during your booking to confirm the pick up location. We can also arrange pickup outside the Melbourne CBD region at an additional service fee. ",
 };
 
 const package003 = {
@@ -540,13 +540,13 @@ const package003 = {
       iconClass: "fas fa-map-marker fa-inverse",
       title: "Pickup & Drop-off included",
       description:
-        "Pickup included from anywhere in Melbourne within 10km radius ",
+        "Pick up & drop of included from anywhere within Melb CBD",
     },
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
       description:
-        "Private tour for your group of maximum 4 people or 7 people",
+        "Protecting natural environments through ecotourism, with smaller group sizes to conserve, preserve & minimise disturbances to our natural habitats",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -677,7 +677,7 @@ const package003 = {
   },
 
   packageMeetAndPickUp:
-    "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
+    "Pick up included from anywhere in Melbourne CBD. Enquire during your booking to confirm the pick up location. We can also arrange pickup outside the Melbourne CBD region at an additional service fee. ",
 };
 
 const package004 = {
@@ -758,13 +758,13 @@ const package004 = {
       iconClass: "fas fa-map-marker fa-inverse",
       title: "Pickup & Drop-off included",
       description:
-        "Pickup included from anywhere in Melbourne within 10km radius ",
+        "Pick up & drop of included from anywhere within Melb CBD",
     },
     section5: {
       iconClass: "fas fa-users fa-inverse",
       title: "Smaller intimate group",
       description:
-        "Private tour for your group of maximum 4 people or 7 people",
+        "Protecting natural environments through ecotourism, with smaller group sizes to conserve, preserve & minimise disturbances to our natural habitats",
     },
     section6: {
       iconClass: "fas fa-car fa-inverse",
@@ -883,7 +883,7 @@ const package004 = {
   },
 
   packageMeetAndPickUp:
-    "Pickup included from anywhere in Melbourne within 10km radius. Enquire during your booking to confirm the Pickup location. We can also arrange pickup outside the 10km radius from Melbourne CBD at an additional service fee. ",
+    "Pick up included from anywhere in Melbourne CBD. Enquire during your booking to confirm the pick up location. We can also arrange pickup outside the Melbourne CBD region at an additional service fee. ",
 };
 
 const area1 = document.querySelector(".accordion");
