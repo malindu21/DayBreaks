@@ -958,9 +958,9 @@ function insertSectionsIntoContainer() {
     );
     populateList(package001.dynamicData);
     packageName.appendChild(packageNameSection(package001.details.title));
-    packageSubTitle.appendChild(
-      packageSubTitleSection(package001.details.subTitle)
-    );
+    // packageSubTitle.appendChild(
+    //   packageSubTitleSection(package001.details.subTitle)
+    // );
     packageDesc.appendChild(packageDescSection(package001.details.desc));
     // packageDuration.appendChild(packageDurationSection(package001.details.duration));
   } else if (packageId == "002") {
@@ -1009,9 +1009,9 @@ function insertSectionsIntoContainer() {
     );
     populateList(package002.dynamicData);
     packageName.appendChild(packageNameSection(package002.details.title));
-    packageSubTitle.appendChild(
-      packageSubTitleSection(package002.details.subTitle)
-    );
+    // packageSubTitle.appendChild(
+    //   packageSubTitleSection(package002.details.subTitle)
+    // );
     packageDesc.appendChild(packageDescSection(package002.details.desc));
   } else if (packageId == "003") {
     backgroundImageUrls = [];
@@ -1058,9 +1058,9 @@ function insertSectionsIntoContainer() {
     );
     populateList(package003.dynamicData);
     packageName.appendChild(packageNameSection(package003.details.title));
-    packageSubTitle.appendChild(
-      packageSubTitleSection(package003.details.subTitle)
-    );
+    // packageSubTitle.appendChild(
+    //   packageSubTitleSection(package003.details.subTitle)
+    // );
     packageDesc.appendChild(packageDescSection(package003.details.desc));
   } else if (packageId == "004") {
     backgroundImageUrls = [];
@@ -1107,9 +1107,9 @@ function insertSectionsIntoContainer() {
     );
     populateList(package004.dynamicData);
     packageName.appendChild(packageNameSection(package004.details.title));
-    packageSubTitle.appendChild(
-      packageSubTitleSection(package004.details.subTitle)
-    );
+    // packageSubTitle.appendChild(
+    //   packageSubTitleSection(package004.details.subTitle)
+    // );
     packageDesc.appendChild(packageDescSection(package004.details.desc));
   }
 }
