@@ -1121,9 +1121,10 @@ var suvPrice = localStorage.getItem("suv7Price");
 var van4Price = localStorage.getItem("van4Price");
 var suv4Price = localStorage.getItem("suv4Price");
 
-addTourType("VAN");
-updatePrice(vanPrice);
-updateSmallPrice(van4Price);
+addTourType("SUV");
+updatePrice(suvPrice);
+updateSmallPrice(suv4Price);
+reloadImportantInformation();
 
 function formatPrice(price) {
   price = parseFloat(price);
@@ -1143,27 +1144,16 @@ function selectButton(button) {
   $(button).addClass("active");
   // Check if it's the first button
   if ($(button).is(":first-child")) {
-    // Logic for the first button
-    console.log("This is the first button. Do something special.");
-    var iconImage = document.getElementById("iconImage");
-    iconImage.src = "images/van.png"; // Change the path accordingly
     updateMaxTravelers(7);
     updatePrice(vanPrice);
     updateSmallPrice(van4Price);
     addTourType("VAN");
-    maxPassengers = 7;
   } else {
-    // Logic for other buttons
-    console.log("This is not the first button. Do something else.");
-    var iconImage = document.getElementById("iconImage");
-    iconImage.src = "images/suv.svg"; // Change the path accordingly
     updateMaxTravelers(4);
     updatePrice(suvPrice);
     updateSmallPrice(suv4Price);
     addTourType("SUV");
-    maxPassengers = 4;
   }
-
   reloadImportantInformation();
 }
 
@@ -1209,6 +1199,15 @@ function updateSmallPrice(tourSmallPrice) {
 }
 
 function addTourType(type) {
+  if (type == "VAN") {
+    var iconImage = document.getElementById("iconImage");
+    iconImage.src = "images/van.png"; // Change the path accordingly
+    maxPassengers = 7;
+  } else if (type == "SUV") {
+    var iconImage = document.getElementById("iconImage");
+    iconImage.src = "images/suv.svg"; // Change the path accordingly
+    maxPassengers = 4;
+  }
   localStorage.setItem("tourType", type);
 }
 
@@ -1324,12 +1323,11 @@ function createIterity(iconClass, title, description, duration, package) {
               <p>${description}</p>
               <h3 style="color:#5F6672">${duration}</h3>
             </div>
-            ${
-              Object.entries(package.package1Iternity).length !=
-              Number(iconClass)
-                ? `<div class="chain chain-bottom"></div>`
-                : ""
-            }
+            ${Object.entries(package.package1Iternity).length !=
+      Number(iconClass)
+      ? `<div class="chain chain-bottom"></div>`
+      : ""
+    }
           </div>
         </div>`;
   return div;

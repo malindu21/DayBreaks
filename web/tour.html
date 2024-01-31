@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-          <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16446727081"></script>
-   <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16446727081"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-   gtag('config', 'AW-16446727081');
-   </script>
+        gtag('config', 'AW-16446727081');
+    </script>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
@@ -141,7 +141,7 @@
                             <h4 style="font-size: 15px; text-align: left;"><b>Select Group size</b></h4>
                             <div
                                 class="tour-package-details-page blur-bg d-flex flex-column justify-content-center text-white mt-1">
-                                <div class="row" style="align-items: center;">
+                                <!-- <div class="row" style="align-items: center;">
                                     <div class="column d-flex justify-content-center">
                                         <div class="btn-group" role="group" aria-label="Button group"
                                             style="justify-content: center;">
@@ -177,6 +177,23 @@
                                                 alt="Icon" style="width: 45px; height: 30px;margin-right:20px;">
                                         </div>
                                     </div>
+                                </div> -->
+                                <div class="d-inline-flex justify-content-between text-large fw-medium align-items-center"
+                                    style="width: 100%;">
+                                    <div>
+                                        <div id="maxTravelers" class="text-small fw-semibold text-start"
+                                            style="margin-bottom: 7.5px; line-height: 13px;">
+                                            Max <span id="maxNumber">7</span> travellers
+                                        </div>
+                                        <div class="tour-price-summary">
+                                            <span id="tourPrice"
+                                                style="font-size: large; font-weight: bold; margin-bottom: -5px;">$880</span>
+                                            <span id="tourSmallPrice" style="font-size: x-small;">($100 per
+                                                person)</span>
+                                        </div>
+                                    </div>
+                                    <img loading="lazy" class="tourIcon" id="iconImage" src="images/van.png" alt="Icon"
+                                        style="width: 60px; height: auto;margin-right:20px;">
                                 </div>
                             </div>
                             <hr class="item-divider">
@@ -423,7 +440,8 @@
                         refund or an alternative travel date.</p>
 
                     <h3>Special cancellation terms apply to the tours listed below:</h3>
-                    <p>“Ocean Vibes - Geelong waterfront, Jack Rabbit Winery, Sorrento, Arthur’s Seat & Dromana”: Due to the nature of the Geelong tours
+                    <p>“Ocean Vibes - Geelong waterfront, Jack Rabbit Winery, Sorrento, Arthur’s Seat & Dromana”: Due to
+                        the nature of the Geelong tours
                         which include also bookings that are made with Third Party Operators: Searoad Ferries, the
                         following terms will apply to any cancellations for the Ocean Vibes tours: Full refund available
                         with cancellation 48 hours before the road-trip start time.</p>
