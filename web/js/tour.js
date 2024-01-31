@@ -19,7 +19,7 @@ const package001 = {
 
   details: {
     title: "Into the forest",
-    subTitle: "Black Spur Drive, rainforests & waterfalls",
+    subTitle: "Black Spur Drive, Steavenson Falls, Wirrawilla Rainforest & Marysville",
     desc: "Embark on a picturesque journey through lush apple orchards, serene rainforests, and iconic Australian forests, all while savouring quick coffee breaks and exploring charming towns along the way. Be captivated by one of the state's tallest waterfalls, before concluding the day with a mesmerizing sunset, overlooking the majestic mountains.",
     duration: "Duration: 12.00 Hours",
     backgroundImageUrls: [
@@ -244,7 +244,7 @@ const package002 = {
 
   details: {
     title: "Ocean Vibes",
-    subTitle: "Geelong, Ferries, Wineries & Sorrento",
+    subTitle: "Geelong waterfront, Jack Rabbit Winery, Sorrento, Arthur’s Seat & Dromana",
     desc: "Embark on a mesmerizing journey as we explore the coastal wonders of Geelong and the Peninsula, unravelling a rich tapestry of unforgettable experiences. Allow yourself to be captivated by the sheer beauty of scenic lookouts and the enchanting allure of coastal trails that grace our road trip. This adventure also promises a taste of the region's cool climate wineries and the thrill of various aerial attractions, adding layers of excitement to our exploration.",
     duration: "Duration: N/A",
     backgroundImageUrls: [
@@ -469,7 +469,7 @@ const package003 = {
 
   details: {
     title: "Beach to Greenery",
-    subTitle: "Great Ocean Road, 12 Apostles & Scenic Drives ",
+    subTitle: "Great Ocean Road, 12 Apostles, Teddy’ Lookout, Gibson Steps & Lighthouse climb ",
     desc: "Explore the stunning Great Ocean Road with our expertly crafted tour. This scenic drive offers breathtaking coastal views, with highlights including the iconic Split Point Lighthouse, Teddy's Lookout for panoramic vistas, a leisurely stroll through Mait's Rest Rainforest, a unique perspective at Gibson Steps, and the awe-inspiring Thunder Cave. The tour culminates at the world-famous Twelve Apostles, where you can witness the changing light throughout the day and possibly catch a spectacular sunset. Join us for a day filled with natural beauty and unforgettable experiences along this iconic Australian coastal highway. ",
     duration: "Duration: 13 hours",
     backgroundImageUrls: [
@@ -685,7 +685,7 @@ const package004 = {
 
   details: {
     title: "Cliffs & Chills",
-    subTitle: "Mornington Peninsula, National Parks & Geothermal Hot Springs",
+    subTitle: "Mornington Peninsula, Geothermal Hot Springs, Moonlit Animal Sanctuary, Cape Schanck & Rye",
     desc: "Discover the Mornington Peninsula, where wildlife encounters, coastal walks, boutique shopping, and exploration meet seamless relaxation. Encounter native animals, learn about conservation, and stroll along the coast, collecting special mementos. Explore dramatic landscapes unique to the area, then unwind in geothermal pools, letting stress melt away amidst the serene natural beauty.",
     duration: "Duration: 12 hours",
     backgroundImageUrls: [
