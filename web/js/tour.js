@@ -1121,9 +1121,9 @@ var suvPrice = localStorage.getItem("suv7Price");
 var van4Price = localStorage.getItem("van4Price");
 var suv4Price = localStorage.getItem("suv4Price");
 
-addTourType("SUV");
-updatePrice(suvPrice);
-updateSmallPrice(suv4Price);
+addTourType("VAN");
+updatePrice(vanPrice);
+updateSmallPrice(van4Price);
 reloadImportantInformation();
 
 function formatPrice(price) {
