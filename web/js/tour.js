@@ -1723,12 +1723,17 @@ function validateCheckout() {
 
   if (packageId == "001") { 
     addTicketWidget("Into the forest");
-
-    // showPopupWithDelay();
+    
   } else if (packageId == "002") {
     addTicketWidget("Ocean Vibes");
 
+  } else if (packageId == "003") {
+    addTicketWidget("Beach to Greenery");
+
+  } else if (packageId == "004") {
+    addTicketWidget("Cliffs & Chills");
   }
+
   $("#ttWidgetModal").modal("show");
   
 }
