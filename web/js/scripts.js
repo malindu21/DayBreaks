@@ -4,13 +4,13 @@
    Description: Day Break
 */
 
-function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
+function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
   window.location.href = "tour.html?packageId=" + packageId
-         localStorage.setItem('packageId', packageId);
-         localStorage.setItem('van4Price', van4Price);
-         localStorage.setItem('suv4Price', suv4Price);
-         localStorage.setItem('van7Price', van7Price);
-         localStorage.setItem('suv7Price', suv7Price);
+  localStorage.setItem('packageId', packageId);
+  localStorage.setItem('van4Price', van4Price);
+  localStorage.setItem('suv4Price', suv4Price);
+  localStorage.setItem('van7Price', van7Price);
+  localStorage.setItem('suv7Price', suv7Price);
 }
 
 (function ($) {
@@ -38,33 +38,14 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
   const typewriterElement1 = document.getElementById("typewriter-text");
   const cursorElement1 = document.getElementById("cursor");
 
-  // const imageUrls = [
-
-
-  //   "images/header/header_1.webp",
-  //   "images/header/header_2.webp",
-  //   "images/header/header_4.webp",
-  //   "images/header/header_5.webp",
-  //   // Add more image URLs as needed
-  // ];
-
-  // // Second Typewriter
-  // const typewriterElementBox1 = document.getElementById('typewriter-text-box-1');
-  // const typewriterElementBox2 = document.getElementById('typewriter-text-box-2');
-  // const typewriterElementBox3 = document.getElementById('typewriter-text-box-3');
-  // const typewriterElementBox4 = document.getElementById('typewriter-text-box-4');
-  // const typewriterElementBox5 = document.getElementById('typewriter-text-box-5');
-  // const typewriterElementBox6 = document.getElementById('typewriter-text-box-6');
-
-
   $(window).on("scroll load", function () {
-   if($('.navbar').length>0){
-    if ($(".navbar").offset().top > 20) {
+    if ($('.navbar').length > 0) {
+      if ($(".navbar").offset().top > 20) {
         $(".fixed-top").addClass("top-nav-collapse");
       } else {
         $(".fixed-top").removeClass("top-nav-collapse");
       }
-   }
+    }
   });
 
   // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -213,6 +194,75 @@ function onclickPackage(packageId,van4Price,suv4Price,van7Price,suv7Price){
     cursorElement.style.display = "inline"; // show cursor
     type();
   }
+
+
+
+  /**Tour package list **/
+
+  fetch("/web/js/package_list.json").then((response) => response.json()).then((data) => {
+    let packageList = data;
+    let packageHtml = "";
+    for (let i = 0; i < packageList.length; i++) {
+      let package = packageList[i];
+      packageHtml += `<div id="lazyLoadDiv" class="tour-package p-3 d-flex flex-column justify-content-between" 
+      style="background-image: url('${package["backgroundImage"]}');"
+      onclick="onclickPackage(
+        '${package["id"]}',
+        '${package['pricePerPersonVan']}',
+        '${package['pricePerPersonSuv']}',
+        '${package['pricePerPersonVan'] * 7}',
+        '${package['pricePerPersonVan'] * 4}')" 
+        role="button">
+      <div class="flex-fill"></div>
+      <div class="tour-package-header d-flex justify-content-between align-items-center">
+         <div class="tour-package-details-middle blur-bgV2 d-flex flex-column justify-content-center text-white">
+            <div class="d-inline-flex justify-content-between text-large fw-medium align-items-center">
+               <div class="mr-2">
+                  <div class="text-regular fw-light text-start">
+                  ${package["subtitle"]}
+                  </div>
+               </div>
+               ${package['icon'].startsWith("image") ?
+          `<img src="${package['icon']}" class="tour-package-middle-icon" alt="icon">` :
+          `<i class="fa-solid ${package['icon']} fa-inverse fa-2x tour-package-middle-icon"></i>`
+        }
+         </div>
+            <div class="d-flex justify-content-between ">
+               <div> <i class="fa-solid fa-clock"></i> ${package['durationInHours']} hr </div>
+               <div class="d-inline-flex fw-bold align-items-baseline">
+                  $${package['pricePerPersonVan']}
+                  <div class="text-small fw-light text-end ml-2">Per Person</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="d-flex mt-3 align-items-center justify-content-between">
+         <a id="bookPackageThree" 
+         onclick="onclickPackage(
+          '${package["id"]}',
+          '${package['pricePerPersonVan']}',
+          '${package['pricePerPersonSuv']}',
+          '${package['pricePerPersonVan'] * 7}',
+          '${package['pricePerPersonVan'] * 4}')" 
+           href="tour.html"
+           class="btn btn-lg btn-dark text-regular w-50 rounded-pill  px-3 py-3">
+            Book Now
+         </a>
+         <div class="text-small text-white text-start" style="
+          height: max-content;
+          padding: 5px 15px;
+          width: 50%;
+          border-radius: 10px;
+          line-height: 1.4;
+          font-weight: bold;">${package['name']}</div>
+      </div>
+    </div>`
+
+      document.getElementById("tour-package-list").innerHTML = packageHtml;
+    }
+  });
+  
+  /****** Tour package list *******/
 
   /* Contact Form */
   $("#contactForm")

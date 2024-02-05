@@ -1,0 +1,42 @@
+[
+    {
+        "id": "003",
+        "name": "Beach to Greenery",
+        "subtitle": "Great Ocean Road, 12 Apostles, Teddy’ Lookout, Gibson Steps & Lighthouse climb",
+        "durationInHours": 13,
+        "pricePerPersonVan": 169,
+        "pricePerPersonSuv": 169,
+        "backgroundImage": "images/greatocenroad.webp",
+        "icon": "fa-water"
+    },
+    {
+        "id": "004",
+        "name": "Cliffs & Chills",
+        "subtitle": "Mornington Peninsula, Geothermal Hot Springs, Moonlit Animal Sanctuary, Cape Schanck & Rye",
+        "durationInHours": 12,
+        "pricePerPersonVan": 249,
+        "pricePerPersonSuv": 169,
+        "backgroundImage": "images/mornington.webp",
+        "icon": "images/hinduist-yoga-position.png"
+    },
+    {
+        "id": "001",
+        "name": "Into the forest",
+        "subtitle": "Black Spur Drive, Steavenson Falls, Wirrawilla Rainforest & Marysville",
+        "durationInHours": 12,
+        "pricePerPersonVan": 149,
+        "pricePerPersonSuv": 169,
+        "backgroundImage": "images/into_the_forest/into-the-forest.webp",
+        "icon": "fa-tree"
+    },
+    {
+        "id": "002",
+        "name": "Ocean Vibes",
+        "subtitle": "Geelong waterfront, Jack Rabbit Winery, Sorrento, Arthur’s Seat & Dromana",
+        "durationInHours": 12,
+        "pricePerPersonVan": 219,
+        "pricePerPersonSuv": 169,
+        "backgroundImage": "images/geelong.webp",
+        "icon": "fa-ferry"
+    }
+]

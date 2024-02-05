@@ -1,37 +1,15 @@
 
 .tour-package {
   background: url(../images/tour1.jpg) no-repeat center center;
-  background-size: cover;
+  background-size: cover !important;
   height: 500px;
   width: 300px;
   border-radius: 30px;
   margin: 10px auto;
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: darken;
   transition: transform 0.5s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.tour-package.into-the-forest{
-    background: url(../images/into_the_forest/into-the-forest.webp);
-   background-size: cover;
-}
-
-
-.tour-package.ocen_vibes{
-  background: url(../images/geelong.webp);
- background-size: cover;
-}
-
-.tour-package.beach-to-greenery{
-  background: url(../images/greatocenroad.webp);
- background-size: cover;
-}
-
-.tour-package.cliffs-chills{
-  background: url(../images/mornington.webp);
- background-size: cover;
-}
 
 
 
