@@ -47,7 +47,9 @@
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/tours-packages.css" rel="stylesheet">
+    <link href="css/booking.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <link rel="stylesheet" href="./css/tours.css">
 
     <!-- Favicon  -->
@@ -203,13 +205,13 @@
                                     <!-- The list items will be added dynamically here -->
                                 </ul>
                             </div>
-                            <!-- end of accordion -->
-                            <div class="book-buttons-v2">
-                                <div class="button-container">
-                                    <a class="btn-solid-reg page-scroll" href="booking_form.html"
-                                        style="float: right">Book Now</a>
-                                </div> <!-- end of button-container -->
-                            </div>
+                       <!-- end of accordion -->
+                        <div class="book-buttons-v2">
+                            <div class="button-container">
+                                <div class="btn-solid-reg page-scroll" onclick="validateCheckout()" style="float: right">Book Now</div>
+                            </div> <!-- end of button-container -->
+                        </div>
+
                         </div> <!-- end of accordion-container -->
                     </div>
                 </div> <!-- end of area-plus -->
@@ -383,14 +385,14 @@
     <!-- end of footer -->
     <div style="height: 5px;"></div>
     <!---fixed book now start--->
-    <div
-        class="fixed-menu btn-solid-reg-wrapper container-fluid position-fixed bottom-0 px-3 py-2 align-items-center justify-content-between">
-        <a class="btn-solid-reg flex-fill tour" href="booking_form.html">Book Now</a>
+    <div class="fixed-menu btn-solid-reg-wrapper container-fluid position-fixed bottom-0 px-3 py-2 align-items-center justify-content-between">
+        <div class="btn-solid-reg flex-fill tour" onclick="validateCheckout()">Book Now</div>
         <div class="tour-price-summary">
             <span id="tourPrice" style="font-size: large; font-weight: bold;">$880</span>
             <span id="tourSmallPrice" style="font-size: x-small;">($100 per person)</span>
         </div>
     </div>
+    
     <!---fixed book now end--->
     <!-- Modal -->
     <div class="modal fade" id="termsConditionModal" tabindex="-1" aria-labelledby="termsConditionModalLabel"
@@ -637,6 +639,30 @@
     </div>
 
 
+<!-- TT Widget Modal -->
+<div class="modal fade" id="ttWidgetModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="ttWidgetModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content tt-widget-modal-content">
+      <div class="modal-body">
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div id="widget-container" class="tt-widget">
+          <div class="tt-widget-fallback">
+            <p>
+              <a href="https://www.tickettailor.com/all-tickets/malindu/?ref=website_widget&srch="
+                target="_blank"></a><br />
+              <small>
+                <a href="https://www.tickettailor.com?rf=wdg_162152" class="tt-widget-powered"></a>
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
@@ -647,8 +673,9 @@
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/tour.js"></script>
+    
     <script>
         const collapsibles = document.querySelectorAll('.collapsible');
 

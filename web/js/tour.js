@@ -1716,3 +1716,48 @@ function hideSlider() {
     element.style.display = "none";
   }
 }
+
+
+function validateCheckout() {
+  var packageId = localStorage.getItem("packageId");
+
+  if (packageId == "001") { 
+    addTicketWidget("Into the forest");
+    
+  } else if (packageId == "002") {
+    addTicketWidget("Ocean Vibes");
+
+  } else if (packageId == "003") {
+    addTicketWidget("Beach to Greenery");
+
+  } else if (packageId == "004") {
+    addTicketWidget("Cliffs & Chills");
+  }
+
+  $("#ttWidgetModal").modal("show");
+  
+}
+
+function addTicketWidget(ref) {
+  //showPopupWithDelay();
+  var widgetContainer = document.getElementById("widget-container");
+  var scriptElement = document.createElement("script");
+  var url =
+    "https://www.tickettailor.com/all-tickets/daybreak/?ref=website_widget" +
+    "&srch=" +
+    ref;
+
+  scriptElement.src = "https://cdn.tickettailor.com/js/widgets/min/widget.js";
+  scriptElement.setAttribute("data-url", url);
+  scriptElement.setAttribute("data-type", "inline");
+  scriptElement.setAttribute("data-inline-minimal", "false");
+  scriptElement.setAttribute("data-inline-show-logo", "true");
+  scriptElement.setAttribute("data-inline-bg-fill", "true");
+  scriptElement.setAttribute(
+    "data-inline-inherit-ref-from-url-param",
+    "special"
+  );
+  scriptElement.setAttribute("data-inline-ref", "website_widget");
+
+  widgetContainer.appendChild(scriptElement);
+}
