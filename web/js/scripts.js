@@ -199,7 +199,9 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
 
   /**Tour package list **/
 
-  fetch("package_list.json").then((response) => response.json()).then((data) => {
+  fetch("https://raw.githubusercontent.com/malindu21/DayBreaks/main/web/js/package_list.json")
+     .then((response) => response.json())
+     .then((data) => {
     let packageList = data;
     let packageHtml = "";
     for (let i = 0; i < packageList.length; i++) {
