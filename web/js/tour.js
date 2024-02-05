@@ -23,11 +23,11 @@ const package001 = {
     desc: "Embark on a picturesque journey through lush apple orchards, serene rainforests, and iconic Australian forests, all while savouring quick coffee breaks and exploring charming towns along the way. Be captivated by one of the state's tallest waterfalls, before concluding the day with a mesmerizing sunset, overlooking the majestic mountains.",
     duration: "Duration: 12.00 Hours",
     backgroundImageUrls: [
+      "images/into_the_forest/3b.webp",
       "images/into_the_forest/0.webp",
       "images/into_the_forest/1.webp",
       "images/into_the_forest/2.webp",
       "images/into_the_forest/3a.webp",
-      "images/into_the_forest/3b.webp",
       "images/into_the_forest/4.webp",
       "images/into_the_forest/5.webp",
       "images/into_the_forest/6.webp",
