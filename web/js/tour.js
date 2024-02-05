@@ -395,7 +395,7 @@ const package002 = {
     },
     5: {
       iconClass: "fas fa-bicycle fa-inverse",
-      title: "Queenscliff to Sorrento Ferry",
+      title: "Sorrento to Queenscliff Ferry",
       description:
         "A scenic and efficient way to travel between the coastal towns of Queenscliff and Mornington. Opportunity to soak up the sun in the ferry viewing deck or enjoy a relaxing journey inside. ",
       duration: "1 hour ● Ferry ride",
@@ -430,7 +430,7 @@ const package002 = {
     "Explore <b>Jack Rabbit winery</b>",
     "<b>Point Lonsdale</b> Coastal Trail",
     "<b>Rip View scenic lookout</b>",
-    "<b>Queencliff</b> to Sorrento ferry",
+    "<b>Sorrento</b> to Queencliff ferry",
 
     "<b>Sorrento</b> town exploration",
     "<b>Millionaire’s Walk</b>",
