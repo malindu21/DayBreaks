@@ -199,7 +199,7 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
 
   /**Tour package list **/
 
-  fetch("web/js/package_list.json").then((response) => response.json()).then((data) => {
+  fetch("package_list.json").then((response) => response.json()).then((data) => {
     let packageList = data;
     let packageHtml = "";
     for (let i = 0; i < packageList.length; i++) {
