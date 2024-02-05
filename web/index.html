@@ -738,18 +738,6 @@
       </div>
    </div>
    <!-- Scripts -->
-   <script>
-      // Add this script after your HTML content or in a separate script file
-
-      // Check if the browser supports the loading attribute
-      if ('loading' in HTMLImageElement.prototype) {
-         // Get the div element by its ID
-         var lazyLoadDiv = document.getElementById('lazyLoadDiv');
-
-         // Set the loading attribute to lazy
-         lazyLoadDiv.loading = 'lazy';
-      }
-   </script>
    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
@@ -817,8 +805,18 @@
       }
 
    </script>
+   <script>
+      // Add this script after your HTML content or in a separate script file
 
+      // Check if the browser supports the loading attribute
+      if ('loading' in HTMLImageElement.prototype) {
+         // Get the div element by its ID
+         var lazyLoadDiv = document.getElementById('lazyLoadDiv');
 
+         // Set the loading attribute to lazy
+         lazyLoadDiv.loading = 'lazy';
+      }
+   </script>
 </body>
 
 </html>

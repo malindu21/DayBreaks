@@ -1193,19 +1193,19 @@ function updatePrice(tourPrice) {
 
 function updateSmallPrice(tourSmallPrice) {
   document.querySelectorAll("#tourSmallPrice").forEach((ele) => {
-    ele.innerText = "( $" + tourSmallPrice + " per person )";
+    ele.innerText = "$"+tourSmallPrice;
   });
   localStorage.setItem("tourSmallPrice", tourSmallPrice);
 }
 
 function addTourType(type) {
   if (type == "VAN") {
-    var iconImage = document.getElementById("iconImage");
-    iconImage.src = "images/van.png"; // Change the path accordingly
+    // var iconImage = document.getElementById("iconImage");
+    // iconImage.src = "images/van.png"; 
     maxPassengers = 7;
   } else if (type == "SUV") {
-    var iconImage = document.getElementById("iconImage");
-    iconImage.src = "images/suv.svg"; // Change the path accordingly
+    // var iconImage = document.getElementById("iconImage");
+    // iconImage.src = "images/suv.svg"; 
     maxPassengers = 4;
   }
   localStorage.setItem("tourType", type);

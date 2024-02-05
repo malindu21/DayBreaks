@@ -49,7 +49,7 @@
     <link href="css/tours-packages.css" rel="stylesheet">
     <link href="css/booking.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
+
     <link rel="stylesheet" href="./css/tours.css">
 
     <!-- Favicon  -->
@@ -140,9 +140,9 @@
                             <hr class="item-divider">
                             <div id="packageDesc" style="text-align: left;"></div>
                             <hr class="item-divider">
-                            <h4 style="font-size: 15px; text-align: left;"><b>Select Group size</b></h4>
-                            <div
-                                class="tour-package-details-page blur-bg d-flex flex-column justify-content-center text-white mt-1">
+                            <!-- <h4 style="font-size: 15px; text-align: left;"><b>Select Group size</b></h4> -->
+                            <div class="tour-package-details-page blur-bg d-flex flex-column justify-content-center text-white my-2"
+                                style="width: max-content;">
                                 <!-- <div class="row" style="align-items: center;">
                                     <div class="column d-flex justify-content-center">
                                         <div class="btn-group" role="group" aria-label="Button group"
@@ -180,9 +180,15 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <div class="d-inline-flex justify-content-between text-large fw-medium align-items-center"
-                                    style="width: 100%;">
-                                    <div>
+                                <div class="text-large fw-medium" style="width: max-content;">
+                                    <span class="d-flex align-items-baseline" style="font-size: 15px;font-weight: 300;">
+                                        <span style="font-size: 30px;font-weight: bold;" class="mr-2" id="tourSmallPrice"></span> per
+                                        person
+                                    </span>
+                                    <span style="font-size: 15px;">
+                                        Includes lunch & all entry fees
+                                    </span>
+                                    <!-- <div>
                                         <div id="maxTravelers" class="text-small fw-semibold text-start"
                                             style="margin-bottom: 7.5px; line-height: 13px;">
                                             Max <span id="maxNumber">7</span> travellers
@@ -195,7 +201,7 @@
                                         </div>
                                     </div>
                                     <img loading="lazy" class="tourIcon" id="iconImage" src="images/van.png" alt="Icon"
-                                        style="width: 60px; height: auto;margin-right:20px;">
+                                        style="width: 60px; height: auto;margin-right:20px;"> -->
                                 </div>
                             </div>
                             <hr class="item-divider">
@@ -205,12 +211,13 @@
                                     <!-- The list items will be added dynamically here -->
                                 </ul>
                             </div>
-                       <!-- end of accordion -->
-                        <div class="book-buttons-v2">
-                            <div class="button-container">
-                                <div class="btn-solid-reg page-scroll" onclick="validateCheckout()" style="float: right">Book Now</div>
-                            </div> <!-- end of button-container -->
-                        </div>
+                            <!-- end of accordion -->
+                            <div class="book-buttons-v2">
+                                <div class="button-container">
+                                    <div class="btn-solid-reg page-scroll" onclick="validateCheckout()"
+                                        style="float: right">Book Now</div>
+                                </div> <!-- end of button-container -->
+                            </div>
 
                         </div> <!-- end of accordion-container -->
                     </div>
@@ -385,14 +392,15 @@
     <!-- end of footer -->
     <div style="height: 5px;"></div>
     <!---fixed book now start--->
-    <div class="fixed-menu btn-solid-reg-wrapper container-fluid position-fixed bottom-0 px-3 py-2 align-items-center justify-content-between">
+    <div
+        class="fixed-menu btn-solid-reg-wrapper container-fluid position-fixed bottom-0 px-3 py-2 align-items-center justify-content-between">
         <div class="btn-solid-reg flex-fill tour" onclick="validateCheckout()">Book Now</div>
         <div class="tour-price-summary">
             <span id="tourPrice" style="font-size: large; font-weight: bold;">$880</span>
             <span id="tourSmallPrice" style="font-size: x-small;">($100 per person)</span>
         </div>
     </div>
-    
+
     <!---fixed book now end--->
     <!-- Modal -->
     <div class="modal fade" id="termsConditionModal" tabindex="-1" aria-labelledby="termsConditionModalLabel"
@@ -639,28 +647,28 @@
     </div>
 
 
-<!-- TT Widget Modal -->
-<div class="modal fade" id="ttWidgetModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="ttWidgetModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content tt-widget-modal-content">
-      <div class="modal-body">
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        <div id="widget-container" class="tt-widget">
-          <div class="tt-widget-fallback">
-            <p>
-              <a href="https://www.tickettailor.com/all-tickets/malindu/?ref=website_widget&srch="
-                target="_blank"></a><br />
-              <small>
-                <a href="https://www.tickettailor.com?rf=wdg_162152" class="tt-widget-powered"></a>
-              </small>
-            </p>
-          </div>
+    <!-- TT Widget Modal -->
+    <div class="modal fade" id="ttWidgetModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="ttWidgetModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content tt-widget-modal-content">
+                <div class="modal-body">
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    <div id="widget-container" class="tt-widget">
+                        <div class="tt-widget-fallback">
+                            <p>
+                                <a href="https://www.tickettailor.com/all-tickets/malindu/?ref=website_widget&srch="
+                                    target="_blank"></a><br />
+                                <small>
+                                    <a href="https://www.tickettailor.com?rf=wdg_162152" class="tt-widget-powered"></a>
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
 
 
     <!-- Scripts -->
@@ -675,7 +683,7 @@ aria-labelledby="ttWidgetModalLabel" aria-hidden="true">
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/tour.js"></script>
-    
+
     <script>
         const collapsibles = document.querySelectorAll('.collapsible');
 

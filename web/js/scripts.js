@@ -248,13 +248,12 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
            class="btn btn-lg btn-dark text-regular w-50 rounded-pill  px-3 py-3">
             Book Now
          </a>
-         <div class="text-small text-white text-start" style="
+         <div class="text-small text-white fw-bold text-start" style="
           height: max-content;
           padding: 5px 15px;
           width: 50%;
           border-radius: 10px;
-          line-height: 1.4;
-          font-weight: bold;">${package['name']}</div>
+          line-height: 1.4;">${package['name']}</div>
       </div>
     </div>`
 
