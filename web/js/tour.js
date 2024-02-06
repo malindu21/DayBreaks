@@ -1719,22 +1719,23 @@ function hideSlider() {
 
 
 function validateCheckout() {
-  var packageId = localStorage.getItem("packageId");
+  alert("Coming Soon...");
+  // var packageId = localStorage.getItem("packageId");
 
-  if (packageId == "001") { 
-    addTicketWidget("Into the forest");
+  // if (packageId == "001") { 
+  //   addTicketWidget("Into the forest");
     
-  } else if (packageId == "002") {
-    addTicketWidget("Ocean Vibes");
+  // } else if (packageId == "002") {
+  //   addTicketWidget("Ocean Vibes");
 
-  } else if (packageId == "003") {
-    addTicketWidget("Beach to Greenery");
+  // } else if (packageId == "003") {
+  //   addTicketWidget("Beach to Greenery");
 
-  } else if (packageId == "004") {
-    addTicketWidget("Cliffs & Chills");
-  }
+  // } else if (packageId == "004") {
+  //   addTicketWidget("Cliffs & Chills");
+  // }
 
-  $("#ttWidgetModal").modal("show");
+  // $("#ttWidgetModal").modal("show");
   
 }
 
