@@ -2,17 +2,55 @@
 .tour-package {
   background: url(../images/tour1.jpg) no-repeat center center;
   background-size: cover !important;
-  height: 500px;
-  width: 300px;
+  height: 600px;
+  width: 350px;
   border-radius: 30px;
   margin: 10px auto;
   transition: transform 0.5s;
+  background-blend-mode: darken;
+  background-color: #00000020;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.icon{
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
 
+.tour-card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
 
+.tour-card-body{
+  padding: 20px 10px;
+}
+.duration-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tour-card-footer{
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.header-text-heading{
+  font-size: 20px;
+}
+
+.header-text-subHeading{
+  font-size: 18px;
+}
+
+.text-white{
+  color: #ffffff;
+}
 
 h5 {
   color: #6f6f6f9b;
@@ -30,7 +68,7 @@ h5 {
 
 .tour-package-middle-icon {
   width: auto;
-  height: 50px;
+  min-height: min-content;
   display: block;
   z-index: 0;
   filter: brightness(0) invert(1);

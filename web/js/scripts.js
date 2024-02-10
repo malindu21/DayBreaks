@@ -5,12 +5,12 @@
 */
 
 function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
-  window.location.href = "tour.html?packageId=" + packageId
-  localStorage.setItem('packageId', packageId);
-  localStorage.setItem('van4Price', van4Price);
-  localStorage.setItem('suv4Price', suv4Price);
-  localStorage.setItem('van7Price', van7Price);
-  localStorage.setItem('suv7Price', suv7Price);
+  window.location.href = "tour.html?packageId=" + packageId;
+  localStorage.setItem("packageId", packageId);
+  localStorage.setItem("van4Price", van4Price);
+  localStorage.setItem("suv4Price", suv4Price);
+  localStorage.setItem("van7Price", van7Price);
+  localStorage.setItem("suv7Price", suv7Price);
 }
 
 (function ($) {
@@ -39,7 +39,7 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
   const cursorElement1 = document.getElementById("cursor");
 
   $(window).on("scroll load", function () {
-    if ($('.navbar').length > 0) {
+    if ($(".navbar").length > 0) {
       if ($(".navbar").offset().top > 20) {
         $(".fixed-top").addClass("top-nav-collapse");
       } else {
@@ -158,8 +158,6 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
     // typeWriter(0, Box6, typewriterElementBox6, cursorElement1);
   }
 
-
-
   function typeWriter(
     sentenceIndex,
     sentences,
@@ -195,74 +193,132 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
     type();
   }
 
-
-
   /**Tour package list **/
 
-  fetch("https://raw.githubusercontent.com/malindu21/DayBreaks/main/web/js/package_list.json")
-     .then((response) => response.json())
-     .then((data) => {
-    let packageList = data;
-    let packageHtml = "";
-    for (let i = 0; i < packageList.length; i++) {
-      let package = packageList[i];
-      packageHtml += `<div id="lazyLoadDiv" class="tour-package p-3 d-flex flex-column justify-content-between" 
+  fetch(
+    "https://raw.githubusercontent.com/malindu21/DayBreaks/main/web/js/package_list.json"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      let packageList = data;
+      let packageHtml = "";
+      for (let i = 0; i < packageList.length; i++) {
+        let package = packageList[i];
+        debugger
+        packageHtml += `<div id="lazyLoadDiv" class="tour-package d-flex flex-column justify-content-between px-2 py-3"
       style="background-image: url('${package["backgroundImage"]}');"
       onclick="onclickPackage(
-        '${package["id"]}',
-        '${package['pricePerPersonVan']}',
-        '${package['pricePerPersonSuv']}',
-        '${package['pricePerPersonVan'] * 7}',
-        '${package['pricePerPersonVan'] * 4}')" 
-        role="button">
-      <div class="flex-fill"></div>
-      <div class="tour-package-header d-flex justify-content-between align-items-center">
-         <div class="tour-package-details-middle blur-bgV2 d-flex flex-column justify-content-center text-white">
-            <div class="d-inline-flex justify-content-between text-large fw-medium align-items-center">
-               <div class="mr-2">
-                  <div class="text-regular fw-light text-start">
-                  ${package["subtitle"]}
-                  </div>
-               </div>
-               ${package['icon'].startsWith("image") ?
-          `<img src="${package['icon']}" class="tour-package-middle-icon" alt="icon">` :
-          `<i class="fa-solid ${package['icon']} fa-inverse fa-2x tour-package-middle-icon"></i>`
-        }
+              '${package["id"]}',
+              '${package["pricePerPersonVan"]}',
+              '${package["pricePerPersonSuv"]}',
+              '${package["pricePerPersonVan"] * 7}',
+              '${package["pricePerPersonVan"] * 4}')" 
+              role="button">
+      <div class="tour-card-header blur-bg  px-2 py-3">
+         <div>
+            <div class="header-text-heading fw-bolder">${
+              package["heading"]
+            }</div>
+            <div class="header-text-subHeading">${package["subHeading"]}</div>
          </div>
-            <div class="d-flex justify-content-between ">
-               <div> <i class="fa-solid fa-clock"></i> ${package['durationInHours']} hr </div>
-               <div class="d-inline-flex fw-bold align-items-baseline">
-                  $${package['pricePerPersonVan']}
-                  <div class="text-small fw-light text-end ml-2">Per Person</div>
-               </div>
-            </div>
+         ${
+           package["icon"].startsWith("image")
+             ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon">`
+             : `<i class="fa-solid ${package["icon"]} fa-inverse fa-2x tour-package-middle-icon"></i>`
+         }
+      </div>
+      <div class="tour-card-body blur-bg px-2 py-3" style="text-align: center;">
+         <div class="tour-card-body-text text-white" style="font-size: 17px;margin-bottom: 10px;">
+            ${package["description"]}
+         </div>
+         <div class="tour-card-body-price text-white fw-bold" style="font-size: 25px;">
+            $${package["pricePerPersonVan"]} Per Person
          </div>
       </div>
-      <div class="d-flex mt-3 align-items-center justify-content-between">
-         <a id="bookPackageThree" 
-         onclick="onclickPackage(
-          '${package["id"]}',
-          '${package['pricePerPersonVan']}',
-          '${package['pricePerPersonSuv']}',
-          '${package['pricePerPersonVan'] * 7}',
-          '${package['pricePerPersonVan'] * 4}')" 
-           href="tour.html"
-           class="btn btn-lg btn-dark text-regular w-50 rounded-pill  px-3 py-3">
+      <div class="tour-card-footer blur-bg text-white py-3">
+         <a id="bookPackageThree" href="tour.html"
+            class="btn btn-lg btn-dark text-regular w-50 rounded-pill  px-3 py-3">
             Book Now
          </a>
-         <div class="text-small text-white fw-bold text-start" style="
-          height: max-content;
-          padding: 5px 15px;
-          width: 50%;
-          border-radius: 10px;
-          line-height: 1.4;">${package['name']}</div>
+         <div class="duration-wrapper">
+            <i class="fas fa-clock" style="font-size: 20px;"></i>
+            <div class="duraiton-text" style="font-size: 14px;">
+               ${package["durationInHours"]}hrs
+            </div>
+         </div>
+         <div class="timslot-wrapper">
+            ${package["tourTimes"]}
+         </div>
       </div>
-    </div>`
+   </div>`;
+        document.getElementById("tour-package-list").innerHTML = packageHtml;
+      }
+    });
 
-      document.getElementById("tour-package-list").innerHTML = packageHtml;
-    }
-  });
-  
+  // fetch("https://raw.githubusercontent.com/malindu21/DayBreaks/main/web/js/package_list.json")
+  //    .then((response) => response.json())
+  //    .then((data) => {
+  //   let packageList = data;
+  //   let packageHtml = "";
+  //   for (let i = 0; i < packageList.length; i++) {
+  //     let package = packageList[i];
+  //     packageHtml += `<div id="lazyLoadDiv" class="tour-package p-3 d-flex flex-column justify-content-between"
+  //     style="background-image: url('${package["backgroundImage"]}');"
+  //     onclick="onclickPackage(
+  //       '${package["id"]}',
+  //       '${package['pricePerPersonVan']}',
+  //       '${package['pricePerPersonSuv']}',
+  //       '${package['pricePerPersonVan'] * 7}',
+  //       '${package['pricePerPersonVan'] * 4}')"
+  //       role="button">
+  //     <div class="flex-fill"></div>
+  //     <div class="tour-package-header d-flex justify-content-between align-items-center">
+  //        <div class="tour-package-details-middle blur-bgV2 d-flex flex-column justify-content-center text-white">
+  //           <div class="d-inline-flex justify-content-between text-large fw-medium align-items-center">
+  //              <div class="mr-2">
+  //                 <div class="text-regular fw-light text-start">
+  //                 ${package["subtitle"]}
+  //                 </div>
+  //              </div>
+  //              ${package['icon'].startsWith("image") ?
+  //         `<img src="${package['icon']}" class="tour-package-middle-icon" alt="icon">` :
+  //         `<i class="fa-solid ${package['icon']} fa-inverse fa-2x tour-package-middle-icon"></i>`
+  //       }
+  //        </div>
+  //           <div class="d-flex justify-content-between ">
+  //              <div> <i class="fa-solid fa-clock"></i> ${package['durationInHours']} hr </div>
+  //              <div class="d-inline-flex fw-bold align-items-baseline">
+  //                 $${package['pricePerPersonVan']}
+  //                 <div class="text-small fw-light text-end ml-2">Per Person</div>
+  //              </div>
+  //           </div>
+  //        </div>
+  //     </div>
+  //     <div class="d-flex mt-3 align-items-center justify-content-between">
+  //        <a id="bookPackageThree"
+  //        onclick="onclickPackage(
+  //         '${package["id"]}',
+  //         '${package['pricePerPersonVan']}',
+  //         '${package['pricePerPersonSuv']}',
+  //         '${package['pricePerPersonVan'] * 7}',
+  //         '${package['pricePerPersonVan'] * 4}')"
+  //          href="tour.html"
+  //          class="btn btn-lg btn-dark text-regular w-50 rounded-pill  px-3 py-3">
+  //           Book Now
+  //        </a>
+  //        <div class="text-small text-white fw-bold text-start" style="
+  //         height: max-content;
+  //         padding: 5px 15px;
+  //         width: 50%;
+  //         border-radius: 10px;
+  //         line-height: 1.4;">${package['name']}</div>
+  //     </div>
+  //   </div>`
+
+  //     document.getElementById("tour-package-list").innerHTML = packageHtml;
+  //   }
+  // });
+
   /****** Tour package list *******/
 
   /* Contact Form */
@@ -336,8 +392,6 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
     }
     $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
   }
-
-
 
   //  function changeBackgroundImage() {
   //     const header = document.getElementById('header');

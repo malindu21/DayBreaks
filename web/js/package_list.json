@@ -1,42 +1,50 @@
 [
     {
         "id": "003",
-        "name": "Beach to Greenery",
-        "subtitle": "Great Ocean Road, 12 Apostles, Teddy’ Lookout, Gibson Steps & Lighthouse climb",
+        "heading": "GREAT OCEAN ROAD",
+        "subHeading": "Beach to Greenery",
+        "description": "Great Ocean Road, 12 Apostles, Teddy’s lookout, Gibson steps, Rainforest walk & Lighthouse climb.",
         "durationInHours": 13,
         "pricePerPersonVan": 169,
         "pricePerPersonSuv": 169,
         "backgroundImage": "images/greatocenroad.webp",
-        "icon": "fa-water"
+        "icon": "fa-water",
+        "tourTimes": "8AM-9PM"
     },
     {
         "id": "004",
-        "name": "Cliffs & Chills",
-        "subtitle": "Mornington Peninsula, Geothermal Hot Springs, Moonlit Animal Sanctuary, Cape Schanck & Rye",
+        "heading":"MORNINGTON PENINSULA",
+        "subHeading": "Cliffs & Chills",
+        "description": "Geothermal Hot Springs, Moonlit Animal Sanctuary, Mornington Peninsula National Park, Cape Schanck & Rye",
         "durationInHours": 12,
         "pricePerPersonVan": 249,
         "pricePerPersonSuv": 169,
         "backgroundImage": "images/mornington.webp",
-        "icon": "images/hinduist-yoga-position.png"
+        "icon": "images/hinduist-yoga-position.png",
+        "tourTimes": "8AM-8PM"
     },
     {
         "id": "001",
-        "name": "Into the forest",
-        "subtitle": "Black Spur Drive, Steavenson Falls, Wirrawilla Rainforest & Marysville",
+        "heading":"BLACK SPUR DRIVE, WATERFALLS & RAINFORESTS",
+        "subHeading": "Into the forest",
+        "description": "Black Spur Drive, Steavenson falls, Wirrawilla Rainforest, Redwood Forest & Marysville.ss",
         "durationInHours": 12,
         "pricePerPersonVan": 149,
         "pricePerPersonSuv": 169,
         "backgroundImage": "images/into_the_forest/into-the-forest.webp",
-        "icon": "fa-tree"
+        "icon": "fa-tree",
+        "tourTimes": "8AM-8PM"
     },
     {
         "id": "002",
-        "name": "Ocean Vibes",
-        "subtitle": "Geelong waterfront, Jack Rabbit Winery, Sorrento, Arthur’s Seat & Dromana",
+        "heading":"GEELONG, DROMANA & SORRENTO",
+        "subHeading": "Ocean Vibes",
+        "description": "Geelong Waterfront & Sky Wheel, Jack Rabbit Winery, Sorrento, Arthur’s Seat Eagle & Dromana beach boxes ",
         "durationInHours": 12,
         "pricePerPersonVan": 219,
         "pricePerPersonSuv": 169,
         "backgroundImage": "images/geelong.webp",
-        "icon": "fa-ferry"
+        "icon": "fa-ferry",
+        "tourTimes": "8AM-8PM"
     }
 ]
