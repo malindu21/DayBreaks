@@ -1,18 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Ubuntu:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+*{
+  font-family: "Lato", sans-serif;
+}
 .tour-package {
   background: url(../images/tour1.jpg) no-repeat center center;
   background-size: cover !important;
-  height: 500px;
-  width: 300px;
+  height: 600px;
+  width: 350px;
   border-radius: 30px;
   margin: 10px auto;
   transition: transform 0.5s;
+  background-blend-mode: darken;
+  background-color: #00000030;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.icon{
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
 
+.tour-card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  min-height: 20%;
+}
 
+.tour-card-body{
+  padding: 20px 10px;
+  min-height: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.tour-card-body-price{
+  font-family: 'Ubuntu', sans-serif;
+}
+.duration-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tour-card-footer{
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text-heading{
+  font-size: 19px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.header-text-subHeading{
+  font-size: 16px;
+}
+
+.text-white{
+  color: #ffffff;
+}
 
 h5 {
   color: #6f6f6f9b;
@@ -30,7 +84,7 @@ h5 {
 
 .tour-package-middle-icon {
   width: auto;
-  height: 50px;
+  min-height: min-content;
   display: block;
   z-index: 0;
   filter: brightness(0) invert(1);
