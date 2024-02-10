@@ -1241,28 +1241,6 @@ function changeBackground(index) {
     //resetInterval();
   };
 }
-//startAutoScroll();
-
-// Populate the dropdown with options
-// var dropdown = document.getElementById("dropdown");
-// for (var category in data) {
-//     var optgroup = document.createElement("optgroup");
-//     optgroup.label = category;
-//     data[category].forEach(function (item) {
-//         var option = document.createElement("option");
-//         option.value = item;
-//         option.text = item;
-//         optgroup.appendChild(option);
-//     });
-//     dropdown.appendChild(optgroup);
-// }
-
-// // Event listener for dropdown change
-// dropdown.addEventListener("change", function () {
-//     var selectedOption = dropdown.value;
-//     var infoDiv = document.getElementById("info");
-//     infoDiv.textContent = selectedOption;
-// });
 
 function aboutThisActivity(topic, desc, iconClass) {
   const container = document.getElementById("dynamic-boxes-container");

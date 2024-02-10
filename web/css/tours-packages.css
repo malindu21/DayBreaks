@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Ubuntu:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+*{
+  font-family: "Lato", sans-serif;
+}
 .tour-package {
   background: url(../images/tour1.jpg) no-repeat center center;
   background-size: cover !important;
@@ -8,7 +13,7 @@
   margin: 10px auto;
   transition: transform 0.5s;
   background-blend-mode: darken;
-  background-color: #00000020;
+  background-color: #00000030;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -23,10 +28,20 @@
   justify-content: space-between;
   align-items: center;
   color: white;
+  min-height: 20%;
 }
 
 .tour-card-body{
   padding: 20px 10px;
+  min-height: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tour-card-body-price{
+  font-family: 'Ubuntu', sans-serif;
 }
 .duration-wrapper{
   display: flex;
@@ -41,11 +56,12 @@
 }
 
 .header-text-heading{
-  font-size: 20px;
+  font-size: 19px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .header-text-subHeading{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .text-white{
