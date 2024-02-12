@@ -1,3 +1,9 @@
+@media (min-width: 1280px) {
+  .durationAndTime{
+      font-size: 20px;
+  }
+}
+
 /*===========Share modal CSS Start ======*/
 .popup {
   position: absolute;

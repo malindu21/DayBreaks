@@ -19,9 +19,11 @@ const package001 = {
 
   details: {
     title: "BLACK SPUR DRIVE, WATERFALLS & RAINFORESTS",
-    subTitle: "Black Spur Drive, Steavenson Falls, Wirrawilla Rainforest & Marysville",
+    subTitle: "Into the forest",
     desc: "Embark on a picturesque journey through lush apple orchards, serene rainforests, and iconic Australian forests, all while savouring quick coffee breaks and exploring charming towns along the way. Be captivated by one of the state's tallest waterfalls, before concluding the day with a mesmerizing sunset, overlooking the majestic mountains.",
     duration: "Duration: 12.00 Hours",
+    durationInHours: "12hr",
+    tourTimes: "8AM-8PM",
     backgroundImageUrls: [
       "images/into_the_forest/3b.webp",
       "images/into_the_forest/0.webp",
@@ -244,9 +246,11 @@ const package002 = {
 
   details: {
     title: "GEELONG, DROMANA & SORRENTO",
-    subTitle: "Geelong waterfront, Jack Rabbit Winery, Sorrento, Arthur’s Seat & Dromana",
+    subTitle: "Ocean Vibes",
     desc: "Embark on a mesmerizing journey as we explore the coastal wonders of Geelong and the Peninsula, unravelling a rich tapestry of unforgettable experiences. Allow yourself to be captivated by the sheer beauty of scenic lookouts and the enchanting allure of coastal trails that grace our road trip. This adventure also promises a taste of the region's cool climate wineries and the thrill of various aerial attractions, adding layers of excitement to our exploration.",
     duration: "Duration: N/A",
+    durationInHours: "12hr",
+    tourTimes: "8AM-8PM",
     backgroundImageUrls: [
       "images/ocean_vibes/0.webp",
       "images/ocean_vibes/1.webp",
@@ -469,9 +473,11 @@ const package003 = {
 
   details: {
     title: "GREAT OCEAN ROAD",
-    subTitle: "Great Ocean Road, 12 Apostles, Teddy’ Lookout, Gibson Steps & Lighthouse climb ",
+    subTitle: "Beach to Greenery",
     desc: "Explore the stunning Great Ocean Road with our expertly crafted tour. This scenic drive offers breathtaking coastal views, with highlights including the iconic Split Point Lighthouse, Teddy's Lookout for panoramic vistas, a leisurely stroll through Mait's Rest Rainforest, a unique perspective at Gibson Steps, and the awe-inspiring Thunder Cave. The tour culminates at the world-famous Twelve Apostles, where you can witness the changing light throughout the day and possibly catch a spectacular sunset. Join us for a day filled with natural beauty and unforgettable experiences along this iconic Australian coastal highway. ",
     duration: "Duration: 13 hours",
+    durationInHours: "13hr",
+    tourTimes: "8AM-9PM",
     backgroundImageUrls: [
       "images/beach_to_greenery/0.webp",
       "images/beach_to_greenery/1.webp",
@@ -685,9 +691,11 @@ const package004 = {
 
   details: {
     title: "MORNINGTON PENINSULA",
-    subTitle: "Mornington Peninsula, Geothermal Hot Springs, Moonlit Animal Sanctuary, Cape Schanck & Rye",
+    subTitle: "Cliffs & Chills",
     desc: "Discover the Mornington Peninsula, where wildlife encounters, coastal walks, boutique shopping, and exploration meet seamless relaxation. Encounter native animals, learn about conservation, and stroll along the coast, collecting special mementos. Explore dramatic landscapes unique to the area, then unwind in geothermal pools, letting stress melt away amidst the serene natural beauty.",
     duration: "Duration: 12 hours",
+    durationInHours: "12hr",
+    tourTimes: "8AM-8PM",
     backgroundImageUrls: [
       "images/clif/1.webp",
       "images/clif/2.webp",
@@ -898,6 +906,8 @@ insertSectionsIntoContainer();
 function insertSectionsIntoContainer() {
   const packageName = document.getElementById("packageName");
   const packageSubTitle = document.getElementById("packageSubTitle");
+  const duration = document.getElementById("duration");
+  const time = document.getElementById("time");
   const packageDesc = document.getElementById("packageDesc");
   const packageDuration = document.getElementById("packageDuration");
   const container = document.getElementById("container");
@@ -958,9 +968,12 @@ function insertSectionsIntoContainer() {
     );
     populateList(package001.dynamicData);
     packageName.appendChild(packageNameSection(package001.details.title));
-    // packageSubTitle.appendChild(
-    //   packageSubTitleSection(package001.details.subTitle)
-    // );
+    packageSubTitle.appendChild(
+      packageSubTitleSection(package001.details.subTitle)
+    );
+    duration.innerHTML = package001.details.durationInHours;
+    time.innerHTML = package001.details.tourTimes;
+    
     packageDesc.appendChild(packageDescSection(package001.details.desc));
     // packageDuration.appendChild(packageDurationSection(package001.details.duration));
   } else if (packageId == "002") {
@@ -1009,9 +1022,11 @@ function insertSectionsIntoContainer() {
     );
     populateList(package002.dynamicData);
     packageName.appendChild(packageNameSection(package002.details.title));
-    // packageSubTitle.appendChild(
-    //   packageSubTitleSection(package002.details.subTitle)
-    // );
+    packageSubTitle.appendChild(
+      packageSubTitleSection(package002.details.subTitle)
+    );
+    duration.innerHTML = package002.details.durationInHours;
+    time.innerHTML = package002.details.tourTimes;
     packageDesc.appendChild(packageDescSection(package002.details.desc));
   } else if (packageId == "003") {
     backgroundImageUrls = [];
@@ -1058,9 +1073,11 @@ function insertSectionsIntoContainer() {
     );
     populateList(package003.dynamicData);
     packageName.appendChild(packageNameSection(package003.details.title));
-    // packageSubTitle.appendChild(
-    //   packageSubTitleSection(package003.details.subTitle)
-    // );
+    packageSubTitle.appendChild(
+      packageSubTitleSection(package003.details.subTitle)
+    );
+    duration.innerHTML = package003.details.durationInHours;
+    time.innerHTML = package003.details.tourTimes;
     packageDesc.appendChild(packageDescSection(package003.details.desc));
   } else if (packageId == "004") {
     backgroundImageUrls = [];
@@ -1107,9 +1124,11 @@ function insertSectionsIntoContainer() {
     );
     populateList(package004.dynamicData);
     packageName.appendChild(packageNameSection(package004.details.title));
-    // packageSubTitle.appendChild(
-    //   packageSubTitleSection(package004.details.subTitle)
-    // );
+    packageSubTitle.appendChild(
+      packageSubTitleSection(package004.details.subTitle)
+    );
+    duration.innerHTML = package004.details.durationInHours;
+    time.innerHTML = package004.details.tourTimes;
     packageDesc.appendChild(packageDescSection(package004.details.desc));
   }
 }
