@@ -220,7 +220,7 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
          </div>
          ${
            package["icon"].startsWith("image")
-             ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon" height="40px">`
+             ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon" height="40px" width="40px">`
              : `<i class="fa-solid ${package["icon"]} fa-inverse fa-2x tour-package-middle-icon"></i>`
          }
       </div>
