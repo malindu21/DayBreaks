@@ -7,7 +7,7 @@
         "durationInHours": 13,
         "pricePerPersonVan": 169,
         "pricePerPersonSuv": 169,
-        "backgroundImage": "images/greatocenroad.webp",
+        "backgroundImage": "images/beach_to_greenary.webp",
         "icon": "fa-water",
         "tourTimes": "8AM-9PM"
     },
@@ -43,7 +43,7 @@
         "durationInHours": 12,
         "pricePerPersonVan": 219,
         "pricePerPersonSuv": 169,
-        "backgroundImage": "images/geelong.webp",
+        "backgroundImage": "images/ocean_vibes_tile.webp",
         "icon": "fa-ferry",
         "tourTimes": "8AM-8PM"
     }

@@ -4,14 +4,17 @@
 *{
   font-family: "Lato", sans-serif;
 }
+
+.tour-package-wrapper{
+  transition: transform 0.5s;
+  margin: 10px auto;
+}
 .tour-package {
   background: url(../images/tour1.jpg) no-repeat center center;
   background-size: cover !important;
   height: 600px;
   width: 350px;
   border-radius: 30px;
-  margin: 10px auto;
-  transition: transform 0.5s;
   background-blend-mode: darken;
   background-color: #00000030;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -73,7 +76,7 @@ h5 {
   font: 700 1.125rem/1.5rem "Montserrat", sans-serif;
 }
 
-.tour-package:hover {
+.tour-package-wrapper:hover {
   transform: scale(1.1);
 }
 
