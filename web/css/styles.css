@@ -434,9 +434,14 @@ strong {
   box-shadow: 0px 0px 10px 0px #11111145;
   z-index: 10;
   display: none;
+
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
+  background-color: rgba(255, 255, 255, 0.3); 
+
 }
+
 
 @media screen and (max-width: 768px) {
   .btn-solid-reg-wrapper {
@@ -456,13 +461,13 @@ strong {
 }
 
 .btn-solid-reg:hover {
-  background-color: transparent;
+  background-color: transparent !important;
   color: #fff;
   text-decoration: none;
 }
 
 .btn-solid-reg.tour:hover {
-  background-color: transparent;
+  background-color: #fff !important;
   color: #111;
 }
 
@@ -1396,6 +1401,15 @@ input.cmn-toggle-round-flat:checked + label:after {
     background-color: rgba(255, 255, 255, 0.09);
   }
   /* end of general styles */
+}
+
+@media (max-width: 768px) {
+  .center-mobile {
+      text-align: center;
+  }
+  .space-between-words {
+      margin-bottom: 20px; /* Adjust the value as per your need */
+  }
 }
 .navbar-custom .navbar-toggler {
   border: none;
