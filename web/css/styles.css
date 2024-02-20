@@ -449,6 +449,20 @@ strong {
   }
 }
 
+.mobile-blank-area {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-blank-area {
+    display: block;
+    /* Adjust height and other styles as needed */
+    height: 76px; /* Example height */
+    background-color: #ffffff; /* Example background color */
+  }
+}
+
+
 .btn-solid-reg.tour {
   background-color: #111 !important;
   border: 0.125rem solid #111;
