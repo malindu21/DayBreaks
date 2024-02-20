@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Ubuntu:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&family=Ubuntu:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-*{
+* {
   font-family: "Lato", sans-serif;
 }
 
-.tour-package-wrapper{
+.tour-package-wrapper {
   transition: transform 0.5s;
   margin: 10px auto;
 }
 .tour-package {
   background: url(../images/tour1.jpg) no-repeat center center;
   background-size: cover !important;
-  height: 600px;
+  height: 350px;
   width: 350px;
   border-radius: 30px;
   background-blend-mode: darken;
@@ -20,21 +20,22 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.icon{
+.icon {
   height: 50px;
   width: 50px;
   background-color: red;
 }
 
-.tour-card-header{
+.tour-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  min-height: 20%;
+  color: #000000;
+  min-height: 15%;
+  width: 350px;
 }
 
-.tour-card-body{
+.tour-card-body {
   padding: 20px 10px;
   min-height: 30%;
   display: flex;
@@ -43,31 +44,39 @@
   justify-content: center;
 }
 
-.tour-card-body-price{
-  font-family: 'Ubuntu', sans-serif;
+.tour-card-body-text {
+  min-height: 11%;
+  width: 350px;
+  font-size: 17px;
+  margin: 15px 0;
+  color: #000000;
 }
-.duration-wrapper{
+
+.tour-card-body-price {
+  font-family: "Ubuntu", sans-serif;
+}
+.duration-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.tour-card-footer{
+.tour-card-footer {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-text-heading{
+.header-text-heading {
   font-size: 19px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.header-text-subHeading{
+.header-text-subHeading {
   font-size: 16px;
 }
 
-.text-white{
+.text-white {
   color: #ffffff;
 }
 
@@ -134,7 +143,6 @@ h5 {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(5px);
 }
-
 
 .text-grey {
   color: #7f8c8d;

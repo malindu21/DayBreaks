@@ -195,16 +195,27 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
 
   /**Tour package list **/
 
-  fetch("https://raw.githubusercontent.com/malindu21/DayBreaks/main/web/js/package_list.json")
+  fetch(
+    "https://raw.githubusercontent.com/malindu21/DayBreaks/main/web/js/package_list.json"
+  )
     .then((response) => response.json())
     .then((data) => {
       let packageList = data;
       let packageHtml = "";
       for (let i = 0; i < packageList.length; i++) {
         let package = packageList[i];
-        packageHtml += `
-        <div class="tour-package-wrapper">
-          <div class="fs-4 fw-bold mb-2 pl-2">Tour ${i + 1}</div>  
+        packageHtml += `<div class="tour-package-wrapper">
+          <div class="tour-card-header py-3 px-2">
+            <div class="mr-2">
+              <div class="header-text-heading">${package["heading"]}</div>
+              <div class="header-text-subHeading">${package["subHeading"]}</div>
+            </div>
+            ${
+              package["icon"].startsWith("image")
+                ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon" height="40px" width="40px">`
+                : `<i class="fa-solid ${package["icon"]} fa-inverse fa-2x tour-package-middle-icon"></i>`
+            }
+          </div>
           <div id="lazyLoadDiv" class="tour-package d-flex flex-column justify-content-between px-2 py-3"
             style="background-image: url('${package["backgroundImage"]}');"
             onclick="onclickPackage(
@@ -214,48 +225,38 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
                 '${package["pricePerPersonVan"] * 7}',
                 '${package["pricePerPersonVan"] * 4}')" 
                 role="button">
-          <div class="tour-card-header blur-bg  px-2 py-3">
-           <div class="mr-2">
-              <div class="header-text-heading">${package["heading"]}</div>
-              <div class="header-text-subHeading">${package["subHeading"]}</div>
-           </div>
-           ${
-             package["icon"].startsWith("image")
-               ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon" height="40px" width="40px">`
-               : `<i class="fa-solid ${package["icon"]} fa-inverse fa-2x tour-package-middle-icon"></i>`
-           }
-          </div>
-          <div class="tour-card-body blur-bg px-2 py-3" style="text-align: center;">
-            <div class="tour-card-body-text text-white" style="font-size: 17px;margin-bottom: 10px;">
-              ${package["description"]}
-            </div>
-            <div class="tour-card-body-price text-white fw-bold" style="font-size: 25px;">
-              $${package["pricePerPersonVan"]} Per Person
-            </div>
-          </div>
-          <div class="tour-card-footer blur-bg text-white py-3">
-            <a id="bookPackageThree" href="tour.html" role="button" onclick="onclickPackage(
-              '${package["id"]}',
-              '${package["pricePerPersonVan"]}',
-              '${package["pricePerPersonSuv"]}',
-              '${package["pricePerPersonVan"] * 7}',
-              '${package["pricePerPersonVan"] * 4}')"
-                class="btn btn-lg btn-dark text-regular w-50 rounded-pill  px-3 py-3">
-                Book Now
-            </a>
-           <div class="duration-wrapper">
-              <i class="fas fa-clock" style="font-size: 20px;"></i>
-              <div class="duraiton-text" style="font-size: 14px;">
-                 ${package["durationInHours"]}hrs
+
+            <div class="tour-card-body blur-bg px-2 py-3" style="text-align: center;">
+              
+              <div class="tour-card-body-price text-white fw-bold" style="font-size: 35px;">
+                $${package["pricePerPersonVan"]} Per Person
               </div>
+            </div>
+            <div class="tour-card-footer blur-bg text-white py-3">
+              <div class="duration-wrapper">
+                <i class="fas fa-clock" style="font-size: 20px;"></i>
+                <div class="duraiton-text" style="font-size: 14px;">
+                 ${package["durationInHours"]}hrs
+                </div>
               </div>
               <div class="timslot-wrapper">
                 ${package["tourTimes"]}
               </div>
             </div>
           </div>
-        </div>
-      `;
+          <div class="tour-card-body-text">
+                ${package["description"]}
+          </div>
+          <a id="bookPackageThree" href="tour.html" role="button" onclick="onclickPackage(
+            '${package["id"]}',
+            '${package["pricePerPersonVan"]}',
+            '${package["pricePerPersonSuv"]}',
+            '${package["pricePerPersonVan"] * 7}',
+            '${package["pricePerPersonVan"] * 4}')"
+              class="btn btn-lg btn-dark text-regular w-100 rounded-pill  px-3 py-3">
+                Book Now
+          </a>
+        </div>`;
         document.getElementById("tour-package-list").innerHTML = packageHtml;
       }
     });
