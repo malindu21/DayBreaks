@@ -210,11 +210,10 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
               <div class="header-text-heading">${package["heading"]}</div>
               <div class="header-text-subHeading">${package["subHeading"]}</div>
             </div>
-            ${
-              package["icon"].startsWith("image")
-                ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon" height="40px" width="40px">`
-                : `<i class="fa-solid ${package["icon"]} fa-inverse fa-2x tour-package-middle-icon"></i>`
-            }
+            ${package["icon"].startsWith("image")
+            ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon" height="40px" width="40px">`
+            : `<i class="fa-solid ${package["icon"]} fa-inverse fa-2x tour-package-middle-icon"></i>`
+          }
           </div>
           <div id="lazyLoadDiv" class="tour-package d-flex flex-column justify-content-between px-2 py-3"
             style="background-image: url('${package["backgroundImage"]}');"
@@ -232,14 +231,14 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
                 $${package["pricePerPersonVan"]} Per Person
               </div>
             </div>
-            <div class="tour-card-footer blur-bg text-white py-3">
-              <div class="duration-wrapper">
+            <div class="tour-card-footer  text-white py-3">
+              <div class="blur-bg duration-wrapper">
                 <i class="fas fa-clock" style="font-size: 20px;"></i>
-                <div class="duraiton-text" style="font-size: 14px;">
+                <div class="duraiton-text ml-2" style="font-size: 14px;">
                  ${package["durationInHours"]}hrs
                 </div>
               </div>
-              <div class="timslot-wrapper">
+              <div class="blur-bg timslot-wrapper">
                 ${package["tourTimes"]}
               </div>
             </div>

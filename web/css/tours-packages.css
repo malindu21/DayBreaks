@@ -9,6 +9,7 @@
   transition: transform 0.5s;
   margin: 10px auto;
 }
+
 .tour-package {
   background: url(../images/tour1.jpg) no-repeat center center;
   background-size: cover !important;
@@ -55,11 +56,22 @@
 .tour-card-body-price {
   font-family: "Ubuntu", sans-serif;
 }
+
 .duration-wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column;
 }
+
+.duration-wrapper,
+.timslot-wrapper {
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000030 !important;
+}
+
 .tour-card-footer {
   padding: 20px 40px;
   display: flex;
@@ -105,12 +117,15 @@ h5 {
 .tour-package-details {
   height: auto;
   width: 100%;
-  gap: 10px; /* Adjust the gap value as needed */
+  gap: 10px;
+  /* Adjust the gap value as needed */
 }
 
-.tour-package-details > * {
-  margin-bottom: 10px; /* Adjust the margin value as needed */
-  margin-top: 10px; /* Adjust the margin value as needed */
+.tour-package-details>* {
+  margin-bottom: 10px;
+  /* Adjust the margin value as needed */
+  margin-top: 10px;
+  /* Adjust the margin value as needed */
 }
 
 .tour-package-details .text-small {
@@ -152,20 +167,25 @@ h5 {
 .text-small {
   font-size: 12px;
 }
+
 .text-regular {
   font-size: 14px;
 }
+
 .text-medium {
   font-size: 16px;
 }
+
 .text-large {
   font-size: 18px;
 }
 
 #bookPackageOne {
   /* Your existing styles */
-  display: inline-block; /* Ensures the hover styles apply correctly */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  display: inline-block;
+  /* Ensures the hover styles apply correctly */
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition effect */
 }
 
 #bookPackageOne:hover {
