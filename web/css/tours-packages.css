@@ -30,9 +30,9 @@
 .tour-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   color: #000000;
-  min-height: 15%;
+  min-height: 20%;
   width: 350px;
 }
 
