@@ -97,9 +97,9 @@ h5 {
   font: 700 1.125rem/1.5rem "Montserrat", sans-serif;
 }
 
-.tour-package-wrapper:hover {
+/* .tour-package-wrapper:hover {
   transform: scale(1.1);
-}
+} */
 
 .tour-package-details-middle {
   height: 160px;
