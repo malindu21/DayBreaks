@@ -1662,12 +1662,21 @@ function handleItemClick(clickedItem) {
   const items = document.querySelectorAll(".HTouritem");
   items.forEach((item) => item.classList.remove("clicked"));
 
-  clickedItem.classList.add("clicked");
-  clickedItem.scrollIntoView({
-    behavior: "smooth",
-    block: "nearest",
-    inline: "center",
-  });
+  if (index < itemList.length - 1) {
+    clickedItem.classList.add("clicked");
+    clickedItem.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  } else {
+    clickedItem.classList.add("clicked");
+    clickedItem.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
+  }
+
 
   changeBackground(index);
 }
