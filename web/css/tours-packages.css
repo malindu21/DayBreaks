@@ -194,9 +194,16 @@
   }
   .tour-card-body-text{
     width: 170px;
+    color: white !important; 
   }
 
 
+}
+
+.tour-card-body-text{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white !important; 
 }
 
 .text-white {
