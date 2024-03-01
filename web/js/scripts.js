@@ -13,6 +13,10 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
   localStorage.setItem("suv7Price", suv7Price);
 }
 
+
+
+
+
 (function ($) {
   const sentences1 = [
     "Day tours",
@@ -195,6 +199,7 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
 
   /**Tour package list **/
 
+
   fetch(
     "https://raw.githubusercontent.com/malindu21/DayBreaks/main/web/js/package_list.json"
   )
@@ -206,8 +211,8 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
         let package = packageList[i];
         packageHtml += `<div class="tour-package-wrapper">
             
-            <div class="flip-card">
-                <div class="flip-card-inner">
+            <div class="flip-card" id="flip-card">
+                <div class="flip-card-inner" id="flip-card-inner">
                     <div class="flip-card-front">
                         <div id="lazyLoadDiv" class="tour-package d-flex flex-column justify-content-between px-2 py-3" style="background-image: url('${package["backgroundImage"]}');" ${isMobile() ? '': `onclick="onclickPackage('${package["id"]}', '${package["pricePerPersonVan"]}', '${package["pricePerPersonSuv"]}', '${package["pricePerPersonVan"] * 7}', '${package["pricePerPersonVan"] * 4}')"`}>
                         <div class="tour-card-header py-3">
@@ -239,12 +244,22 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
         </div>`;
         document.getElementById("tour-package-list").innerHTML = packageHtml;
       }
+      document.querySelectorAll('#flip-card').forEach(e=>{
+        if(isMobile()){
+          e.addEventListener("touchstart", function() {
+            e.childNodes[1].classList.toggle('flip');
+          });
+        }
+      });
     });
 
-
-  function isMobile() {
+    
+    function isMobile() {
       return window.innerWidth < 768; 
-  }
+    }
+
+    
+
   /****** Tour package list *******/
 
   /* Contact Form */
