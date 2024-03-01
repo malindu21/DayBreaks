@@ -235,16 +235,7 @@ function onclickPackage(packageId, van4Price, suv4Price, van7Price, suv7Price) {
                         </div>
                     </div>
                     <div class="flip-card-back">
-                     
-
-                    <div id="lazyLoadDiv" class="tour-package d-flex flex-column justify-content-between px-2 py-3" style="background-image: url('${package["backgroundImage"]}');" ${isMobile() ? '': `onclick="onclickPackage('${package["id"]}', '${package["pricePerPersonVan"]}', '${package["pricePerPersonSuv"]}', '${package["pricePerPersonVan"] * 7}', '${package["pricePerPersonVan"] * 4}')"`}>
-                    <div class="tour-card-header py-3">
-            <div class="mr-2">
-                <div class="header-text-heading">${package["heading"]}</div>
-                <div class="header-text-subHeading">${package["subHeading"]}</div>
-            </div>
-            ${package["icon"].startsWith("image") ? `<img src="${package["icon"]}" class="tour-package-middle-icon" alt="icon" height="40px" width="40px">` : `<i class="fa-solid ${package["icon"]} fa-inverse fa-2x tour-package-middle-icon"></i>`}
-        </div>    
+                    <div id="lazyLoadDiv" class="tour-package d-flex flex-column justify-content-between px-2 py-3" style="background-image: url('${package["backgroundImage"]}');" ${isMobile() ? '': `onclick="onclickPackage('${package["id"]}', '${package["pricePerPersonVan"]}', '${package["pricePerPersonSuv"]}', '${package["pricePerPersonVan"] * 7}', '${package["pricePerPersonVan"] * 4}')"`}>  
                     <div class="tour-card-body blur-bg px-2 py-3" style="text-align: center;">
                     <div class="tour-card-body-text">${package["description"]}</div>
                         </div>
